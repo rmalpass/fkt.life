@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Ross Malpass`,
-    description: ` is a digital designer and endurance athelete`,
+    description: ` is a digital designer and endurance athlete`,
     author: `@rmalpass`,
   },
   plugins: [
@@ -10,7 +10,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://rossmalpass.co.uk',
-        sitemap: 'https://ombori.co.uk/sitemap.xml',
+        sitemap: 'https://rossmalpass.co.uk/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -71,7 +71,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#fff',
         display: 'minimal-ui',
-        // icon: 'src/images/ombori-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/M.svg', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

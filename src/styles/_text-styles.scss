@@ -1,0 +1,89 @@
+// /* Font families */
+// @mixin headline-text {
+//   font-family: $headline-font;
+//   font-size: 4.3rem;
+//   font-weight: 300;
+//   line-height: 1.12;
+//   color: $color-headline;
+// }
+// @mixin body-text {
+//   font-family: $body-font;
+//   font-size: 1.6rem;
+//   line-height: 1.31;
+//   color: $color-text;
+//   font-weight: normal;
+// }
+//
+// /* Sensible defaults */
+// h1, h2, h3, h4 {
+//   @include headline-text;
+//   color: $color-headline;
+// }
+// h1 {
+//   /* Innovations for a fa: */
+//   font-weight: bold;
+//   font-size: 3.2rem;
+//   line-height: 4rem;
+//   @include for-tablet-portrait-up {
+//     font-size: 6.4rem;
+//     line-height: 7.2rem;
+//   }
+// }
+// h2 {
+//   font-size: 2rem;
+//   line-height: 3.2rem;
+//   font-weight: bold;
+//   @include for-tablet-portrait-up {
+//     font-size: 2.4rem;
+//     line-height: 3.2rem;
+//   }
+// }
+// h3 {
+//   font-size: 1.6rem;
+//   line-height: 2.4rem;
+//   font-weight: 800;
+//   text-transform: uppercase;
+//   letter-spacing: 0.08rem;
+// }
+// h4 {
+//   font-size: 1.3rem;
+//   line-height: 1.6rem;
+//   color: $color-grey-4;
+//   text-transform: uppercase;
+//   letter-spacing: 0.08rem;
+//   font-weight: 800;
+// }
+// h5 {
+//   /* Web to App: */
+//   opacity: 0.56;
+//   font-size: 1.3rem;
+//   color: $color-grey-5;
+//   letter-spacing: 0.08rem;
+//   text-transform: uppercase;
+// }
+// p {
+//   font-size: 1.6rem;
+//   line-height: 2.4rem;
+// }
+
+/* Links */
+a {
+  text-decoration: underline !important;
+  color: $color-deep-blue !important;
+  position: relative;
+  display: inline-block;
+  transition: all 0.1s linear;
+
+  &[data-link-external] {
+    color: $color-link !important;
+    &:before {
+      content: '/ ';
+    }
+  }
+
+  &:hover {
+    text-decoration: none !important;
+    // background: rgba(#000,0.04);
+    // color: $color-link !important;
+  }
+}

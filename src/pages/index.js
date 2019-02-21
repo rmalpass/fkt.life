@@ -1,54 +1,82 @@
-import React, { Component } from "react"
-import { Link, graphql } from "gatsby"
-import { Clock } from "react-feather"
+import React, { Component } from "react";
+import { Link, graphql } from "gatsby";
+import { Helmet } from 'react-helmet';
+import classNames from 'classnames';
 
-import Layout from "../layouts"
-import PostIcons from "../components/post-icons"
+import PostIcons from "../components/post-icons";
+import BouncyArrow from '../components/bouncyArrow';
 
-import { rhythm } from "../utils/typography"
+// style
+import '../styles/styles.scss';
+import { rhythm } from "../utils/typography";
+import styles from './index.module.scss';
+
+// images
+import M from '../images/M.svg';
 
 class Home extends Component {
   render() {
     const data = this.props.data
 
     return (
-      <Layout>
-        <div css={{ marginBottom: rhythm(1) }}>
-          <h1>Pages</h1>
-          {data.allWordpressPage.edges.map(({ node }) => (
-            <div key={node.slug}>
+      <div className={styles.page__home}>
+
+        <Helmet>
+          <meta
+            property="og:image"
+            content="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg"
+          />
+        </Helmet>
+
+        <section className={styles.hello}>
+          <header>
+            <img src={M} backgroundColor alt="Malpass Mountains logo" />
+            <h1>Ross Malpass</h1>
+            <p>A <a href="https://ombori.com">designer</a>, <a href="https://medium.com/@rmalpass">writer</a>, and <a href="https://www.strava.com/athletes/182874">athlete</a> from North West England.</p>
+            <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">3 peaks record</a> holder. Father of two.</p>
+            <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>.</p>
+          </header>
+          <div className={styles.bouncyArrow}>
+            <BouncyArrow />
+          </div>
+        </section>
+
+        <section className={styles.threePeaks}>
+          <img src="https://cdn-images-1.medium.com/max/2600/1*dC80Up_uuuSwS8mUM1S0TA.png" alt="A lonely hill 7 hours into the National Three Peaks record" />
+          <header className={styles.threePeaks__header}>
+            <h1>The National Three Peaks by Bike. A Record-breaking Ride</h1>
+            <p>In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours.</p>
+            <p><a href="http://rossmalpass.co.uk/training-for-the-national-hill-climb-championships-2015/" data-link-external>Read on Medium</a></p>
+          </header>
+        </section>
+
+        <section className={styles.hillClimb}>
+          <div className={styles.hillClimb__content}>
+            <header className={styles.hillClimb__header}>
+              <h1>Training for the National Hill Climb Championship</h1>
+              <p>In 2015 I was obssessed with breaking the Top Ten at the National Hill Climb competition. This training diary details my diet, workouts, and misfortune.</p>
+            </header>
+          </div>
+        </section>
+        {/*<section>
+          <h1>Posts</h1>
+          {data.allWordpressPost.edges.map(({ node }) => (
+            <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
               <Link to={node.slug} css={{ textDecoration: `none` }}>
                 <h3>{node.title}</h3>
               </Link>
               <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              <span>
-                <Clock
-                  size={14}
-                  css={{ position: `relative`, bottom: 1 }}
-                />
-                {` `}
-                {node.date}
-              </span>
+              <PostIcons node={node} />
             </div>
           ))}
-        </div>
-        <hr />
-        <h1>Posts</h1>
-        {data.allWordpressPost.edges.map(({ node }) => (
-          <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
-            <Link to={node.slug} css={{ textDecoration: `none` }}>
-              <h3>{node.title}</h3>
-            </Link>
-            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            <PostIcons node={node} />
-          </div>
-        ))}
-      </Layout>
+        </section>
+        */}
+      </div>
     )
   }
 }
 
-export default Home
+export default Home;
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`

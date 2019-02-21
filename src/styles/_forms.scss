@@ -1,0 +1,95 @@
+@import "variables";
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox, select {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0px
+}
+
+.btn {
+  vertical-align: middle;
+  min-height: 40px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  padding: 0 1.6rem;
+  border: 0;
+  font-size: 1.6rem;
+
+  &__primary {
+    background: $color-link;
+    color: $color-white;
+    @include shadow-2;
+  }
+  &__ghost {
+
+  }
+}
+
+label {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  span {
+    color: $color-brand;
+  }
+}
+
+input:not([type="submit"]), textarea, select {
+  /* input: */
+  display: block;
+  min-height: 40px;
+  padding: 0;
+  outline: 0;
+  @include animate(0.24s);
+  color: $color-deep-blue;
+  font-size: 1.6rem;
+  font-family: $body-font;
+  border: 0;
+  border-bottom:1px solid $color-grey-3 !important;
+  background: 0;
+  font-weight: normal;
+  &:focus {
+    border-bottom: 1px solid $color-deep-blue !important;
+    //background: $color-grey-1;
+    //padding-left: 0.8rem;
+  }
+}
+.selectLabel {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f00;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+  }
+}
+
+.display-none, .hidden {
+  display: none !important;
+}

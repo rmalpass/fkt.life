@@ -1,0 +1,137 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../styles/variables.scss';
+
+.page__home {
+
+  .hello {
+    position: relative;
+    height: calc(100vh - 64px);
+    @include css-grid;
+
+    .bouncyArrow {
+      position: absolute;
+      bottom: 64px;
+      grid-column: col 12 / span 1;
+    }
+
+    header {
+      grid-column: 2 / span 10;
+      grid-row: 1;
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+      width: 100%;
+      @include for-tablet-portrait-up {
+        grid-column: col 3 / span 6;
+      }
+
+      img {
+        margin: 0;
+        align-self: flex-start;
+      }
+
+      h1 {
+        align-self: flex-start;
+        margin: 48px 0 40px 0;
+        font-size: 40px;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 900;
+      }
+      p {
+        margin: 0;
+      }
+      .ombori {
+        color: $color-red !important;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // Three Peaks & Hill climb
+  .threePeaks {
+    position: relative;
+    @include css-grid;
+
+    img {
+      grid-column: col 1 / span 12;
+      @include for-desktop-up {
+        transform: translate(0,-48px);
+        grid-column: col 6 / span 7;
+        grid-row: 1;
+      }
+    }
+
+    &__header {
+      grid-column: col 2 / span 10;
+      border-top: 4px solid $color-deep-blue;
+      @include for-desktop-up {
+        grid-column: col 3 / span 2;
+        grid-row: 1;
+        text-align: right;
+      }
+      h1 {
+        font-size: 16px;
+        line-height: 2;
+        letter-spacing: normal;
+        font-family: "Merriweather", sans-serif;
+        margin: 16px 0;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 24px 0 0 0;
+        color: $color-grey-4;
+      }
+    }
+  }
+}
+
+.hillClimb {
+  @include css-grid;
+  position: relative;
+  margin-top: 16vh;
+
+  &__content {
+    @include for-desktop-up {
+      grid-column: col 4 / span 6 !important;
+      background: #eee;
+      display: flex;
+      min-height: 720px;
+      background: url('http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg') 0 bottom no-repeat;
+      background-size: 180%;
+    }
+  }
+
+  &__header {
+    padding-top: 32px;
+    border-top: 4px solid $color-deep-blue;
+    align-self: flex-start;
+    margin: 0 auto;
+
+    h1,p {
+      max-width: 375px;
+      margin: auto;
+      text-align: center;
+      margin: 0;
+    }
+    h1 {
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: normal;
+      font-family: "Merriweather", sans-serif;
+      margin: 16px 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 24px 0 0 0;
+      color: $color-grey-4;
+    }
+  }
+}

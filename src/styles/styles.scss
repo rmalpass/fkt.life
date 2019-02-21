@@ -1,0 +1,76 @@
+@import "variables";
+@import "text-styles";
+
+
+// Sane starting points
+html, body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background: $color-white;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {-webkit-font-smoothing: antialiased;}
+
+body {
+  background: #fff;
+  -webkit-column-break-inside: avoid;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.page__solutions {
+  .btnPlatform {
+    a:after {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+}
+
+.page__generic {
+  padding: 4rem;
+
+  &_content {
+
+  }
+
+  table {
+    th, td {
+      padding: 0.8rem;
+      vertical-align: top;
+    }
+    th {
+      background: $color-grey-1;
+      font-weight: bold;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 0;
+
+    @include css-grid;
+    .page__generic_content {
+      grid-column: 2 / span 3;
+    }
+  }
+}

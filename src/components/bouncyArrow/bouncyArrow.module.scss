@@ -1,0 +1,49 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../../styles/variables.scss';
+
+@keyframes bounce {
+  from {
+    height: 56px;
+    transform: translate(0, 0);
+  }
+  50% {
+    height: 72px;
+    transform: translate(0, -24px);
+  }
+}
+
+.bouncyArrow {
+  width: 2px;
+  height: 56px;
+  background: $color-deep-blue;
+  display: block;
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 2px;
+
+  &:before, &:after {
+    position: absolute;
+    bottom: -4px;
+    width: 2px;
+    height: 16px;
+    content: '';
+    background: $color-deep-blue;
+    border-radius: 2px;
+  }
+  &:before {
+    left: 50%;
+    transform: translate(4px, 0) rotate(45deg);
+  }
+  &:after {
+    right: 50%;
+    transform: translate(-4px, 0) rotate(-45deg);
+  }
+}
