@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
+import classNames from 'classnames';
 
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -19,24 +20,22 @@ class PostTemplate extends Component {
         <article className={styles.post}>
           <div className={styles.post__content}>
             <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+            <p dangerouslySetInnerHTML={{ __html: post.date }} className={styles.post__content__date} />
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
         </article>
         <section className={styles.sidebar}>
-          <header>
-            <p>Written by Ross on {post.date}</p>
-          </header>
-          <div className={styles.sidebar__about}>
-            <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/avatar.jpg" alt="Ross riding a bike" />
-            <p>I'm a digital designer living in the North West of England, and working in Stockholm Sweden.</p>
-            <p>I love to ride my bicycle, run, take my dogs for long walks, and stuff my face full of delicious food.</p>
-            <p>You can follow my exploits on Instagram (@rmalpass). Where I post frequently and shamelessly!</p>
-          </div>
           {post.featured_media &&
             <div className={styles.sidebar__media}>
               <img src={post.featured_media.source_url} alt="Hero image" />
             </div>
           }
+          <div className={classNames([styles.sidebar__about], {[styles.hasMedia]: post.featured_media})}>
+            <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/avatar.jpg" alt="Ross riding a bike" />
+            <p>I'm a digital designer living in the North West of England, and working in Stockholm Sweden.</p>
+            <p>I love to ride my bicycle, run, take my dogs for long walks, and stuff my face full of delicious food.</p>
+            <p>You can follow my exploits on Instagram (@rmalpass). Where I post frequently and shamelessly!</p>
+          </div>
         </section>
       </div>
     )
