@@ -1,57 +1,44 @@
-import React, { Component } from "react"
-import { graphql } from "gatsby"
-import PropTypes from "prop-types"
-import PostIcons from "../components/post-icons"
-import Img from "gatsby-image"
-import Layout from "../layouts"
+import React, { Component } from "react";
+import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 
-import { rhythm } from "../utils/typography"
+import SEO from '../components/seo';
+import StickyMenu from '../components/stickyMenu/stickyMenu';
+
+import { rhythm } from "../utils/typography";
+import styles from './post.module.scss';
 
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.wordpressPost
 
     return (
-      <Layout>
-        <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-        <PostIcons node={post} css={{ marginBottom: rhythm(1 / 2) }} />
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        {post.acf &&
-          post.acf.page_builder_post &&
-          post.acf.page_builder_post.map((layout, i) => {
-            if (layout.__typename === `WordPressAcf_image_gallery`) {
-              return (
-                <div key={`${i} image-gallery`}>
-                  <h2>ACF Image Gallery</h2>
-                  {layout.pictures.map(({ picture }) => {
-                    const img = picture.localFile.childImageSharp.fluid
-                    return (
-                      <Img
-                        css={{ marginBottom: rhythm(1) }}
-                        key={img.src}
-                        fluid={img}
-                      />
-                    )
-                  })}
-                </div>
-              )
-            }
-            if (layout.__typename === `WordPressAcf_post_photo`) {
-              const img = layout.photo.localFile.childImageSharp.fluid
-              return (
-                <div key={`${i}-photo`}>
-                  <h2>ACF Post Photo</h2>
-                  <Img
-                    css={{ marginBottom: rhythm(1) }}
-                    src={img.src}
-                    fluid={img}
-                  />
-                </div>
-              )
-            }
-            return null
-          })}
-      </Layout>
+      <div className={styles.page__post}>
+        <SEO title={post.title} />
+        <StickyMenu hidden title={post.title} />
+        <article className={styles.post}>
+          <div className={styles.post__content}>
+            <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          </div>
+        </article>
+        <section className={styles.sidebar}>
+          <header>
+            <p>Written by Ross on {post.date}</p>
+          </header>
+          <div className={styles.sidebar__about}>
+            <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/avatar.jpg" alt="Ross riding a bike" />
+            <p>I'm a digital designer living in the North West of England, and working in Stockholm Sweden.</p>
+            <p>I love to ride my bicycle, run, take my dogs for long walks, and stuff my face full of delicious food.</p>
+            <p>You can follow my exploits on Instagram (@rmalpass). Where I post frequently and shamelessly!</p>
+          </div>
+          {post.featured_media &&
+            <div className={styles.sidebar__media}>
+              <img src={post.featured_media.source_url} alt="Hero image" />
+            </div>
+          }
+        </section>
+      </div>
     )
   }
 }
@@ -61,19 +48,25 @@ PostTemplate.propTypes = {
   edges: PropTypes.array,
 }
 
-export default PostTemplate
+export default PostTemplate;
 
 export const pageQuery = graphql`
   query($id: String!) {
     wordpressPost(id: { eq: $id }) {
       title
-      content
-      ...PostIcons
+    date
+    content
+    featured_media {
+      source_url
     }
-    site {
-      siteMetadata {
-        title
-      }
+    author {
+      name
     }
   }
-`
+  site {
+    siteMetadata {
+      title
+      description
+    }
+  }
+}`

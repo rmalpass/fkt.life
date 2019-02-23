@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .stickyMenu {
-  display: none;
+  display: block;
 
   @include for-tablet-portrait-up {
     height: 80px;
@@ -15,7 +15,31 @@
     // transform: translate(0, -100%);
     transition: all 0.16s ease-out;
     z-index: 999;
-    // background: rgba(#fff,0.98);
+
+    &.hidden {
+      transform: translate(0, -100%);
+      background: rgba(#fff,0.98);
+      border-bottom: 1px solid $color-grey-2;
+      transition: all .5s ease-in-out;
+
+      ul li {
+        display: none;
+        &:first-child {
+          display: inherit;
+        }
+      }
+
+      &:hover {
+        ul {
+          li {
+            display: inherit;
+            &:first-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
 
     &.active {
       transform: translate(0, 0);
@@ -43,6 +67,8 @@
     }
 
     .wordmark {
+      position: relative;
+      z-index: 3;
       text-align: center;
       display: flex;
       align-items: center;
@@ -60,6 +86,19 @@
       }
     }
 
+    .title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto 0;
+      flex: 1;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
     ul {
       margin: 0 16px 0 auto;
       padding: 0;
@@ -74,6 +113,10 @@
       margin: 0 8px 0 0;
       position: relative;
 
+      &:first-child {
+        display: none;
+      }
+
       a {
         color: $color-grey-4;
         line-height: 40px;
@@ -86,7 +129,6 @@
         font-weight: bold;
         text-transform: uppercase;
         text-decoration: none !important;
-        mix-blend-mode: difference;
 
         &:hover {
           color: $color-black;

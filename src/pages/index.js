@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
 import a11yChecker from 'a11y-checker';
 import Fade from 'react-reveal/Fade';
@@ -10,6 +9,8 @@ import PostIcons from "../components/post-icons";
 import BouncyArrow from '../components/bouncyArrow';
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
+import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
+import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
 
 // style
 import '../styles/styles.scss';
@@ -50,7 +51,7 @@ class Home extends Component {
           <header>
             <img src={M} alt="Malpass Mountains logo" />
             <h1>Ross Malpass</h1>
-            <p>A <a href="https://ombori.com">designer</a>, <a href="https://medium.com/@rmalpass">writer</a>, and <a href="https://www.strava.com/athletes/182874">athlete</a> from North West England.</p>
+            <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
             <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">3 peaks record</a> holder. Father of two.</p>
             <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>.</p>
           </header>
@@ -77,9 +78,17 @@ class Home extends Component {
                 <p>This is the story of my year long training journey. Everything from bitterly cold base miles, to throwing up after interval sessions on the turbo trainer in the garage.</p>
               </header>
             </div>
+            <div className={styles.hillClimb__posts}>
+              <HorizontalScroller fullWidth>
+                <HorizontalScrollerItem>
+                  <h1 style={{paddingLeft: '75vw'}}>Hello</h1>
+                </HorizontalScrollerItem>
+              </HorizontalScroller>
+            </div>
+            <div className={styles.hillClimb__bg} />
           </section>
         </Fade>
-        {/*<section>
+        <section>
           <h1>Posts</h1>
           {data.allWordpressPost.edges.map(({ node }) => (
             <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
@@ -91,7 +100,6 @@ class Home extends Component {
             </div>
           ))}
         </section>
-        */}
       </div>
     )
   }

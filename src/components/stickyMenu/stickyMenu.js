@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
+import { Menu } from 'react-feather';
 
 // Styles
 import styles from './stickyMenu.module.scss';
@@ -30,18 +31,26 @@ class StickyMenu extends Component {
 
   render() {
     const { scrolling } = this.state;
+    const data = this.props
+
     return (
       <nav
-        className={classNames([styles.stickyMenu], {
-          [styles.active]: this.state.scrolling,
-        })}
+        className={classNames(
+          [styles.stickyMenu],
+          { [styles.hidden]: this.props.hidden },
+          { [styles.active]: this.state.scrolling }
+        )}
       >
         <div className={styles.wordmark}>
           <Link to="/">
             <img src={wordmark} alt="Go back to the home page" />
           </Link>
         </div>
+        {data.title &&
+          <p dangerouslySetInnerHTML={{ __html: data.title }} className={styles.title} />
+        }
         <ul>
+          <li><Menu size={24} /></li>
           <li>
             <Link to="/">Athlete</Link>
           </li>

@@ -4,8 +4,10 @@
 
 // Sane starting points
 html, body {
-  margin: 0;
   padding: 0;
+  max-width: 1680px;
+  position: relative;
+  margin: 0 auto;
 }
 html {
   box-sizing: border-box;
