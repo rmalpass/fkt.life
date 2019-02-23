@@ -9,13 +9,22 @@
 
   .hello {
     position: relative;
-    height: calc(100vh - 64px);
     @include css-grid;
+    padding: 80px 0;
+
+    @include for-tablet-portrait-up {
+      height: calc(100vh - 64px);
+      padding: 0;
+    }
 
     .bouncyArrow {
       position: absolute;
       bottom: 64px;
       grid-column: col 12 / span 1;
+      display: none;
+      @include for-tablet-portrait-up {
+        display: block;
+      }
     }
 
     header {
@@ -32,16 +41,21 @@
       img {
         margin: 0;
         align-self: flex-start;
+        background: 0;
       }
 
       h1 {
         align-self: flex-start;
-        margin: 48px 0 40px 0;
-        font-size: 40px;
+        margin: 48px 0 24px 0;
+        font-size: 32px;
         line-height: 1;
         text-transform: uppercase;
         letter-spacing: 4px;
         font-weight: 900;
+        @include for-tablet-portrait-up {
+          font-size: 40px;
+          margin: 48px 0 40px 0;
+        }
       }
       p {
         margin: 0;
@@ -60,20 +74,40 @@
 
     img {
       grid-column: col 1 / span 12;
-      @include for-desktop-up {
+      margin: 0;
+
+      @include for-tablet-portrait-up {
         transform: translate(0,-48px);
-        grid-column: col 6 / span 7;
+        grid-column: col 5 / span 8;
         grid-row: 1;
+        @include shadow-mega;
+      }
+
+      @include for-desktop-up {
+        grid-column: col 6 / span 7;
       }
     }
 
     &__header {
       grid-column: col 2 / span 10;
       border-top: 4px solid $color-deep-blue;
-      @include for-desktop-up {
-        grid-column: col 3 / span 2;
+
+      @include for-tablet-portrait-up {
+        grid-column: col 1 / span 6;
         grid-row: 1;
         text-align: right;
+        max-width: 50%;
+
+        h1, p {
+          padding-left: 24px;
+        }
+      }
+
+      @include for-desktop-up {
+        grid-column: col 3 / span 4;
+        h1,p {
+          padding-left: 0;
+        }
       }
       h1 {
         font-size: 16px;
@@ -83,7 +117,7 @@
         margin: 16px 0;
       }
       p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
         margin: 24px 0 0 0;
         color: $color-grey-4;
@@ -98,13 +132,17 @@
   margin-top: 16vh;
 
   &__content {
+    grid-column: col 2 / span 10;
+    background: #eee;
+    display: flex;
+    padding-bottom: 400px;
+    background: url('http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg') 0 bottom no-repeat;
+    background-size: 180%;
+
     @include for-desktop-up {
-      grid-column: col 4 / span 6 !important;
-      background: #eee;
-      display: flex;
+      padding: 0;
       min-height: 720px;
-      background: url('http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg') 0 bottom no-repeat;
-      background-size: 180%;
+      grid-column: col 4 / span 6 !important;
     }
   }
 

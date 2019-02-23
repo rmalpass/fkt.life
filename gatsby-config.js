@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Ross Malpass`,
-    description: ` is a digital designer and endurance athlete`,
+    description: `is a digital designer and endurance athlete`,
     author: `@rmalpass`,
   },
   plugins: [
@@ -48,7 +48,7 @@ module.exports = {
         hostingWPCOM: false,
         // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
         // This feature is untested for sites hosted on Wordpress.com
-        useACF: true,
+        useACF: false,
       },
     },
     'gatsby-plugin-react-helmet',

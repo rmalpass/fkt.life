@@ -56,8 +56,11 @@ $height-lg: 61.8vh;
 
 @mixin css-grid {
   display: grid;
-  column-gap: 1em;
-  row-gap: 1em;
+  column-gap: 8px;
+  row-gap: 0;
+  @include for-tablet-portrait-up {
+    column-gap: 16px;
+  }
   grid-template-columns: repeat(12, [col] 4fr );
   grid-template-rows: auto;
 }

@@ -1,0 +1,99 @@
+@import '../../styles/variables.scss';
+
+.stickyMenu {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    // transform: translate(0, -100%);
+    transition: all 0.16s ease-out;
+    z-index: 999;
+    // background: rgba(#fff,0.98);
+
+    &.active {
+      transform: translate(0, 0);
+      // border-bottom: 1px solid $color-grey-2;
+      // @include shadow-3;
+      .wordmark {
+        opacity: 1;
+      }
+      // ul {
+      //   li {
+      //     a {
+      //       opacity: 0.24;
+      //     }
+      //   }
+      // }
+      // &:hover {
+      //   ul {
+      //     li {
+      //       a {
+      //         opacity: 1;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+
+    .wordmark {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.16s ease-out;
+      a {
+        display: block;
+        margin: auto;
+      }
+      img {
+        background: 0;
+        height: 32px;
+        margin: auto 24px;
+        display: block;
+      }
+    }
+
+    ul {
+      margin: 0 16px 0 auto;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      height: 80px;
+      align-items: center;
+      // background: #fff;
+      // border-bottom: 1px solid $color-grey-1;
+    }
+    li {
+      margin: 0 8px 0 0;
+      position: relative;
+
+      a {
+        color: $color-grey-4;
+        line-height: 40px;
+        padding: 0 16px;
+        border-radius: $radius-lg;
+        display: block;
+        background: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+        @include animate(0.16s);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        mix-blend-mode: difference;
+
+        &:hover {
+          color: $color-black;
+          background: $color-grey-1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
