@@ -12,6 +12,14 @@ sutroTheme.overrideThemeStyles = () => {
     body: {
       color: '#252A3D',
     },
+    a: {
+      textDecoration: 'underline',
+      color: '#252A3D',
+      transition: 'all 0.1s linear',
+    },
+    'a:hover': {
+      textDecoration: 'none',
+    },
     p: {
       color: '#252A3D',
     },

@@ -68,11 +68,6 @@
 
 /* Links */
 a {
-  text-decoration: underline !important;
-  color: $color-deep-blue !important;
-  position: relative;
-  display: inline-block;
-  transition: all 0.1s linear;
 
   &[data-link-external] {
     color: $color-link !important;

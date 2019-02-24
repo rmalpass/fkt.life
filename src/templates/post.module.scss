@@ -17,6 +17,7 @@
     display: flex;
     width: 100%;
     margin: auto;
+    flex-direction: column;
 
     @include for-desktop-up {
       width: 75%;
@@ -58,6 +59,13 @@
         letter-spacing: 2px;
         font-family: 'Source Sans Pro', sans-serif;
       }
+    }
+
+    &__comments {
+      width: 100%;
+      max-width: 760px;
+      margin: auto;
+      padding: 0 40px;
     }
   }
 
@@ -131,6 +139,35 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+
+    &__share {
+      display: flex;
+      align-self: flex-end;
+      margin: auto 0 0 0;
+      list-style: none;
+      width: 100%;
+      border-top: 1px solid $color-grey-2;
+      li {
+        display: block;
+        margin: auto;
+        font-family: $headline-font;
+        flex: 1;
+        text-align: center;
+        a {
+          display: block;
+          padding: 8px;
+          color: #fff;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+        &:nth-child(2) {
+          a {
+            background: #00aced;
+          }
+        }
       }
     }
     &:hover {

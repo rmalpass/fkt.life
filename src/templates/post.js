@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import classNames from 'classnames';
+import { DiscussionEmbed } from "disqus-react";
+import { get } from 'lodash';
 
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -11,7 +13,14 @@ import styles from './post.module.scss';
 
 class PostTemplate extends Component {
   render() {
-    const post = this.props.data.wordpressPost
+    const post = this.props.data.wordpressPost;
+
+    const siteTitle = get(this.props, "data.site.siteMetadata.title");
+    const disqusShortname = "rmalpass";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.title,
+    };
 
     return (
       <div className={styles.page__post}>
@@ -22,6 +31,9 @@ class PostTemplate extends Component {
             <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
             <p dangerouslySetInnerHTML={{ __html: post.date }} className={styles.post__content__date} />
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          </div>
+          <div className={styles.post__comments}>
+            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
           </div>
         </article>
         <section className={styles.sidebar}>
@@ -36,6 +48,10 @@ class PostTemplate extends Component {
             <p>I love to ride my bicycle, run, take my dogs for long walks, and stuff my face full of delicious food.</p>
             <p>You can follow my exploits on Instagram (@rmalpass). Where I post frequently and shamelessly!</p>
           </div>
+          <ul className={styles.sidebar__share}>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
         </section>
       </div>
     )
@@ -52,6 +68,7 @@ export default PostTemplate;
 export const pageQuery = graphql`
   query($id: String!) {
     wordpressPost(id: { eq: $id }) {
+      id
       title
     date
     content
