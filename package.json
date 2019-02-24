@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Ross Malpass <ross.malpass@gmail.com>",
   "dependencies": {
-    "a11y-checker": "^2.2.1",
     "classnames": "^2.2.6",
     "crypto": "^1.0.1",
     "disqus-react": "^1.0.5",

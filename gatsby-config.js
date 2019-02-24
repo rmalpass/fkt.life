@@ -5,15 +5,15 @@ module.exports = {
     author: `@rmalpass`,
   },
   plugins: [
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://rossmalpass.co.uk',
-        sitemap: 'https://rossmalpass.co.uk/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
+    // 'gatsby-plugin-sitemap',
+    // {
+    //   resolve: 'gatsby-plugin-robots-txt',
+    //   options: {
+    //     host: 'https://rossmalpass.co.uk',
+    //     sitemap: 'https://rossmalpass.co.uk/sitemap.xml',
+    //     policy: [{ userAgent: '*', allow: '/' }],
+    //   },
+    // },
     // {
     //   resolve: 'gatsby-plugin-google-tagmanager',
     //   options: {

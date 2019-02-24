@@ -63,9 +63,10 @@
 
     &__comments {
       width: 100%;
-      max-width: 760px;
-      margin: auto;
-      padding: 0 40px;
+      background: $color-grey-1;
+      // max-width: 760px;
+      margin: 40px 0 0 0;
+      padding: 40px;
     }
   }
 

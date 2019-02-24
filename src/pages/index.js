@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import classNames from 'classnames';
-import a11yChecker from 'a11y-checker';
 import Fade from 'react-reveal/Fade';
 
 // Component
@@ -21,9 +20,7 @@ import styles from './index.module.scss';
 import M from '../images/M.svg';
 
 class Home extends Component {
-  componentDidMount() {
-    a11yChecker();
-  }
+
   render() {
     const data = this.props.data
 
@@ -121,7 +118,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressPost(
+      limit: 5
+      sort: {
+        fields: [date]
+        order: DESC
+      }
+    ) {
       edges {
         node {
           title
