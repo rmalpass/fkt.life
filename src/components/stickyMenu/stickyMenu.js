@@ -52,16 +52,16 @@ class StickyMenu extends Component {
         <ul>
           <li><Menu size={24} /></li>
           <li>
-            <Link to="/">Athlete</Link>
+            <Link to="/athlete">Athlete</Link>
           </li>
           <li>
-            <Link to="/">Designer</Link>
+            <Link to="/designer">Designer</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/">Archive</Link>
+            <Link to="/archive">Archive</Link>
           </li>
         </ul>
       </nav>

@@ -35,7 +35,7 @@
       flex-direction: column;
       width: 100%;
       @include for-tablet-portrait-up {
-        grid-column: col 3 / span 6;
+        grid-column: col 3 / span 9;
       }
 
       img {
@@ -47,18 +47,45 @@
       h1 {
         align-self: flex-start;
         margin: 48px 0 24px 0;
-        font-size: 32px;
+        font-size: 40px;
         line-height: 1;
         text-transform: uppercase;
         letter-spacing: 4px;
         font-weight: 900;
-        @include for-tablet-portrait-up {
+        @include for-desktop-up {
           font-size: 40px;
           margin: 48px 0 40px 0;
         }
       }
       p {
         margin: 0;
+        @include for-tablet-portrait-up {
+          font-size: 24px;
+          line-height: 40px;
+        }
+        a {
+          position: relative;
+          display: inline-block;
+          z-index: 1;
+          &:after {
+            z-index: -1;
+            content: '';
+            display: block;
+            height: 0;
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            height: 4px;
+            background: $color-deep-blue;
+            transition: all 0.16s ease-in-out;
+          }
+          &:hover {
+            &:after {
+              right: 0;
+            }
+          }
+        }
       }
       .ombori {
         color: $color-red !important;
@@ -140,6 +167,7 @@
     @include for-desktop-up {
       padding: 0;
       grid-column: col 4 / span 6 !important;
+      background: #fcfcfc;
     }
   }
 
@@ -170,12 +198,140 @@
     }
   }
 
+  .spacer {
+    display: block;
+    margin-left: 64vw;
+  }
+
+  .hcCard {
+    // background: #fff;
+    // @include shadow-mega;
+    // border-radius: 16px;
+    // max-width: 375px;
+    // margin-right: 16px;
+    // border: 1px solid $color-grey-1;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+
+    &__content {
+      position: relative;
+      background: #fff;
+      max-width: 25vw;
+      margin-right: 40px;
+      transition: all 0.16s ease-in-out;
+      box-shadow: 0px 8px 24px rgba(13,13,18,0.1);
+      // border: 1px solid $color-grey-2;
+      .arrow {
+        width: 2px;
+        height: 32px;
+        background: $color-deep-blue;
+        display: block;
+        position: absolute;
+        bottom: 16px;
+        right: 8px;
+        transform: rotate(-90deg);
+        transition: all 0.16s ease-in-out;
+
+        &:before, &:after {
+          position: absolute;
+          bottom: -4px;
+          width: 2px;
+          height: 16px;
+          content: '';
+          background: $color-deep-blue;
+          border-radius: 2px;
+        }
+        &:before {
+          left: 50%;
+          transform: translate(4px, 0) rotate(45deg);
+        }
+        &:after {
+          right: 50%;
+          transform: translate(-4px, 0) rotate(-45deg);
+        }
+      }
+
+      &__media {
+        width: 100%;
+        height: 25vw;
+        display: block;
+        transition: all 0.16s ease-in-out;
+        padding: 24px 24px 0 24px;
+
+        img {
+          transition: all 0.16s ease-in-out;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          margin: 0;
+        }
+      }
+    }
+
+    &__date {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid $color-black;
+      margin-bottom: 16px;
+      position: relative;
+      padding-right: 40px;
+
+      p {
+        margin: 0 0 8px 0;
+        text-align: center;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: calc(50% - 40px);
+        transform: translate(-50%, 0);
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        z-index: 2;
+        background: $color-black;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+    p {
+      font-size: 16px;
+    }
+    h2 {
+      padding: 24px;
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      // transform: translate(0, 50%);
+    }
+    &:hover {
+      .hcCard__content {
+        background: $color-yellow;
+        @include shadow-mega;
+        .arrow {
+          right: 32px;
+        }
+        &__media {
+          padding: 8px 8px 0 8px;
+        }
+      }
+    }
+  }
+
   &__posts {
     grid-column: col / span 12;
     grid-row: 2;
     z-index: 2;
     @include for-desktop-up {
-
+      padding: 32px 0;
     }
   }
 

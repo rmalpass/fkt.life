@@ -13,7 +13,6 @@ import HorizontalScrollerItem from '../components/horizontalScroller/horizontalS
 
 // style
 import '../styles/styles.scss';
-import { rhythm } from "../utils/typography";
 import styles from './index.module.scss';
 
 // images
@@ -75,20 +74,43 @@ class Home extends Component {
                 <p>This is the story of my year long training journey. Everything from bitterly cold base miles, to throwing up after interval sessions on the turbo trainer in the garage.</p>
               </header>
             </div>
-            <div className={styles.hillClimb__posts}>
-              <HorizontalScroller fullWidth>
-                <HorizontalScrollerItem>
-                  <h1 style={{paddingLeft: '75vw'}}>Hello</h1>
-                </HorizontalScrollerItem>
-              </HorizontalScroller>
-            </div>
+            <Fade right>
+              <div className={styles.hillClimb__posts}>
+                <HorizontalScroller fullWidth>
+                  <HorizontalScrollerItem>
+                    <div className={styles.spacer} />
+                  </HorizontalScrollerItem>
+                  {data.hillclimb.edges.map(({ node }) => (
+                    <HorizontalScrollerItem>
+                      <div className={styles.hcCard}>
+                      <div className={styles.hcCard__date}>
+                        <p>{node.date}</p>
+                      </div>
+                      <div className={styles.hcCard__content}>
+                        <Link to={node.slug}>
+                          {node.featured_media &&
+                            <div className={styles.hcCard__content__media}>
+                              <img src={node.featured_media.source_url} />
+                            </div>
+                          }
+                          <h2 dangerouslySetInnerHTML={{ __html: node.title }} />
+                          <div className={styles.arrow} />
+                          {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                        </Link>
+                      </div>
+                      </div>
+                    </HorizontalScrollerItem>
+                  ))}
+                </HorizontalScroller>
+              </div>
+            </Fade>
             <div className={styles.hillClimb__bg} />
           </section>
         </Fade>
         <section>
           <h1>Posts</h1>
-          {data.allWordpressPost.edges.map(({ node }) => (
-            <div css={{ marginBottom: rhythm(2) }} key={node.slug}>
+          {data.postOverview.edges.map(({ node }) => (
+            <div key={node.slug}>
               <Link to={node.slug} css={{ textDecoration: `none` }}>
                 <h3>{node.title}</h3>
               </Link>
@@ -106,19 +128,28 @@ export default Home;
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`
-  query {
-    allWordpressPage {
+  query getCats ($catname: String = "National Hill Climb 2015"){
+    hillclimb: allWordpressPost(
+      filter: {categories: {elemMatch: {name: { eq: $catname }}}}
+      sort: {
+        fields: [date]
+        order: ASC
+      }
+    ){
       edges {
         node {
-          id
+          guid
           title
+          date
           excerpt
           slug
-          date(formatString: "MMMM DD, YYYY")
+          featured_media {
+            source_url
+          }
         }
       }
     }
-    allWordpressPost(
+    postOverview: allWordpressPost(
       limit: 5
       sort: {
         fields: [date]
@@ -131,6 +162,9 @@ export const pageQuery = graphql`
           excerpt
           slug
           ...PostIcons
+          featured_media {
+            source_url
+          }
         }
       }
     }

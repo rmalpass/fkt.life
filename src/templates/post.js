@@ -8,8 +8,8 @@ import { get } from 'lodash';
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 
-import { rhythm } from "../utils/typography";
 import styles from './post.module.scss';
+import M from '../images/m.svg';
 
 class PostTemplate extends Component {
   render() {
@@ -28,8 +28,11 @@ class PostTemplate extends Component {
         <StickyMenu hidden title={post.title} />
         <article className={styles.post}>
           <div className={styles.post__content}>
-            <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-            <p dangerouslySetInnerHTML={{ __html: post.date }} className={styles.post__content__date} />
+            <header className={styles.post__content__header}>
+              <img src={M} alt="Go back home" />
+              <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+              <p dangerouslySetInnerHTML={{ __html: post.date }} className={styles.post__content__date} />
+            </header>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
           <div className={styles.post__comments}>

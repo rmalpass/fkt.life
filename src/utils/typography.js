@@ -1,35 +1,16 @@
 import Typography from "typography"
-import sutroTheme from 'typography-theme-sutro'
 
-sutroTheme.headerLineHeight = 1.1
-sutroTheme.baseFontSize = '18px' // was 20px.
-sutroTheme.headerFontFamily = ['Source Sans Pro', 'sans-serif']
-sutroTheme.overrideThemeStyles = () => {
-  return {
-    html: {
-      color: '#252A3D',
-    },
-    body: {
-      color: '#252A3D',
-    },
-    a: {
-      textDecoration: 'underline',
-      color: '#252A3D',
-      transition: 'all 0.1s linear',
-    },
-    'a:hover': {
-      textDecoration: 'none',
-    },
-    p: {
-      color: '#252A3D',
-    },
-    h1: {
-      lineHeight: 1,
-    },
-  }
-}
-
-const typography = new Typography(sutroTheme)
+const typography = new Typography({
+  baseFontSize: "18px",
+  baseLineHeight: 2,
+  scaleRatio: 3,
+  headerFontFamily: [
+    "Source Sans Pro",
+    "sans-serif",
+  ],
+  bodyFontFamily: ["Merriweather", "serif"],
+})
 
 export const { rhythm, scale } = typography
+
 export default typography

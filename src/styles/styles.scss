@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Source+Sans+Pro:900');
+
 @import "variables";
 @import "text-styles";
 
@@ -5,13 +7,12 @@
 // Sane starting points
 html, body {
   padding: 0;
-  max-width: 1680px;
+  // max-width: 1680px;
   position: relative;
   margin: 0 auto;
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
   background: $color-white;
 }
 
@@ -22,9 +23,11 @@ html {
 
 body {
   background: #fff;
+  font-family: $body-font;
   -webkit-column-break-inside: avoid;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
