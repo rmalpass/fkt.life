@@ -80,6 +80,11 @@
             background: $color-deep-blue;
             transition: all 0.16s ease-in-out;
           }
+          &.ombori {
+            &:after {
+              background: $color-red;
+            }
+          }
           &:hover {
             &:after {
               right: 0;
@@ -167,7 +172,7 @@
     @include for-desktop-up {
       padding: 0;
       grid-column: col 4 / span 6 !important;
-      background: #fcfcfc;
+      background: #f9f9f9;
     }
   }
 
@@ -344,8 +349,8 @@
       height: 100%;
       grid-column: col 4 / span 6 !important;
       grid-row: 1 / span 2;
-      background: url('http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg') 0 bottom no-repeat;
-      background-size: 180%;
+      background: #eee url('http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg') 0 bottom no-repeat;
+      background-size: cover;
     }
   }
 }

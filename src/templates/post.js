@@ -12,6 +12,26 @@ import styles from './post.module.scss';
 import M from '../images/m.svg';
 
 class PostTemplate extends Component {
+  state = {
+    scrolling: false,
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = event => {
+    if (window.scrollY === 0 && this.state.scrolling === true) {
+      this.setState({ scrolling: false });
+    } else if (window.scrollY !== 0 && this.state.scrolling !== true) {
+      this.setState({ scrolling: true });
+    }
+  };
+
   render() {
     const post = this.props.data.wordpressPost;
 
@@ -26,10 +46,22 @@ class PostTemplate extends Component {
       <div className={styles.page__post}>
         <SEO title={post.title} />
         <StickyMenu hidden title={post.title} />
-        <article className={styles.post}>
+
+        <article className={classNames(
+          [styles.post],
+          {[styles.has_hero]: post.featured_media},
+          {[styles.scrolling]: this.state.scrolling}
+        )}>
+
+          {post.featured_media &&
+            <div className={classNames([styles.post__hero], {[styles.scrolling]: this.state.scrolling})}>
+              <img src={post.featured_media.source_url} alt={post.title} />
+            </div>
+          }
+
           <div className={styles.post__content}>
             <header className={styles.post__content__header}>
-              <img src={M} alt="Go back home" />
+              <img src={M} alt="Go back home" id="content" name="content" />
               <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
               <p dangerouslySetInnerHTML={{ __html: post.date }} className={styles.post__content__date} />
             </header>
