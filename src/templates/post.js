@@ -9,7 +9,7 @@ import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 
 import styles from './post.module.scss';
-import M from '../images/m.svg';
+import M from '../images/M.svg';
 
 class PostTemplate extends Component {
   state = {
