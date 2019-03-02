@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import classNames from 'classnames';
 import { DiscussionEmbed } from "disqus-react";
 import { get } from 'lodash';
+import { Plus } from 'react-feather';
 
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -55,17 +56,45 @@ class PostTemplate extends Component {
 
           {post.featured_media &&
             <div className={classNames([styles.post__hero], {[styles.scrolling]: this.state.scrolling})}>
-              <img src={post.featured_media.source_url} alt={post.title} />
+              <Plus size={32} color="#ffffff" />
+              <img src={post.featured_media.source_url} className={styles.post__hero__img} alt={post.title} />
             </div>
           }
 
           <div className={styles.post__content}>
             <header className={styles.post__content__header}>
-              <img src={M} alt="Go back home" id="content" name="content" />
-              <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-              <p dangerouslySetInnerHTML={{ __html: post.date }} className={styles.post__content__date} />
+              <div>
+                <img src={M} alt="Go back home" id="content" name="content" />
+                <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+                <p className={styles.post__content__categories}>
+                  {post.categories.map(category => (
+                    <span>
+                      {category.name}
+                    </span>
+                  ))}
+                </p>
+              </div>
             </header>
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <footer className={styles.post__info}>
+              <div className={styles.author_info}>
+                <h4>Ross Malpass</h4>
+                <p>Is a Designer, writer, and athlete from North West England.</p>
+                <p>Current 3 peaks record holder. Father of two.</p>
+                <p>Working @ Ombori.</p>
+              </div>
+              <div className={styles.post_info}>
+                <p>
+                  This article was written on {post.date} and posted under
+                  {post.categories.map(category => (
+                    <span>
+                      {` `}
+                      {category.name}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </footer>
           </div>
           <div className={styles.post__comments}>
             <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
@@ -105,12 +134,15 @@ export const pageQuery = graphql`
     wordpressPost(id: { eq: $id }) {
       id
       title
-    date
+    date(formatString: "MMMM DD, YYYY")
     content
     featured_media {
       source_url
     }
     author {
+      name
+    }
+    categories {
       name
     }
   }
