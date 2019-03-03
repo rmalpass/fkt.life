@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import classNames from 'classnames';
 import { DiscussionEmbed } from "disqus-react";
 import { get } from 'lodash';
-import { Plus } from 'react-feather';
+import { Plus, MoreHorizontal } from 'react-feather';
 
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -76,7 +76,12 @@ class PostTemplate extends Component {
             className={classNames([styles.post__btn_more], {[styles.scrolling]: this.state.scrolling}, {[styles.sidebar_active]: this.state.isToggleOn})}
             onClick={this.toggleMenu}
           >
-            <Plus size={32} color="#ffffff" />
+            {!this.state.isToggleOn &&
+              <MoreHorizontal size={32} color="#ffffff" />
+            }
+            {this.state.isToggleOn &&
+              <Plus size={32} color="#ffffff" />
+            }
             {post.featured_media &&
               <img src={post.featured_media.source_url} className={styles.post__btn_more__img} alt={post.title} />
             }

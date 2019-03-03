@@ -9,6 +9,20 @@ const typography = new Typography({
     "sans-serif",
   ],
   bodyFontFamily: ["Merriweather", "serif"],
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    blockquote: {
+      ...adjustFontSizeTo('18px'),
+      backgroundColor: '#F5F6FA',
+      color: '#333',
+      fontStyle: 'italic',
+      marginLeft: '0px',
+      marginRight: '0px',
+      padding: rhythm(13/16),
+    },
+    'blockquote > :last-child': {
+      marginBottom: 0,
+    },
+  })
 })
 
 export const { rhythm, scale } = typography
