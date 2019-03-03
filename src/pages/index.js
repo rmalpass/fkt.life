@@ -140,7 +140,7 @@ export const pageQuery = graphql`
         node {
           guid
           title
-          date
+          date(formatString: "MMMM DD, YYYY")
           excerpt
           slug
           featured_media {
