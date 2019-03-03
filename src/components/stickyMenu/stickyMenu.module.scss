@@ -1,9 +1,8 @@
 @import '../../styles/variables.scss';
 
 .stickyMenu {
-  display: block;
   height: 80px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -11,18 +10,27 @@
   align-items: center;
   text-align: right;
   // transform: translate(0, -100%);
-  transition: all 0.16s ease-out;
+  transition: all 0.16s ease-in-out;
   z-index: 999;
   overflow: scroll;
   @include for-tablet-portrait-up {
     position: fixed;
   }
 
+  &.sidebar {
+    display: none;
+    transition: all 0.08s linear;
+    right: 38vw;
+    @include for-tablet-portrait-up {
+      display: flex;
+    }
+  }
+
   &.hidden {
     transform: translate(0, -100%);
     background: rgba(#fff,0.98);
     border-bottom: 1px solid $color-grey-2;
-    border-left: 1px solid $color-grey-2;
+    // border-left: 1px solid $color-grey-2;
     transition: all .5s ease-in-out;
     left: 0;
 
@@ -98,9 +106,9 @@
   }
 
   .title {
+    left: 56px;
+    right: 56px;
     position: absolute;
-    left: 200px;
-    right: 200px;
     margin: auto 0;
     flex: 1;
     text-align: center;
@@ -112,6 +120,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @include for-tablet-portrait-up {
+      left: 200px;
+      right: 200px;
+    }
   }
 
   ul {
