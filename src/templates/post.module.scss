@@ -93,11 +93,11 @@
     }
 
     &__btn_more {
-      z-index: 3;
+      z-index: 6;
       width: 72px;
       height: 72px;
       @include shadow-mega;
-      bottom: 16px;
+      bottom: 32px;
       right: 16px;
       position: fixed;
       border-radius: 100%;
@@ -363,9 +363,12 @@
       align-self: flex-start;
       position: relative;
       width: 100%;
-      height: calc(38vw / 16 * 9);
+      height: calc(100vw / 16 * 9);
       @include shadow-3;
       border-bottom: 8px solid $color-deep-blue;
+      @include for-tablet-portrait-up {
+        height: calc(38vw / 16 * 9);
+      }
 
       img {
         position: absolute;
