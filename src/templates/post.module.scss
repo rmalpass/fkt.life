@@ -8,8 +8,10 @@
 :global {
   .post-intro-large {
     p {
-      font-size: 24px !important;
-      line-height: 40px !important;
+      @include for-tablet-portrait-up {
+        font-size: 24px !important;
+        line-height: 40px !important;
+      }
     }
   }
 }
@@ -18,17 +20,20 @@
   display: flex;
   flex-direction: column;
 
-  // &:before {
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   height: 8px;
-  //   z-index: 99;
-  //   content: '';
-  //   background: $color-deep-blue;
-  //   // background-image: radial-gradient(50% 100%, #FFBD55 0%, #EF472F 100%);
-  // }
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 8px;
+    z-index: 99;
+    content: '';
+    background: $color-deep-blue;
+    @include for-desktop-up {
+      position: fixed;
+    }
+    // background-image: radial-gradient(50% 100%, #FFBD55 0%, #EF472F 100%);
+  }
 
   @include for-desktop-up {
     flex-direction: row-reverse;
@@ -46,30 +51,38 @@
       padding-right: 38vw;
     }
 
-    &.has_hero {
-      padding-top: 37.5vw;
-      @include for-tablet-portrait-up {
-        padding-top: 0;
-      }
-    }
-
     &__content__header {
-      padding: 88px 0 0 0;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+
+      div {
+        padding: 40px 0;
+        margin: auto;
+      }
       img {
         display: block;
         margin: 0 auto 4rem auto;
         background: 0;
       }
       h1 {
-        font-size: 40px;
-        line-height: 56px;
-        letter-spacing: 4.5px;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: 1.5px;
         text-align: center;
         font-weight: 900;
         text-transform: uppercase;
         text-align: center;
         line-height: 1.32;
         margin: 0;
+      }
+      @include for-tablet-portrait-up {
+        padding: 88px 0 0 0;
+        h1 {
+          font-size: 40px;
+          line-height: 56px;
+          letter-spacing: 4.5px;
+        }
       }
     }
 
@@ -79,13 +92,13 @@
       align-self: flex-start;
     }
 
-    &__hero {
+    &__btn_more {
       z-index: 3;
-      width: 120px;
-      height: 120px;
+      width: 72px;
+      height: 72px;
       @include shadow-mega;
-      bottom: 40px;
-      right: 40px;
+      bottom: 16px;
+      right: 16px;
       position: fixed;
       border-radius: 100%;
       overflow: hidden;
@@ -123,10 +136,6 @@
       }
 
       &:hover {
-        // z-index: 99;
-        // width: 50vw;
-        // height: calc(50vw / 16 * 9);
-        // border-radius: 0;
         img {
           opacity: 0.24;
         }
@@ -135,10 +144,14 @@
         }
         cursor: w-resize;
       }
-      // &.scrolling {
-      //   opacity: 0.08;
-      //   transform: translate(-50%,-60%);
-      // }
+
+      @include for-tablet-portrait-up {
+        width: 120px;
+        height: 120px;
+        @include shadow-mega;
+        bottom: 40px;
+        right: 40px;
+      }
     }
 
     &__content {
@@ -147,16 +160,6 @@
       margin: auto;
       padding: 0 24px;
       position: relative;
-
-      header {
-        min-height: 75vh;
-        display: flex;
-        align-items: center;
-        div {
-          padding: 40px 0;
-          margin: auto;
-        }
-      }
 
       // &:after {
       //   position: fixed;
@@ -210,6 +213,10 @@
     &__info {
       display: flex;
       padding: 40px 0;
+      flex-wrap: wrap;
+      @include for-tablet-portrait-up {
+        flex-wrap: nowrap;
+      }
 
       p {
         margin: 0;
@@ -220,7 +227,13 @@
       .author_info {
         border-top: 4px solid $color-deep-blue;
         padding-top: 24px;
-        flex: 1 1 75%;
+        flex: 1 0 100%;
+        width: 100%;
+
+        @include for-tablet-portrait-up {
+          width: auto;
+          flex: 1 1 75%;
+        }
         h4 {
           margin: 0 0 8px 0;
         }
@@ -229,10 +242,16 @@
         }
       }
       .post_info {
-        flex: 1 1 25%;
-        margin-left: 16px;
+        flex: 1 0 100%;
+        width: 100%;
+        margin-top: 24px;
         padding-top: 24px;
         border-top: 4px solid $color-grey-2;
+        @include for-tablet-portrait-up {
+          width: auto;
+          flex: 1 1 25%;
+          margin: 0 0 0 16px;
+        }
         p {
           color: $color-grey-3;
         }

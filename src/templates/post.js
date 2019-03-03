@@ -73,12 +73,12 @@ class PostTemplate extends Component {
         )}>
 
           <div
-            className={classNames([styles.post__hero], {[styles.scrolling]: this.state.scrolling}, {[styles.sidebar_active]: this.state.isToggleOn})}
+            className={classNames([styles.post__btn_more], {[styles.scrolling]: this.state.scrolling}, {[styles.sidebar_active]: this.state.isToggleOn})}
             onClick={this.toggleMenu}
           >
             <Plus size={32} color="#ffffff" />
             {post.featured_media &&
-              <img src={post.featured_media.source_url} className={styles.post__hero__img} alt={post.title} />
+              <img src={post.featured_media.source_url} className={styles.post__btn_more__img} alt={post.title} />
             }
           </div>
 
