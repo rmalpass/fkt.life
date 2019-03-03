@@ -12,9 +12,25 @@ import StickyMenu from '../components/stickyMenu/stickyMenu';
 import styles from './post.module.scss';
 import M from '../images/M.svg';
 
+const defaultProps = {
+  isToggleOn: false,
+};
+
 class PostTemplate extends Component {
-  state = {
-    scrolling: false,
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrolling: false,
+      isToggleOn: false,
+    };
+  }
+
+  toggleMenu = () => {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn,
+    }));
+    console.log('menu toggle', this.state.isToggleOn);
   };
 
   componentDidMount() {
@@ -35,6 +51,7 @@ class PostTemplate extends Component {
 
   render() {
     const post = this.props.data.wordpressPost;
+    const categories = this.props.data.allWordpressCategory;
 
     const siteTitle = get(this.props, "data.site.siteMetadata.title");
     const disqusShortname = "rmalpass";
@@ -51,15 +68,19 @@ class PostTemplate extends Component {
         <article className={classNames(
           [styles.post],
           {[styles.has_hero]: post.featured_media},
-          {[styles.scrolling]: this.state.scrolling}
+          {[styles.scrolling]: this.state.scrolling},
+          {[styles.sidebar_active]: this.state.isToggleOn}
         )}>
 
-          {post.featured_media &&
-            <div className={classNames([styles.post__hero], {[styles.scrolling]: this.state.scrolling})}>
-              <Plus size={32} color="#ffffff" />
+          <div
+            className={classNames([styles.post__hero], {[styles.scrolling]: this.state.scrolling}, {[styles.sidebar_active]: this.state.isToggleOn})}
+            onClick={this.toggleMenu}
+          >
+            <Plus size={32} color="#ffffff" />
+            {post.featured_media &&
               <img src={post.featured_media.source_url} className={styles.post__hero__img} alt={post.title} />
-            </div>
-          }
+            }
+          </div>
 
           <div className={styles.post__content}>
             <header className={styles.post__content__header}>
@@ -100,22 +121,43 @@ class PostTemplate extends Component {
             <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
           </div>
         </article>
-        <section className={styles.sidebar}>
+        <section className={classNames([styles.sidebar], {[styles.active]: this.state.isToggleOn})}>
           {post.featured_media &&
             <div className={styles.sidebar__media}>
               <img src={post.featured_media.source_url} alt="Hero image" />
             </div>
           }
-          <div className={classNames([styles.sidebar__about], {[styles.hasMedia]: post.featured_media})}>
-            <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/avatar.jpg" alt="Ross riding a bike" />
-            <p>I'm a digital designer living in the North West of England, and working in Stockholm Sweden.</p>
-            <p>I love to ride my bicycle, run, take my dogs for long walks, and stuff my face full of delicious food.</p>
-            <p>You can follow my exploits on Instagram (@rmalpass). Where I post frequently and shamelessly!</p>
-          </div>
-          <ul className={styles.sidebar__share}>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
+          <div className={styles.sidebar__categories}>
+          <ul>
+
           </ul>
+          </div>
+          <div className={styles.sidebar__post_info}>
+            <p>
+              This article was written on <strong>{post.date}</strong> and is about
+              {post.categories.map(category => (
+                <span>
+                  {category.name}
+                </span>
+              ))}
+            </p>
+            <p>
+              I also write about
+            </p>
+            <ul>
+              {/* categories.edges.map(({ node }) => (
+                <li>
+                  {node.name}
+                </li>
+              ))*/}
+              <li><a href="#">Adventures</a></li>
+              <li><a href="#">Cycling</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Life</a></li>
+              <li><a href="#">Outdoors</a></li>
+            </ul>
+          </div>
         </section>
       </div>
     )
@@ -144,6 +186,13 @@ export const pageQuery = graphql`
     }
     categories {
       name
+    }
+  }
+  allWordpressCategory {
+    edges {
+      node {
+        name
+      }
     }
   }
   site {
