@@ -148,10 +148,10 @@ class PostTemplate extends Component {
               ))}
             </p>
             <p>
-              For more stuff you can follow me on <a href="https://twitter.com/rmalpass">Twitter</a>, <a href="https://instagram.com/rmalpass">Instagram</a>, Strava, <a href="https://medium.com/@rmalpass">Medium</a>, or <a href="https://dribbble.com/rmalpass">Dribbble</a>.
+              I'm a Designer, writer, and athlete from North West England. Current 3 peaks record holder. Father of two. Working @ Ombori.
             </p>
             <p>
-              <strong>I also write about</strong>
+              You can follow me on <a href="https://twitter.com/rmalpass">Twitter</a>, <a href="https://instagram.com/rmalpass">Instagram</a>, <a href="https://www.strava.com/athletes/182874">Strava</a>, <a href="https://medium.com/@rmalpass">Medium</a>, and <a href="https://dribbble.com/rmalpass">Dribbble</a>. Or read more about;
             </p>
             <ul>
               {/* categories.edges.map(({ node }) => (

@@ -138,6 +138,7 @@
         left: 50%;
         transform: scale(1) translate(-50%, -50%);
         transition: all 0.16s ease-in-out;
+        @include shadow-1;
       }
 
       &__img {
@@ -323,8 +324,7 @@
 
   .sidebar {
     $sidebar-padding: 40px;
-
-    display: flex;
+    display: block;
     align-items: flex-start;
     flex-direction: column;
     position: fixed;
@@ -339,6 +339,8 @@
     transform: translate(100%, 0);
     transition: all 0.16s ease-in-out;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
 
     a {
       color: $color-pale-blue;
@@ -406,12 +408,8 @@
       align-self: flex-start;
       position: relative;
       width: 100%;
-      height: calc(100vw / 16 * 9);
+      height: 61vh;
       @include shadow-3;
-      border-bottom: 8px solid $color-deep-blue;
-      @include for-tablet-portrait-up {
-        height: calc(38vw / 16 * 9);
-      }
 
       img {
         position: absolute;

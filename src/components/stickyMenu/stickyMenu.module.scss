@@ -10,7 +10,7 @@
   align-items: center;
   text-align: right;
   // transform: translate(0, -100%);
-  transition: all 0.16s ease-in-out;
+  transition: transform 0.16s ease-in-out;
   z-index: 999;
   overflow: scroll;
   @include for-tablet-portrait-up {
