@@ -150,7 +150,7 @@ export const pageQuery = graphql`
       }
     }
     postOverview: allWordpressPost(
-      limit: 5
+      limit: 100
       sort: {
         fields: [date]
         order: DESC

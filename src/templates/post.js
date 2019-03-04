@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import classNames from 'classnames';
 import { DiscussionEmbed } from "disqus-react";
 import { get } from 'lodash';
-import { Plus, MoreHorizontal } from 'react-feather';
+import { Plus, MoreHorizontal, Twitter, Instagram } from 'react-feather';
 
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -114,7 +114,7 @@ class PostTemplate extends Component {
                   This article was written on {post.date} and posted under
                   {post.categories.map(category => (
                     <span>
-                      {` `}
+                      {'  '}
                       {category.name}
                     </span>
                   ))}
@@ -139,15 +139,19 @@ class PostTemplate extends Component {
           </div>
           <div className={styles.sidebar__post_info}>
             <p>
-              This article was written on <strong>{post.date}</strong> and is about
+              "<strong>{post.title}</strong>" was written on <strong>{post.date}</strong> and is about
               {post.categories.map(category => (
                 <span>
+                  {' '}
                   {category.name}
                 </span>
               ))}
             </p>
             <p>
-              I also write about
+              For more stuff you can follow me on <a href="https://twitter.com/rmalpass">Twitter</a>, <a href="https://instagram.com/rmalpass">Instagram</a>, Strava, <a href="https://medium.com/@rmalpass">Medium</a>, or <a href="https://dribbble.com/rmalpass">Dribbble</a>.
+            </p>
+            <p>
+              <strong>I also write about</strong>
             </p>
             <ul>
               {/* categories.edges.map(({ node }) => (
