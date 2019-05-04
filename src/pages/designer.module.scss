@@ -1,0 +1,145 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../styles/variables.scss';
+
+.page__designer {
+
+  .hero {
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+
+    @include for-tablet-portrait-up {
+      height: calc(100vh - 64px);
+      padding: 0;
+    }
+
+    header {
+      margin: auto;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+        align-self: flex-start;
+        background: 0;
+        transform: translate(-8px, 0);
+      }
+
+      h1 {
+        align-self: flex-start;
+        margin: 48px 0 24px 0;
+        font-size: 40px;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 900;
+        @include for-desktop-up {
+          font-size: 40px;
+          margin: 48px 0 40px 0;
+        }
+      }
+    }
+  }
+
+  .hello {
+    display: block;
+
+    a {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+      &:after {
+        z-index: -1;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 4px;
+        background: $color-deep-blue;
+        transition: all 0.16s ease-in-out;
+      }
+      &.ombori {
+        &:after {
+          background: $color-red;
+        }
+      }
+      &:hover {
+        &:after {
+          right: 0;
+        }
+      }
+    }
+
+    .ombori {
+      color: $color-red !important;
+      font-weight: bold;
+    }
+
+    @include for-tablet-portrait-up {
+      @include css-grid;
+      align-items: center;
+
+      p {
+        margin: auto;
+        grid-column: 3 / span 5;
+        font-size: 24px;
+        line-height: 40px;
+      }
+      img {
+        grid-column: 9 / span 4;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .services {
+    margin-top: 80px;
+
+    @include for-tablet-portrait-up {
+      @include css-grid;
+    }
+    header {
+      grid-column: 3 / span 4;
+      img {
+        width: 100%;
+        background: 0;
+      }
+      h1 {
+        font-size: 12vw;
+        font-family: $body-font;
+      }
+    }
+    &__list {
+      grid-column: 3 / span 8;
+      list-style: none;
+      margin: 64px -32px 0 -32px;
+      padding: 0;
+      display: flex;
+
+      li {
+        flex: 1 33%;
+        margin: 0 32px;
+        padding: 0;
+        border-top: 4px solid $color-deep-blue;
+
+        h2 {
+          font-family: $body-font;
+          font-size: 16px;
+          font-weight: 900;
+          margin: 32px 0 16px 0;
+        }
+        p {
+          font-size: 14px;
+          opacity: 0.72;
+        }
+      }
+    }
+  }
+}
