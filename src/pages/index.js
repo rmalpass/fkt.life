@@ -43,18 +43,20 @@ class Home extends Component {
         </Helmet>
         */}
 
-        <section className={styles.hello}>
-          <header>
-            <img src={M} alt="Malpass Mountains logo" />
-            <h1>Ross Malpass</h1>
-            <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
-            <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">Three Peaks Challenge</a> record holder. Father of two.</p>
-            <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
-          </header>
-          <div className={styles.bouncyArrow}>
-            <BouncyArrow />
-          </div>
-        </section>
+        <Fade>
+          <section className={styles.hello}>
+            <header>
+              <img src={M} alt="Malpass Mountains logo" />
+              <h1>Ross Malpass</h1>
+              <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
+              <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">Three Peaks Challenge</a> record holder. Father of two.</p>
+              <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
+            </header>
+            <div className={styles.bouncyArrow}>
+              <BouncyArrow />
+            </div>
+          </section>
+        </Fade>
 
         <section className={styles.threePeaks}>
           <img src="https://cdn-images-1.medium.com/max/2600/1*dC80Up_uuuSwS8mUM1S0TA.png" alt="A lonely hill 7 hours into the National Three Peaks record" />
@@ -74,14 +76,13 @@ class Home extends Component {
                   <HorizontalScrollerItem>
                     <header className={styles.timeline__header}>
                       <h1>Events & achievements</h1>
-                      <p>A timeline of things I'm proud of doing or have done alreay.</p>
+                      <p>I'm proud of many things, here are some of them. From sport to design to everyday life.</p>
 
                       <label>Records <input type="checkbox" checked /></label>
                       <label>Race wins <input type="checkbox" checked /></label>
                       <label>Life events <input type="checkbox" checked /></label>
                       <label>Upcoming events <input type="checkbox" checked /></label>
                       <label>Design achievements <input type="checkbox" checked /></label>
-                      <p><a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200" data-link-external>Read on Medium</a></p>
                     </header>
                   </HorizontalScrollerItem>
 
@@ -94,7 +95,7 @@ class Home extends Component {
                   <HorizontalScrollerItem>
                     <div className={classNames([styles.card], [styles.spacer])}>
                       <div className={styles.card__date}>
-                        <p>8th September, 2019</p>
+                        <p>8/09/2019</p>
                       </div>
                       <div className={styles.card__content}>
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
@@ -109,9 +110,9 @@ class Home extends Component {
                   </HorizontalScrollerItem>
 
                   <HorizontalScrollerItem>
-                    <div className={classNames([styles.card], [styles.spacer])}>
+                    <div className={classNames([styles.card])}>
                       <div className={styles.card__date}>
-                        <p>22nd September, 2019</p>
+                        <p>22/09/2019</p>
                       </div>
                       <div className={styles.card__content}>
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
@@ -139,7 +140,7 @@ class Home extends Component {
                   <HorizontalScrollerItem>
                     <div className={classNames([styles.card], [styles.spacer])}>
                       <div className={styles.card__date}>
-                        <p>15th February, 2018</p>
+                        <p>15/02/2018</p>
                       </div>
                       <div className={styles.card__content}>
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
@@ -165,7 +166,7 @@ class Home extends Component {
                   <HorizontalScrollerItem>
                     <div className={classNames([styles.card], [styles.spacer])}>
                       <div className={styles.card__date}>
-                        <p>11th August, 2017</p>
+                        <p>11/08/2017</p>
                       </div>
                       <div className={styles.card__content}>
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
@@ -194,7 +195,7 @@ class Home extends Component {
                   <HorizontalScrollerItem>
                     <div className={classNames([styles.card], [styles.spacer])}>
                       <div className={styles.card__date}>
-                        <p>11th August, 2016</p>
+                        <p>11/04/2016</p>
                       </div>
                       <div className={styles.card__content}>
                         <a href="http://rossmalpass.co.uk">
@@ -212,16 +213,22 @@ class Home extends Component {
                   </HorizontalScrollerItem>
 
                   <HorizontalScrollerItem>
-                    <div className={classNames([styles.card], [styles.spacer])}>
+                    <div className={styles.timeline__year}>
+                      2015
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card])}>
                       <div className={styles.card__date}>
-                        <p>11th August, 2017</p>
+                        <p>01/08/2015</p>
                       </div>
                       <div className={styles.card__content}>
-                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                        <a href="https://www.strava.com/activities/359051541">
                           <div className={styles.card__content__media}>
                             <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/pages/c2c/hawes/full.jpg" />
                           </div>
-                          <h2>Coast 2 Coast</h2>
+                          <h2>Morecambe to Scarborough Coast 2 Coast</h2>
                           <ul className={styles.card__tags}>
                             <li>Cycling</li>
                             <li>Ultra</li>
@@ -233,11 +240,49 @@ class Home extends Component {
                     </div>
                   </HorizontalScrollerItem>
 
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card])}>
+                      <div className={styles.card__date}>
+                        <p>01/08/2015</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://www.strava.com/activities/359051541">
+                          <h2>1st @ Martin Greenwood Memorial TT</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Cycling</li>
+                            <li>TimeTrial</li>
+                            <li>Win</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card])}>
+                      <div className={styles.card__date}>
+                        <p>01/08/2015</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://www.strava.com/activities/359051541">
+                          <h2>1st @ GCC Undulation Trophy TT</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Cycling</li>
+                            <li>TimeTrial</li>
+                            <li>Win</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
                 </HorizontalScroller>
               </div>
             </Fade>
           </section>
         </Fade>
+
+        {/*
         <section>
           <h1>Posts</h1>
           {data.postOverview.edges.map(({ node }) => (
@@ -250,6 +295,7 @@ class Home extends Component {
             </div>
           ))}
         </section>
+        */}
       </div>
     )
   }

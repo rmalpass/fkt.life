@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import { Menu, ExternalLink } from 'react-feather';
+import { Menu } from 'react-feather';
 
 // Styles
 import styles from './stickyMenu.module.scss';
@@ -53,13 +53,13 @@ class StickyMenu extends Component {
         <ul>
           <li><Menu size={24} /></li>
           <li>
-            <Link to="/athlete">Athlete</Link>
+            <Link to="/">Athlete</Link>
           </li>
           <li>
             <Link to="/designer">Designer</Link>
           </li>
           <li>
-            <Link to="/designer">Writer <ExternalLink size={16} /></Link>
+            <Link to="/designer">Writer</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
