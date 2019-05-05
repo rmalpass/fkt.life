@@ -159,10 +159,56 @@
 }
 
 // hillclimb
-.hillClimb {
+.timeline {
   @include css-grid;
   position: relative;
   margin-top: 16vh;
+
+  &__header {
+    max-width: 25vw;
+    width: 100%;
+    border-top: 4px solid $color-deep-blue;
+
+    @include for-tablet-portrait-up {
+      margin-top: 40px;
+      margin-left: $gutter-lg;
+      padding-right: $gutter-sm;
+
+      h1, p {
+        max-width: 375px;
+        text-align: right;
+        padding-left: 24px;
+      }
+    }
+
+    h1 {
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: normal;
+      font-family: "Merriweather", sans-serif;
+      margin: 16px 0;
+    }
+    p,label {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 24px 0;
+      color: $color-grey-4;
+    }
+    label {
+      display: block;
+      margin: 0;
+      text-align: right;
+    }
+  }
+
+  &__year {
+    padding: 0 $padding-lg;
+    border-right: 1px solid $color-deep-blue;
+    border-left: 1px solid $color-deep-blue;
+    line-height: 24px;
+    font-size: 24px;
+    margin-top: 28px;
+  }
 
   &__content {
     grid-column: col 2 / span 10;
@@ -176,43 +222,7 @@
     }
   }
 
-  &__header {
-    padding-top: 32px;
-    border-top: 4px solid $color-deep-blue;
-    align-self: flex-start;
-    margin: 0 auto;
-
-    h1,p {
-      max-width: 375px;
-      margin: auto;
-      text-align: center;
-      margin: 0;
-    }
-    h1 {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: normal;
-      font-family: "Merriweather", sans-serif;
-      margin: 16px 0;
-    }
-    p {
-      font-size: 14px;
-      line-height: 24px;
-      margin: 24px 0 0 0;
-      color: $color-grey-4;
-    }
-  }
-
-  .spacer {
-    display: block;
-    margin-left: 64vw;
-    display: none;
-    @include for-tablet-portrait-up {
-      display: block;
-    }
-  }
-
-  .hcCard {
+  .card {
     // background: #fff;
     // @include shadow-mega;
     // border-radius: 16px;
@@ -223,6 +233,19 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 24px;
+
+    &.spacer {
+      margin-left: $padding-lg;
+      &:before {
+        content: '';
+        width: $padding-lg;
+        height: 1px;
+        background: $color-deep-blue;
+        position: absolute;
+        top: 40px;
+        left: 0;
+      }
+    }
 
     &__content {
       position: relative;
@@ -286,7 +309,28 @@
           height: 100%;
           object-fit: cover;
           margin: 0;
+          filter:grayscale(72%);
         }
+      }
+    }
+
+    &__tags {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-size: 14px;
+      border-top: 1px solid $color-grey-1;
+      padding-top: 8px;
+
+      li {
+        background: $color-grey-1;
+        color: $color-grey-3;
+        margin: 0 0 8px 8px;
+        list-style: none;
+        padding: 0 8px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 2px;
       }
     }
 
@@ -333,14 +377,19 @@
       // transform: translate(0, 50%);
     }
     &:hover {
-      .hcCard__content {
-        background: $color-yellow;
+      .card__content {
+        // background: $color-yellow;
         @include shadow-mega;
         .arrow {
           right: 32px;
         }
         &__media {
           padding: 8px 8px 0 8px;
+          img {
+            transform: rotate(4deg);
+            @include shadow-mega;
+            filter:grayscale(0%);
+          }
         }
       }
     }

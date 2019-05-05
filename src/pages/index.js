@@ -49,7 +49,7 @@ class Home extends Component {
             <h1>Ross Malpass</h1>
             <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
             <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">Three Peaks Challenge</a> record holder. Father of two.</p>
-            <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Plotting and scheming.</p>
+            <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
           </header>
           <div className={styles.bouncyArrow}>
             <BouncyArrow />
@@ -66,45 +66,176 @@ class Home extends Component {
         </section>
 
         <Fade>
-          <section className={styles.hillClimb}>
-            <div className={styles.hillClimb__content}>
-              <header className={styles.hillClimb__header}>
-                <h1>Training for the National Hill Climb Championship 2015</h1>
-                <p>The year I was obssessed with making the Top Ten at the National Hill Climb competition.</p>
-                <p>This is the story of my year long training journey. Everything from bitterly cold base miles, to throwing up after interval sessions on the turbo trainer in the garage.</p>
-              </header>
-            </div>
+          <section className={styles.timeline}>
             <Fade right>
-              <div className={styles.hillClimb__posts}>
+              <div className={styles.timeline__posts}>
                 <HorizontalScroller fullWidth>
+
                   <HorizontalScrollerItem>
-                    <div className={styles.spacer} />
+                    <header className={styles.timeline__header}>
+                      <h1>Events & achievements</h1>
+                      <p>A timeline of things I'm proud of doing or have done alreay.</p>
+
+                      <label>Records <input type="checkbox" checked /></label>
+                      <label>Race wins <input type="checkbox" checked /></label>
+                      <label>Life events <input type="checkbox" checked /></label>
+                      <label>Upcoming events <input type="checkbox" checked /></label>
+                      <label>Design achievements <input type="checkbox" checked /></label>
+                      <p><a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200" data-link-external>Read on Medium</a></p>
+                    </header>
                   </HorizontalScrollerItem>
-                  {data.hillclimb.edges.map(({ node }) => (
-                    <HorizontalScrollerItem>
-                      <div className={styles.hcCard}>
-                      <div className={styles.hcCard__date}>
-                        <p>{node.date}</p>
+
+                  <HorizontalScrollerItem>
+                    <div className={styles.timeline__year}>
+                      2019
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>8th September, 2019</p>
                       </div>
-                      <div className={styles.hcCard__content}>
-                        <Link to={node.slug}>
-                          {node.featured_media &&
-                            <div className={styles.hcCard__content__media}>
-                              <img src={node.featured_media.source_url} />
-                            </div>
-                          }
-                          <h2 dangerouslySetInnerHTML={{ __html: node.title }} />
+                      <div className={styles.card__content}>
+                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                          <h2>Ambleside Trail 60km</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Running</li>
+                            <li>Ultra</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>22nd September, 2019</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                          <div className={styles.card__content__media}>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ribble_-_geograph.org.uk_-_42616.jpg" />
+                          </div>
+                          <h2>The Ribble Way FKT attempt</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Running</li>
+                            <li>Ultra</li>
+                          </ul>
                           <div className={styles.arrow} />
                           {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
-                        </Link>
+                        </a>
                       </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={styles.timeline__year}>
+                      2018
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>15th February, 2018</p>
                       </div>
-                    </HorizontalScrollerItem>
-                  ))}
+                      <div className={styles.card__content}>
+                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                          <div className={styles.card__content__media}>
+                            <img src="https://scontent.fman1-1.fna.fbcdn.net/v/t1.0-9/27750695_10160115184495077_3559515959127389353_n.jpg?_nc_cat=102&_nc_ht=scontent.fman1-1.fna&oh=4bda188430f6167dc0db5d6edb7f6cfa&oe=5D70B811" />
+                          </div>
+                          <h2>Erik Malpass born</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Life</li>
+                            <li>Child</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={styles.timeline__year}>
+                      2017
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>11th August, 2017</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                          <div className={styles.card__content__media}>
+                            <img src="https://cdn-images-1.medium.com/max/2400/1*9hJUjIQzIIs1Aqa_MNla3g.png" />
+                          </div>
+                          <h2>The National Three Peaks by Bike</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Record</li>
+                            <li>Cycling</li>
+                            <li>Ultra</li>
+                          </ul>
+                          <div className={styles.arrow} />
+                          {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={styles.timeline__year}>
+                      2016
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>11th August, 2016</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="http://rossmalpass.co.uk">
+                          <div className={styles.card__content__media}>
+                            <img src="https://scontent.fman1-1.fna.fbcdn.net/v/t1.0-9/12936781_10156829863855077_8255999253801425165_n.jpg?_nc_cat=103&_nc_ht=scontent.fman1-1.fna&oh=6fea257ed9e6736094b42ca9b250df5a&oe=5D725BA9" />
+                          </div>
+                          <h2>Arlo Malpass born</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Life</li>
+                            <li>Child</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>11th August, 2017</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                          <div className={styles.card__content__media}>
+                            <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/pages/c2c/hawes/full.jpg" />
+                          </div>
+                          <h2>Coast 2 Coast</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Cycling</li>
+                            <li>Ultra</li>
+                          </ul>
+                          <div className={styles.arrow} />
+                          {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
                 </HorizontalScroller>
               </div>
             </Fade>
-            <div className={styles.hillClimb__bg} />
           </section>
         </Fade>
         <section>
