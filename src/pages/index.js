@@ -303,11 +303,9 @@ class Home extends Component {
             <div className={styles.background}>
               <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
             </div>
-            <Fade>
-              <header>
-                <h1>Breaking <br />New<br /> Ground</h1>
-              </header>
-            </Fade>
+            <header>
+              <h1>Breaking <br />New<br /> Ground</h1>
+            </header>
           </section>
         </Fade>
 

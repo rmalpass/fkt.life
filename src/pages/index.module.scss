@@ -227,7 +227,7 @@
 .newGround {
   @include css-grid;
   position: relative;
-  margin-top: 16vh;
+  margin-top: 24vh;
 
  .background {
    height: 80vh;
@@ -244,8 +244,8 @@
   header {
     @include for-desktop-up {
       position: absolute;
-      grid-column: col 8 / span 4;
-      transform: translate(0,-25%);
+      grid-column: col 3 / span 4;
+      transform: translate(0,-64px);
     }
 
     h1 {
