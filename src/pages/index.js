@@ -10,6 +10,7 @@ import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
+import Footer from '../components/footer';
 
 // style
 import '../styles/styles.scss';
@@ -17,6 +18,10 @@ import styles from './index.module.scss';
 
 // images
 import M from '../images/M.svg';
+import ArloImg from '../images/timeline/arlo.jpg';
+import ErikImg from '../images/timeline/erik.jpg';
+import ThreePeaksImg from '../images/timeline/3peaks.jpg';
+import C2cImg from '../images/timeline/c2c.jpg';
 
 class Home extends Component {
 
@@ -75,37 +80,19 @@ class Home extends Component {
 
                   <HorizontalScrollerItem>
                     <header className={styles.timeline__header}>
-                      <h1>Events & achievements</h1>
-                      <p>I'm proud of many things, here are some of them. From sport to design to everyday life.</p>
+                      <h1>Schedule, events & achievements</h1>
 
-                      <label>Records <input type="checkbox" checked /></label>
+                      {/*<label>Records <input type="checkbox" checked /></label>
                       <label>Race wins <input type="checkbox" checked /></label>
                       <label>Life events <input type="checkbox" checked /></label>
                       <label>Upcoming events <input type="checkbox" checked /></label>
-                      <label>Design achievements <input type="checkbox" checked /></label>
+                      <label>Design achievements <input type="checkbox" checked /></label>*/}
                     </header>
                   </HorizontalScrollerItem>
 
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
                       2019
-                    </div>
-                  </HorizontalScrollerItem>
-
-                  <HorizontalScrollerItem>
-                    <div className={classNames([styles.card], [styles.spacer])}>
-                      <div className={styles.card__date}>
-                        <p>8/09/2019</p>
-                      </div>
-                      <div className={styles.card__content}>
-                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
-                          <h2>Ambleside Trail 60km</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Running</li>
-                            <li>Ultra</li>
-                          </ul>
-                        </a>
-                      </div>
                     </div>
                   </HorizontalScrollerItem>
 
@@ -123,6 +110,7 @@ class Home extends Component {
                           <ul className={styles.card__tags}>
                             <li>Running</li>
                             <li>Ultra</li>
+                            <li>FKT Attempt</li>
                           </ul>
                           <div className={styles.arrow} />
                           {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
@@ -131,6 +119,50 @@ class Home extends Component {
                     </div>
                   </HorizontalScrollerItem>
 
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card], [styles.spacer])}>
+                      <div className={styles.card__date}>
+                        <p>8/09/2019</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                          <div className={styles.card__content__media}>
+                            <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
+                          </div>
+                          <h2>Ambleside Trail 60km</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Running</li>
+                            <li>Ultra</li>
+                          </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card])}>
+                      <div className={styles.card__date}>
+                        <p>03/08/2019</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="https://fastestknowntime.com/route/lancaster-canal-uk">
+                          <div className={styles.card__content__media}>
+                            <img src="https://fastestknowntime.com/sites/default/files/styles/very_large/public/2019-06/33117.jpg?itok=oWekc7jL" />
+                          </div>
+                          <h2>The Lancaster Canal FKT attempt</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Running</li>
+                            <li>Ultra</li>
+                            <li>FKT Attempt</li>
+                          </ul>
+                          <div className={styles.arrow} />
+                          {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                        </a>
+                      </div>
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  {/*
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
                       2018
@@ -145,7 +177,7 @@ class Home extends Component {
                       <div className={styles.card__content}>
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
                           <div className={styles.card__content__media}>
-                            <img src="https://scontent.fman1-1.fna.fbcdn.net/v/t1.0-9/27750695_10160115184495077_3559515959127389353_n.jpg?_nc_cat=102&_nc_ht=scontent.fman1-1.fna&oh=4bda188430f6167dc0db5d6edb7f6cfa&oe=5D70B811" />
+                            <img src={ErikImg} alt="Baby Erik" />
                           </div>
                           <h2>Erik Malpass born</h2>
                           <ul className={styles.card__tags}>
@@ -156,6 +188,7 @@ class Home extends Component {
                       </div>
                     </div>
                   </HorizontalScrollerItem>
+                  */}
 
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
@@ -171,7 +204,7 @@ class Home extends Component {
                       <div className={styles.card__content}>
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
                           <div className={styles.card__content__media}>
-                            <img src="https://cdn-images-1.medium.com/max/2400/1*9hJUjIQzIIs1Aqa_MNla3g.png" />
+                            <img src={ThreePeaksImg} alt="Start of the National Three Peaks Challenge" />
                           </div>
                           <h2>The National Three Peaks by Bike</h2>
                           <ul className={styles.card__tags}>
@@ -186,9 +219,27 @@ class Home extends Component {
                     </div>
                   </HorizontalScrollerItem>
 
+                  {/*
+
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
                       2016
+                    </div>
+                  </HorizontalScrollerItem>
+
+                  <HorizontalScrollerItem>
+                    <div className={classNames([styles.card])}>
+                      <div className={styles.card__date}>
+                        <p>20/12/2016</p>
+                      </div>
+                      <div className={styles.card__content}>
+                        <a href="http://rossmalpass.co.uk">
+                          <h2>Named in the top 10% of writers on the Medium platform</h2>
+                          <ul className={styles.card__tags}>
+                            <li>Writing</li>
+                          </ul>
+                        </a>
+                      </div>
                     </div>
                   </HorizontalScrollerItem>
 
@@ -211,6 +262,7 @@ class Home extends Component {
                       </div>
                     </div>
                   </HorizontalScrollerItem>
+                  */}
 
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
@@ -226,7 +278,7 @@ class Home extends Component {
                       <div className={styles.card__content}>
                         <a href="https://www.strava.com/activities/359051541">
                           <div className={styles.card__content__media}>
-                            <img src="http://rossmalpass.co.uk/wp-content/themes/rm/static/img/pages/c2c/hawes/full.jpg" />
+                            <img src={C2cImg} alt="Bombing a hill on the coast to coast ride" />
                           </div>
                           <h2>Morecambe to Scarborough Coast 2 Coast</h2>
                           <ul className={styles.card__tags}>
@@ -240,62 +292,45 @@ class Home extends Component {
                     </div>
                   </HorizontalScrollerItem>
 
-                  <HorizontalScrollerItem>
-                    <div className={classNames([styles.card])}>
-                      <div className={styles.card__date}>
-                        <p>01/08/2015</p>
-                      </div>
-                      <div className={styles.card__content}>
-                        <a href="https://www.strava.com/activities/359051541">
-                          <h2>1st @ Martin Greenwood Memorial TT</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Cycling</li>
-                            <li>TimeTrial</li>
-                            <li>Win</li>
-                          </ul>
-                        </a>
-                      </div>
-                    </div>
-                  </HorizontalScrollerItem>
-
-                  <HorizontalScrollerItem>
-                    <div className={classNames([styles.card])}>
-                      <div className={styles.card__date}>
-                        <p>01/08/2015</p>
-                      </div>
-                      <div className={styles.card__content}>
-                        <a href="https://www.strava.com/activities/359051541">
-                          <h2>1st @ GCC Undulation Trophy TT</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Cycling</li>
-                            <li>TimeTrial</li>
-                            <li>Win</li>
-                          </ul>
-                        </a>
-                      </div>
-                    </div>
-                  </HorizontalScrollerItem>
-
                 </HorizontalScroller>
               </div>
             </Fade>
           </section>
         </Fade>
 
-        {/*
-        <section>
-          <h1>Posts</h1>
-          {data.postOverview.edges.map(({ node }) => (
-            <div key={node.slug}>
-              <Link to={node.slug} css={{ textDecoration: `none` }}>
-                <h3>{node.title}</h3>
-              </Link>
-              <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              <PostIcons node={node} />
+        <Fade>
+          <section className={styles.newGround}>
+            <div className={styles.background}>
+              <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
             </div>
-          ))}
+            <Fade>
+              <header>
+                <h1>Breaking <br />New<br /> Ground</h1>
+              </header>
+            </Fade>
+          </section>
+        </Fade>
+
+        <section className={styles.archives}>
+          <aside>
+            <h2>From my archives</h2>
+          </aside>
+          <ol>
+            {data.postOverview.edges.map(({ node }) => (
+              <li key={node.slug}>
+                <Link to={node.slug} css={{ textDecoration: `none` }}>
+                  <h3>{node.title}</h3>
+                  <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  <footer>
+                    <PostIcons node={node} />
+                  </footer>
+                </Link>
+              </li>
+            ))}
+          </ol>
         </section>
-        */}
+
+        <Footer />
       </div>
     )
   }

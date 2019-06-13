@@ -48,6 +48,22 @@ $height-lg: 61.8vh;
 
 @import "breakpoints";
 
+@mixin headline-text {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: normal;
+  font-family: $body-font;
+  margin: 16px 0;
+}
+@mixin title-text {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: $headline-font;
+}
+
 @mixin content-block {
   display: flex;
   flex-wrap: wrap;
