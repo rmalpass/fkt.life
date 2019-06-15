@@ -162,14 +162,16 @@
   align-items: flex-start;
 
   aside {
-    grid-column: 2 / span 10;
+    grid-column: 3 / span 10;
     grid-row: 1;
     flex-direction: column;
     width: 100%;
+    position: sticky;
+    top:0;
     @include for-tablet-portrait-up {
       position: sticky;
       grid-row: 1;
-      grid-column: col 4 / span 5;
+      grid-column: col 2 / span 3;
       border-top: 4px solid $color-deep-blue;
     }
 
@@ -178,7 +180,7 @@
     }
   }
   ol {
-    grid-column: 2 / span 10;
+    grid-column: 3 / span 10;
     grid-row: 2;
     display: flex;
     margin: auto;
@@ -186,7 +188,8 @@
     width: 100%;
     margin-left: -16px;
     @include for-tablet-portrait-up {
-      grid-column: col 4 / span 5;
+      grid-row: 1;
+      grid-column: col 6 / span 6;
     }
     li {
       margin: 0 0 1.6rem 0;

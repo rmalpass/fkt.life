@@ -311,7 +311,7 @@ class Home extends Component {
 
         <section className={styles.archives}>
           <aside>
-            <h2>From my archives</h2>
+            <h2>Posts from my archives</h2>
           </aside>
           <ol>
             {data.postOverview.edges.map(({ node }) => (
