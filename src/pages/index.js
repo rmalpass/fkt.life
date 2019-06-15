@@ -18,8 +18,7 @@ import styles from './index.module.scss';
 
 // images
 import M from '../images/M.svg';
-import ArloImg from '../images/timeline/arlo.jpg';
-import ErikImg from '../images/timeline/erik.jpg';
+import NGImg from '../images/newgrounds.jpg';
 import ThreePeaksImg from '../images/timeline/3peaks.jpg';
 import C2cImg from '../images/timeline/c2c.jpg';
 
@@ -301,10 +300,11 @@ class Home extends Component {
         <Fade>
           <section className={styles.newGround}>
             <div className={styles.background}>
-              <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
+              <img src={NGImg} alt="Coniston Old Man" />
             </div>
             <header>
               <h1>Breaking <br />New<br /> Ground</h1>
+              <p>Why I decided to start chasing Fastest Known Times on North West England's finest trails.</p>
             </header>
           </section>
         </Fade>
