@@ -305,6 +305,7 @@ class Home extends Component {
             <header>
               <h1>Breaking <br />New<br /> Ground</h1>
               <p>Why I decided to start chasing Fastest Known Times on North West England's finest trails.</p>
+              <p><Link className="btn btn__white">Read more</Link></p>
             </header>
           </section>
         </Fade>
@@ -312,6 +313,14 @@ class Home extends Component {
         <section className={styles.archives}>
           <aside>
             <h2>Posts from my archives</h2>
+            <ul>
+              <li><a href="/adventures">Adventures</a></li>
+              <li><a href="/category/cycling">Cycling</a></li>
+              <li><a href="/category/design">Design</a></li>
+              <li><a href="/category/food">Food</a></li>
+              <li><a href="/category/life">Life</a></li>
+              <li><a href="/category/outdoors">Outdoors</a></li>
+            </ul>
           </aside>
           <ol>
             {data.postOverview.edges.map(({ node }) => (
