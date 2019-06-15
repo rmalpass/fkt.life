@@ -270,17 +270,24 @@
 .timeline {
   @include css-grid;
   position: relative;
-  margin-top: 16vh;
+  margin-top: 40px;
+
+  @include for-tablet-portrait-up {
+     margin-top: 24vh;
+  }
 
   &__header {
     // position: absolute;
     // top: 0;
     // left: 0;
     // transform: translate(0,-100%);
-    width: 100vw;
+    width: 32vw;
+    margin-top: 38px;
+    margin-left: 32px;
     border-top: 4px solid $color-deep-blue;
 
     @include for-tablet-portrait-up {
+      margin-left: 0;
       width: 100%;
       display: block;
       max-width: 25vw;
@@ -320,23 +327,30 @@
     border-left: 1px solid $color-deep-blue;
     line-height: 48px;
     font-size: 16px;
-    margin-top: 16px;
     font-weight: bold;
-    // background: $color-deep-blue;
-    // color: $color-grey-1;
+    letter-spacing: 1px;
+    background: $color-deep-blue;
+    @include tag-text;
+    color: $color-white;
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    text-align: center;
+    line-height: 80px;
+
     @include for-desktop-up {
-      padding: 0 $padding-lg;
+      padding: 0;
       margin-right: $padding-lg;
-      font-size: 24px;
-    }
-    &:before {
-      content: '';
-      width: $padding-lg;
-      height: 1px;
-      background: $color-deep-blue;
-      position: absolute;
-      top: 40px;
-      right: 0;
+      font-size: 20px;
+      &:before {
+        content: '';
+        width: $padding-lg;
+        height: 1px;
+        background: $color-deep-blue;
+        position: absolute;
+        top: 40px;
+        right: 0;
+      }
     }
   }
 
@@ -454,8 +468,10 @@
       padding-top: 8px;
 
       li {
+        @include tag-text;
+        font-size: 12px;
+        color: $color-grey-4;
         background: $color-grey-1;
-        color: $color-grey-3;
         margin: 0 0 8px 8px;
         list-style: none;
         padding: 0 8px;
@@ -472,6 +488,8 @@
       margin-bottom: 16px;
       position: relative;
       padding-right: 40px;
+      @include tag-text;
+      color: $color-grey-5;
 
       p {
         margin: 0 0 8px 0;
