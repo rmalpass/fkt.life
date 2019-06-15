@@ -166,10 +166,9 @@
     grid-row: 1;
     flex-direction: column;
     width: 100%;
-    position: sticky;
-    top:0;
     @include for-tablet-portrait-up {
       position: sticky;
+      top: 24vh;
       grid-row: 1;
       grid-column: col 2 / span 3;
       border-top: 4px solid $color-deep-blue;
