@@ -201,7 +201,7 @@ class Home extends Component {
                         <p>11/08/2017</p>
                       </div>
                       <div className={styles.card__content}>
-                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
+                        <Link to="/rides/national-three-peaks-by-bike-record" data-link-external>
                           <div className={styles.card__content__media}>
                             <img src={ThreePeaksImg} alt="Start of the National Three Peaks Challenge" />
                           </div>
@@ -213,7 +213,7 @@ class Home extends Component {
                           </ul>
                           <div className={styles.arrow} />
                           {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </HorizontalScrollerItem>

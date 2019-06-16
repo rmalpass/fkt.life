@@ -137,7 +137,7 @@ Before I knew it, 4 am arrived to the sound of my alarm. I changed into my cycli
 
 <image-zoom caption='About to set off up Snowdon Friday morning'><img src='5 snowdon.png'/></image-zoom>
 
-## Snowdon 3,560 ft<marker-link lat='53.0685032' lng='-4.0850314' label='A' zoom='14'>(Go to location)</marker-link>
+## Snowdon 3,560 ft<marker-link lat='53.0685032' lng='-4.0850314' label='A' zoom='14'>Go to location</marker-link>
 https://www.strava.com/activities/1127831991
 
 At 04:23 I set off on my first ascent. Mount Snowdon, Wales 3,560 ft.

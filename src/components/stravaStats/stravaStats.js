@@ -36,6 +36,11 @@ const StravaStats = props => {
   let moving_time_seconds = activityData.moving_time
   let formatted = moment.utc(moving_time_seconds * 1000).format('HH:mm:ss')
 
+  // Activity speed
+  let avg_speed = activityData.average_speed
+  let speed = avg_speed * 2.2369;
+  console.log('speed', avg_speed);
+
   if (props.loading) {
     return (
       <div className="c-strava-stats">
@@ -55,6 +60,7 @@ const StravaStats = props => {
           value={elevation ? elevation : 0}
           unit="m"
         />
+        {/*<Stat label="Average Speed" value={avg_speed ? avg_speed : 0} unit="mph" />*/}
         <Stat label="Moving Time" value={formatted ? formatted : 0} unit="" />
         <Stat label="Calories" value={calories ? calories : 0} unit="cal" />
       </div>

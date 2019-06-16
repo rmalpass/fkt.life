@@ -133,15 +133,15 @@ class PostPage extends Component {
               />
             </div>
             {renderAst(this.state.post.htmlAst)}
-            <div className="mt5 ph4 pv2 bg-near-white flex flex-wrap items-start">
+            <footer className={styles.post__footer}>
               <a
-                className="mv3 link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl db white bg-black ttu"
+                className="btn btn__white"
                 href={this.state.post.frontmatter.route_file.publicURL}
               >
                 download gpx
               </a>
               <a
-                className="mv3 link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl white db bg-black ttu"
+                className="btn btn__primary"
                 href={
                   'https://www.strava.com/activities/' +
                   this.state.post.frontmatter.strava_id
@@ -149,7 +149,7 @@ class PostPage extends Component {
               >
                 view strava activity
               </a>
-            </div>
+            </footer>
           </div>
           {/*
           <ImageZoom
