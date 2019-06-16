@@ -201,7 +201,7 @@ class Home extends Component {
                         <p>11/08/2017</p>
                       </div>
                       <div className={styles.card__content}>
-                        <Link to="/rides/national-three-peaks-by-bike-record" data-link-external>
+                        <Link to="/rides/national-three-peaks-by-bike-record">
                           <div className={styles.card__content__media}>
                             <img src={ThreePeaksImg} alt="Start of the National Three Peaks Challenge" />
                           </div>
