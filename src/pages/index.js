@@ -305,7 +305,7 @@ class Home extends Component {
             <header>
               <h1>Breaking <br />New<br /> Ground</h1>
               <p>Why I decided to start chasing Fastest Known Times on North West England's finest trails.</p>
-              <p><Link className="btn btn__white">Read more</Link></p>
+              <p><Link className="btn btn__white">/ Read more</Link></p>
             </header>
           </section>
         </Fade>

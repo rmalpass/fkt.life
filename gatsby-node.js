@@ -2,6 +2,31 @@ const _ = require(`lodash`)
 const Promise = require(`bluebird`)
 const path = require(`path`)
 const slash = require(`slash`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+
+    createNodeField({
+      node,
+      name: 'slug',
+      value: node.frontmatter.path,
+    })
+    createNodeField({
+      node,
+      name: 'strava_id',
+      value: node.frontmatter.strava_id,
+    })
+    createNodeField({
+      node,
+      name: 'cover_image',
+      value: node.frontmatter.cover_image,
+    })
+  }
+}
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
@@ -12,12 +37,6 @@ const slash = require(`slash`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
-    // The “graphql” function allows us to run arbitrary
-    // queries against the local Wordpress graphql schema. Think of
-    // it like the site has a built-in database constructed
-    // from the fetched data that you can run queries against.
-
-    // ==== PAGES (WORDPRESS NATIVE) ====
     graphql(
       `
         {
@@ -102,7 +121,49 @@ exports.createPages = ({ graphql, actions }) => {
           })
           resolve()
         })
+
+        .then(() => {
+          graphql(`
+            {
+              allMarkdownRemark(filter: { frontmatter: { publish: { eq: true } } }) {
+                edges {
+                  node {
+                    fields {
+                      slug
+                    }
+                  }
+                }
+              }
+            }
+          `).then(result => {
+            result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+              createPage({
+                path: node.fields.slug,
+                component: path.resolve('./src/templates/activity.js'),
+                context: {
+                  slug: node.fields.slug,
+                },
+              })
+            })
+            resolve()
+          })
+        })
       })
     // ==== END POSTS ====
   })
 }
+
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /mapbox-gl/,
+            use: ['null-loader']
+          },
+        ],
+      }
+    })
+  }
+};
