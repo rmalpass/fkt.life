@@ -81,3 +81,5 @@ Then it was time to put a route together. The last time a record for doing a Thr
 I grabbed the route Spike, Dug, and Andy used and began to tweak it slightly. Very slightly! I knew there was a better way through Preston, and I managed to shave off 0.6 of a mile by taking a back road in Keswick.
 
 The full bike route came out at 430 miles. 192 from Snowdon to Scafell Pike. Then a further 238 miles up to Fort William. My longest ride ever stood at 164 miles. That was the Bowland Baddass. Not a ride I’ve done again in a hurry. So 430 miles was a little daunting. I found it best not to think about it.
+
+<marker-link lat='53.0685032' lng='-4.0850314' label='Snowdon Summit' zoom='14'>Snowdon</marker-link>
