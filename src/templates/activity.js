@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Map from '../components/mapbox'
 import rehypeReact from 'rehype-react'
 // import Footer from '../components/footer'
@@ -111,7 +111,7 @@ class PostPage extends Component {
           <div className={styles.post__content}>
             <header className={styles.post__content__header}>
               <div>
-                <img src={M} alt="Go back home" id="content" name="content" />
+                <Link to="/"><img src={M} alt="Go back home" id="content" name="content" /></Link>
                 <h1>{this.state.post.frontmatter.title}</h1>
                 <p className={styles.post__content__categories}>
                   {this.state.post.frontmatter.location} •{' '}
