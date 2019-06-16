@@ -1,5 +1,5 @@
 ---
-path: '/rides/national-three-peaks-by-bike-record'
+path: '/activities/national-three-peaks-by-bike-record'
 date: '2019-05-07'
 title: 'The National Three Peaks By Bike Record'
 excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort."
