@@ -93,14 +93,17 @@
     flex-direction: column;
     transition: all 0.16s ease-in-out;
 
-    &.sidebar_active {
+    @include for-tablet-portrait-up {
       padding-right: 38vw;
     }
 
     &__content__header {
-      min-height: 75vh;
       display: flex;
       align-items: center;
+
+      @include for-tablet-portrait-up {
+        min-height: 75vh;
+      }
 
       div {
         padding: 40px 0;
@@ -374,18 +377,23 @@
     flex-direction: column;
     position: fixed;
     right: 0;
-    top: 0;
-    width: 38vw;
-    min-width: 375px;
-    height: 100vh;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    height: 24vh;
     z-index: 2;
     background: $color-deep-blue;
     color: $color-grey-2;
     transform: translate(100%, 0);
     transition: all 0.16s ease-in-out;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      left: auto;
+      min-width: 375px;
+      width: 38vw;
+      height: 100vh;
+    }
 
     a {
       color: $color-pale-blue;
