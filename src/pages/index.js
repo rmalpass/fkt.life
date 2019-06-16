@@ -275,7 +275,7 @@ class Home extends Component {
                         <p>01/08/2015</p>
                       </div>
                       <div className={styles.card__content}>
-                        <a href="https://www.strava.com/activities/359051541">
+                        <Link to="activities/coast-to-coast/">
                           <div className={styles.card__content__media}>
                             <img src={C2cImg} alt="Bombing a hill on the coast to coast ride" />
                           </div>
@@ -286,7 +286,7 @@ class Home extends Component {
                           </ul>
                           <div className={styles.arrow} />
                           {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </HorizontalScrollerItem>
