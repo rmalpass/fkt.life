@@ -25,9 +25,12 @@ const StravaStats = props => {
   // Activity distance
   let distanceMeter = activityData.distance
   let distanceKilometer = _.round(distanceMeter / 1000, 2)
+  let distanceMile = distanceKilometer * 0.62137;
+  distanceMile = _.round(distanceMile, 2);
 
   // Activity elevation gain
   let elevation = activityData.total_elevation_gain
+  elevation = _.round(elevation * 3.2808, 2);
 
   // Activity calories
   let calories = activityData.calories
@@ -52,13 +55,13 @@ const StravaStats = props => {
       <div className={styles.stravaStats}>
         <Stat
           label="Distance"
-          value={distanceKilometer ? distanceKilometer : 0}
-          unit="km"
+          value={distanceMile ? distanceMile : 0}
+          unit="mi"
         />
         <Stat
           label="Elevation Gain"
           value={elevation ? elevation : 0}
-          unit="m"
+          unit="ft"
         />
         {/*<Stat label="Average Speed" value={avg_speed ? avg_speed : 0} unit="mph" />*/}
         <Stat label="Moving Time" value={formatted ? formatted : 0} unit="" />
