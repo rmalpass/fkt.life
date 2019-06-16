@@ -39,7 +39,8 @@ class StickyMenu extends Component {
           [styles.stickyMenu],
           { [styles.hidden]: this.props.hidden },
           { [styles.active]: this.state.scrolling },
-          { [styles.sidebar]: this.props.sidebar}
+          { [styles.sidebar]: this.props.sidebar},
+          { [styles.activity]: this.props.activity}
         )}
       >
         <div className={styles.wordmark}>

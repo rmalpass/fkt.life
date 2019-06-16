@@ -28,6 +28,10 @@
 
   &.activity {
     position: fixed;
+    right: 0;
+    @include for-tablet-portrait-up {
+      right: 38vw;
+    }
   }
 
   &.hidden {
