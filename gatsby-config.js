@@ -99,9 +99,6 @@ module.exports = {
         trackingId: `UA-383639-1`,
       },
     },
-    {
-      resolve: `gatsby-plugin-feed`,
-    },
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
