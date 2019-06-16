@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import PostLayout from '../components/post-layout'
 import { graphql } from 'gatsby'
 import Map from '../components/mapbox'
 import rehypeReact from 'rehype-react'
-import Footer from '../components/footer'
+// import Footer from '../components/footer'
 import MarkerLink from '../components/markerLink'
 import StravaStats from '../components/stravaStats'
 import AltitudeChart from '../components/altitudeChart'
@@ -13,6 +12,11 @@ import ImageZoomComponent from '../components/imageZoom'
 import InfoCard from '../components/infoCard'
 import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
+import StickyMenu from '../components/stickyMenu/stickyMenu';
+import M from '../images/M.svg';
+import classNames from 'classnames';
+
+import styles from './activity.module.scss';
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -87,7 +91,7 @@ class PostPage extends Component {
       .split(' ')[0]
 
     return (
-      <div className="c-post-container">
+      <div className={styles.page__activity}>
         <SEO
           title={this.state.post.frontmatter.title}
           keywords={[`gatsby`, `application`, `react`]}
@@ -96,77 +100,80 @@ class PostPage extends Component {
             this.state.post.frontmatter.social_image.childImageSharp.fixed.src
           }
         />
-        <PostLayout>
-          <div>
-            <ImageZoom
-              image={{
-                src: coverImageSrc,
-                alt: 'main',
-                className: 'w-100',
-              }}
-              zoomMargin={10}
-              zoomImage={{
-                src: coverImageSrcSetFullFlatten,
-                alt: 'main',
-                className: 'w-100',
-              }}
-            />
 
-            <div className="center mw7 pa4-l ph4 pb4">
-              <div className="pt4 pb3 mb4 mw7 center">
-                <h1 className="tc f2 f1-l mb3 near-dark lh-title serif">
-                  {this.state.post.frontmatter.title}
-                </h1>
-                <p className="tc mt0 mb3 silver lh-copy">
+        <StickyMenu hidden sidebar={this.state.isToggleOn} title={this.state.post.frontmatter.title} />
+
+        <article className={classNames(
+          [styles.post],
+          [styles.sidebar_active],
+          {[styles.sidebar_active]: this.state.isToggleOn}
+        )}>
+          <div className={styles.post__content}>
+            <header className={styles.post__content__header}>
+              <div>
+                <img src={M} alt="Go back home" id="content" name="content" />
+                <h1>{this.state.post.frontmatter.title}</h1>
+                <p className={styles.post__content__categories}>
                   {this.state.post.frontmatter.location} •{' '}
                   {this.state.post.frontmatter.date} • by{' '}
                   {this.state.post.frontmatter.author}
                 </p>
-                <div className="mv4-l mv3">
-                  <AltitudeChart
-                    loading={this.state.loading}
-                    data={this.state.streams}
-                  />
-                  <StravaStats
-                    loading={this.state.loading}
-                    activityData={
-                      this.state.activityData ? this.state.activityData : 0
-                    }
-                  />
-                </div>
               </div>
-              <div className="markdown-body">
-                <div className="lh-copy center f5 f4-l">
-                  {renderAst(this.state.post.htmlAst)}
-                </div>
-              </div>
-              <div className="mt5 ph4 pv2 bg-near-white flex flex-wrap items-start">
-                <a
-                  className="mv3 link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl db white bg-black ttu"
-                  href={this.state.post.frontmatter.route_file.publicURL}
-                >
-                  download gpx
-                </a>
-                <a
-                  className="mv3 link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl white db bg-black ttu"
-                  href={
-                    'https://www.strava.com/activities/' +
-                    this.state.post.frontmatter.strava_id
-                  }
-                >
-                  view strava activity
-                </a>
-              </div>
+            </header>
+            <div className={styles.activity__stats}>
+              <AltitudeChart
+                loading={this.state.loading}
+                data={this.state.streams}
+              />
+              <StravaStats
+                loading={this.state.loading}
+                activityData={
+                  this.state.activityData ? this.state.activityData : 0
+                }
+              />
+            </div>
+            {renderAst(this.state.post.htmlAst)}
+            <div className="mt5 ph4 pv2 bg-near-white flex flex-wrap items-start">
+              <a
+                className="mv3 link w-100 w-auto-l dim db br2 mb3 mb0-l ph3 pv3 mr3-l mr0 tc b tl db white bg-black ttu"
+                href={this.state.post.frontmatter.route_file.publicURL}
+              >
+                download gpx
+              </a>
+              <a
+                className="mv3 link w-100 w-auto-l dim db br2 mb0 ph3 pv3 tc b tl white db bg-black ttu"
+                href={
+                  'https://www.strava.com/activities/' +
+                  this.state.post.frontmatter.strava_id
+                }
+              >
+                view strava activity
+              </a>
             </div>
           </div>
+          {/*
+          <ImageZoom
+            image={{
+              src: coverImageSrc,
+              alt: 'main',
+              className: 'w-100',
+            }}
+            zoomMargin={10}
+            zoomImage={{
+              src: coverImageSrcSetFullFlatten,
+              alt: 'main',
+              className: 'w-100',
+            }}
+          />
+          */}
 
-          <Footer />
-        </PostLayout>
-
-        <Map
-          loading={this.state.loading}
-          activityData={this.state.activityData}
-        />
+        </article>
+        <section className={classNames([styles.sidebar], [styles.active], {[styles.active]: this.state.isToggleOn})}>
+          <Map
+            loading={this.state.loading}
+            activityData={this.state.activityData}
+          />
+        </section>
       </div>
     )
   }
