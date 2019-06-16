@@ -13,17 +13,21 @@
   transition: transform 0.16s ease-in-out;
   z-index: 999;
   overflow: scroll;
+
   @include for-tablet-portrait-up {
     position: fixed;
   }
 
   &.sidebar {
-    display: none;
     transition: all 0.08s linear;
     right: 38vw;
     @include for-tablet-portrait-up {
       display: flex;
     }
+  }
+
+  &.activity {
+    position: fixed;
   }
 
   &.hidden {

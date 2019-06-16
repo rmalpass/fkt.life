@@ -371,6 +371,7 @@
   }
 
   .sidebar {
+    border-top: 4px solid $color-deep-blue;
     $sidebar-padding: 40px;
     display: block;
     align-items: center;
@@ -389,6 +390,7 @@
     width: 100%;
 
     @include for-tablet-portrait-up {
+      border: 0;
       left: auto;
       min-width: 375px;
       width: 38vw;

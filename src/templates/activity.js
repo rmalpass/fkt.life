@@ -101,7 +101,7 @@ class PostPage extends Component {
           }
         />
 
-        <StickyMenu hidden sidebar={this.state.isToggleOn} sidebar="true" title={this.state.post.frontmatter.title} />
+        <StickyMenu hidden activity title={this.state.post.frontmatter.title} />
 
         <article className={classNames(
           [styles.post],
