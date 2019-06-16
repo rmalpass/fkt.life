@@ -42,7 +42,6 @@ const StravaStats = props => {
   // Activity speed
   let avg_speed = activityData.average_speed
   let speed = avg_speed * 2.2369;
-  console.log('speed', avg_speed);
 
   if (props.loading) {
     return (

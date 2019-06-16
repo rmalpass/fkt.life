@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import { Menu } from 'react-feather';
+import { Menu, Home } from 'react-feather';
 
 // Styles
 import styles from './stickyMenu.module.scss';
@@ -51,7 +51,10 @@ class StickyMenu extends Component {
         {data.title &&
           <p dangerouslySetInnerHTML={{ __html: data.title }} className={styles.title} />
         }
-        <ul>
+        <Link to="/" className={styles.btn__back}>
+          <Home size={16} />
+        </Link>
+        <ul className={styles.navigation}>
           <li><Menu size={24} /></li>
           <li>
             <Link to="/">Athlete</Link>

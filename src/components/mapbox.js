@@ -130,7 +130,7 @@ class Map extends Component {
                 return bounds.extend(coord);
             }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
 
-            window.map.fitBounds(bounds, { padding: 80 });
+            window.map.fitBounds(bounds, { padding: 24 });
         })
     }
     render() {

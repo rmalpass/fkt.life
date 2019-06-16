@@ -80,8 +80,10 @@
 .page__activity {
   display: flex;
   flex-direction: column;
+  padding-top: 24vh;
 
   @include for-desktop-up {
+    padding-top: 0;
     flex-direction: row-reverse;
     // @include css-grid;
   }
@@ -375,9 +377,8 @@
     align-items: center;
     flex-direction: column;
     position: fixed;
-    right: 16px;
-    top: auto;
-    bottom: 16px;
+    right: 0;
+    top: 0;
     height: 24vh;
     z-index: 2;
     background: $color-deep-blue;
@@ -385,9 +386,6 @@
     transform: translate(100%, 0);
     transition: all 0.16s ease-in-out;
     width: 100%;
-    width: 40vw;
-    height: 40vw;
-    border-radius: 20vw;
     overflow: hidden;
     @include shadow-mega;
 

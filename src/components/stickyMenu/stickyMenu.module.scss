@@ -29,9 +29,47 @@
   &.activity {
     position: fixed;
     right: 0;
-    @include for-tablet-portrait-up {
-      right: 38vw;
+    top: 24vh;
+    height: 48px;
+
+    .btn__back {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      display: block;
     }
+    .title {
+      left: 32px;
+      right: 16px;
+    }
+    .navigation {
+      display: none;
+    }
+    &.hidden {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    &.active {
+      opacity: 1;
+    }
+
+    @include for-tablet-portrait-up {
+      transform: translate(0, -100%);
+      right: 38vw;
+      height: 80px;
+      top: 0;
+
+      .btn__back {
+        display: none;
+      }
+      .navigation {
+        display: inherit;
+      }
+    }
+  }
+
+  .btn__back {
+    display: none;
   }
 
   &.hidden {
