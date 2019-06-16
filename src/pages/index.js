@@ -67,7 +67,7 @@ class Home extends Component {
           <header className={styles.threePeaks__header}>
             <h1>The National Three Peaks by Bike. A Record-breaking Ride</h1>
             <p>In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours.</p>
-            <p><a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200" data-link-external>Read on Medium</a></p>
+            <p><Link to="/rides/national-three-peaks-by-bike-record" data-link-external>Read More</Link></p>
           </header>
         </section>
 

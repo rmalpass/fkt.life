@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import ImageZoom from 'react-medium-image-zoom'
 
+import styles from './imageZoom.module.scss';
+
 class ImageZoomComponent extends Component {
   render() {
     let imgSrcSet = this.props.children[0].props.children[3].props.srcSet
@@ -10,7 +12,7 @@ class ImageZoomComponent extends Component {
 
     return (
       <div>
-        <figure className="pa2 mv0">
+        <figure className={styles.figure}>
           <ImageZoom
             image={{
               src: imgsrc,
@@ -24,7 +26,7 @@ class ImageZoomComponent extends Component {
             }}
           />
           {this.props.caption ? (
-            <figcaption className="mb3 gatsby-resp-image-figcaption w-100 tc i db lh-copy silver">
+            <figcaption>
               {this.props.caption}
             </figcaption>
           ) : null}

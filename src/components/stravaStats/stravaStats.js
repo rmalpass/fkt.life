@@ -1,12 +1,14 @@
 import React from 'react'
 import _ from 'lodash'
 import moment from 'moment'
-import Loader from './loader'
+import Loader from '../loader/loader'
+
+import styles from './stravaStats.module.scss';
 
 const Stat = props => {
   let { label, value, unit } = props
   return (
-    <div className="flex flex-column tc pa1 fl w-100 w-50-ns">
+    <div className={styles.stravaStat}>
       <div className=" b--black-05 pa3 br2 c-strava-stats-card">
         <label htmlFor="distance">{label}</label>
         <h2 className="f3 fw7 mt1 mb0" name="distance">
@@ -36,13 +38,13 @@ const StravaStats = props => {
 
   if (props.loading) {
     return (
-      <div className="mt4 pv5 c-strava-stats black br3 flex justify-around cf flex-wrap">
+      <div className="c-strava-stats">
         <Loader />
       </div>
     )
   } else {
     return (
-      <div className="c-strava-stats black br2 flex flex-column flex-row-ns justify-around flex-wrap">
+      <div className={styles.stravaStats}>
         <Stat
           label="Distance"
           value={distanceKilometer ? distanceKilometer : 0}

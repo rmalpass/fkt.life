@@ -1,0 +1,25 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../../styles/variables.scss';
+
+.loader {
+  @keyframes loaderAnimation {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  display: block;
+  text-align: center;
+  
+  svg {
+    display: block;
+    margin: auto;
+    animation: loaderAnimation 1s ease-in-out infinite;
+  }
+}

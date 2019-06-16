@@ -4,11 +4,11 @@ import Map from '../components/mapbox'
 import rehypeReact from 'rehype-react'
 // import Footer from '../components/footer'
 import MarkerLink from '../components/markerLink'
-import StravaStats from '../components/stravaStats'
-import AltitudeChart from '../components/altitudeChart'
+import StravaStats from '../components/stravaStats/stravaStats'
+import AltitudeChart from '../components/altitudeChart/altitudeChart'
 import SEO from '../components/seo'
 import RouteCard from '../components/routeCard'
-import ImageZoomComponent from '../components/imageZoom'
+import ImageZoomComponent from '../components/imageZoom/imageZoom'
 import InfoCard from '../components/infoCard'
 import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
@@ -101,7 +101,7 @@ class PostPage extends Component {
           }
         />
 
-        <StickyMenu hidden sidebar={this.state.isToggleOn} title={this.state.post.frontmatter.title} />
+        <StickyMenu hidden sidebar={this.state.isToggleOn} sidebar="true" title={this.state.post.frontmatter.title} />
 
         <article className={classNames(
           [styles.post],

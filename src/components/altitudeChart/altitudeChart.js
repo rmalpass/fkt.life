@@ -3,6 +3,8 @@ import { Line } from 'react-chartjs-2'
 import _ from 'lodash'
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 
+import styles from './altitudeChart.module.scss';
+
 let marker
 
 let handleOnHover = latlng => {
@@ -142,9 +144,9 @@ const AltitudeChart = props => {
       ],
     }
     return (
-      <div className="pa1">
+      <div className={styles.altitudeChart}>
         <div className="br2 c-altitude-card near-black">
-          <p className="f5 pt4 ph4">Elevation</p>
+          <label>Elevation</label>
           <div className="pa4">
             <Line
               data={altitudeChartData}

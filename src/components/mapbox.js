@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Loader from './loader/loader'
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js'
 import polyline from '@mapbox/polyline'
 mapboxgl.accessToken = `pk.eyJ1Ijoicm1hbHBhc3MiLCJhIjoiY2p3eHk2MDl3MTlidTQ5bW82MXJ5ZzB3aiJ9.0TO1f8jRFfSzVTvTx0tuoA
@@ -134,7 +135,7 @@ class Map extends Component {
     }
     render() {
         if (this.props.loading) {
-            return <div id="map" className="bg-near-white c-post-map" />
+            return <div id="map" className="bg-near-white c-post-map"><Loader /></div>
         } else {
             this.initMap()
             return <div id="map" className="bg-near-white c-post-map" />

@@ -1,0 +1,22 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../../styles/variables.scss';
+
+.figure {
+  font-weight: normal;
+  img, figure, figcaption {
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+  figcaption {
+    margin-top: 0;
+    font-family: $headline-font;
+    color: $color-grey-3;
+    font-weight: normal !important;
+    text-align: center;
+  }
+
+}

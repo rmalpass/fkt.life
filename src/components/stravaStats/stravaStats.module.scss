@@ -1,0 +1,21 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../../styles/variables.scss';
+
+.stravaStats {
+  display: flex;
+  flex-wrap: wrap;
+
+  .stravaStat {
+    flex:1 0 50%;
+    margin: 16px 0;
+    label {
+      @include tag-text;
+      text-align: left;
+      line-height: 1;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 import React from 'react'
 
+import styles from './loader.module.scss';
+
 const Loader = () => {
   return (
-    <div className="flex flex-column items-center">
+    <div className={styles.loader}>
 
       <svg
         className="loader mb3"
@@ -29,7 +31,7 @@ const Loader = () => {
           />
         </g>
       </svg>
-      <span className="silver">Loading data from Strava...</span>
+      <span>Loading data from Strava...</span>
     </div>
   )
 }

@@ -1,0 +1,16 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../../styles/variables.scss';
+
+.altitudeChart {
+  padding-bottom: $padding-md;
+  label {
+    @include tag-text;
+    text-align: left;
+    line-height: 1;
+    padding-bottom: 16px;
+  }
+}

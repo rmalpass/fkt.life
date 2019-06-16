@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Loader from '../loader/loader'
 
 const mapStyle = [
   {
@@ -215,7 +216,7 @@ class Map extends Component {
 
   render() {
     if (this.props.loading) {
-      return <div id="map" className="bg-near-white c-post-map" />
+      return <Loader />
     } else {
       this.initMap()
       return <div id="map" className="bg-near-white c-post-map" />

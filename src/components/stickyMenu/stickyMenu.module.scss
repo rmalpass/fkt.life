@@ -120,6 +120,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 900;
+
     @include for-tablet-portrait-up {
       left: 200px;
       right: 200px;
