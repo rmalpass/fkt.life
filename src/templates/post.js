@@ -63,6 +63,7 @@ class PostTemplate extends Component {
     return (
       <div className={styles.page__post}>
         <SEO title={post.title} />
+
         <StickyMenu hidden sidebar={this.state.isToggleOn} title={post.title} />
 
         <article className={classNames(
