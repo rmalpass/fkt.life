@@ -102,22 +102,19 @@ class Home extends Component {
                         <p>22/09/2019</p>
                       </div>
                       <div className={styles.card__content}>
-                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
-                          <div className={styles.card__content__media}>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ribble_-_geograph.org.uk_-_42616.jpg" />
-                            <div className={styles.countdown}>
-                              <DateCountdown second="09/22/2019" />
-                            </div>
+                        <div className={styles.card__content__media}>
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ribble_-_geograph.org.uk_-_42616.jpg" />
+                          <div className={styles.countdown}>
+                            <DateCountdown second="09/22/2019" />
                           </div>
-                          <h2>The Ribble Way FKT attempt</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Running</li>
-                            <li>Ultra</li>
-                            <li>FKT Attempt</li>
-                          </ul>
-                          <div className={styles.arrow} />
-                          {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
-                        </a>
+                        </div>
+                        <h2>The Ribble Way FKT attempt</h2>
+                        <ul className={styles.card__tags}>
+                          <li>Running</li>
+                          <li>Ultra</li>
+                          <li>FKT Attempt</li>
+                        </ul>
+                        <div className={styles.arrow} />
                       </div>
                     </div>
                   </HorizontalScrollerItem>
