@@ -1,0 +1,66 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../styles/variables.scss';
+
+.page__fkt {
+
+  @include css-grid;
+
+  .hero {
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    grid-column: 2 / span 10;
+    grid-row: 1;
+
+    @include for-tablet-portrait-up {
+      padding: 0;
+      grid-column: col 3 / span 4;
+      height: calc(100vh - 64px);
+    }
+
+    header {
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+      width: 100%;
+
+      img {
+        margin: 0;
+        align-self: flex-start;
+        background: 0;
+      }
+
+      h1 {
+        align-self: flex-start;
+        margin: 48px 0 24px 0;
+        font-size: 32px;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 900;
+        @include for-desktop-up {
+          font-size: 40px;
+          margin: 48px 0 40px 0;
+        }
+      }
+      p {
+        margin: 0;
+        @include for-tablet-portrait-up {
+          font-size: 24px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  .fkt__content {
+    grid-column: 2 / span 10;
+    @include for-tablet-portrait-up {
+      grid-column: col 3 / span 6;
+    }
+  }
+}

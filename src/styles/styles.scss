@@ -50,3 +50,17 @@ img {
 .hidden {
   display: none;
 }
+
+blockquote {
+  margin-left: 32px;
+  margin-right: 32px;
+
+  p {
+    width: calc(100% + 56px);
+    transform: translate(-56px, 0);
+    font-weight: bold;
+    &:before, &:after {
+      content: "'";
+    }
+  }
+}
