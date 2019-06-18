@@ -60,7 +60,7 @@ class StickyMenu extends Component {
             <Link to="/">Athlete</Link>
           </li>
           <li>
-            <a to="https://ombori.com" target="_blank">Designer</a>
+            <a href="https://ombori.com" target="_blank">Designer</a>
           </li>
           <li>
             <a href="https://medium.com/@rmalpass" target="_blank">Writer</a>

@@ -4,6 +4,9 @@
 @import "variables";
 @import "text-styles";
 
+:global {
+  @import "mapbox";
+}
 
 // Sane starting points
 html, body {
