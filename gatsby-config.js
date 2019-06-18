@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Ross Malpass`,
+    siteUrl: `http//rossmalpass.co.uk`,
     description: `is a digital designer and endurance athlete`,
     author: `@rmalpass`,
+    image: `src/images/timeline/3peaks.jpg`,
   },
   plugins: [
     // 'gatsby-plugin-sitemap',
@@ -106,12 +108,12 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Ross Malpass',
-        short_name: 'starter',
+        short_name: 'Ross',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#fff',
         display: 'minimal-ui',
-        icon: 'src/images/M.svg', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
