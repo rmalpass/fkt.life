@@ -46,6 +46,13 @@
 
   .hello {
     display: block;
+    @include css-grid;
+    align-items: center;
+
+    p {
+      grid-column: 2 / span 10;
+      text-align: center;
+    }
 
     a {
       position: relative;
@@ -82,14 +89,12 @@
     }
 
     @include for-tablet-portrait-up {
-      @include css-grid;
-      align-items: center;
-
       p {
         margin: auto;
         grid-column: 3 / span 5;
         font-size: 24px;
         line-height: 40px;
+        text-align: left;
       }
       img {
         grid-column: 9 / span 4;
@@ -101,12 +106,10 @@
 
   .services {
     margin-top: 80px;
+    @include css-grid;
 
-    @include for-tablet-portrait-up {
-      @include css-grid;
-    }
     header {
-      grid-column: 3 / span 4;
+      grid-column: 2 / span 10;
       img {
         width: 100%;
         background: 0;
@@ -117,14 +120,15 @@
       }
     }
     &__list {
-      grid-column: 3 / span 8;
+      grid-column: 2 / span 10;
       list-style: none;
       margin: 64px -32px 0 -32px;
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
 
       li {
-        flex: 1 33%;
+        flex: 1 100%;
         margin: 0 32px;
         padding: 0;
         border-top: 4px solid $color-deep-blue;
@@ -138,6 +142,18 @@
         p {
           font-size: 14px;
           opacity: 0.72;
+        }
+      }
+    }
+    @include for-tablet-portrait-up {
+      header {
+        grid-column: 3 / span 4;
+      }
+      &__list {
+        flex-wrap: nowrap;
+        grid-column: 3 / span 8;
+        li {
+          flex: 1 33%;
         }
       }
     }
