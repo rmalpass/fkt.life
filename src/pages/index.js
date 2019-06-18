@@ -31,7 +31,10 @@ class Home extends Component {
     return (
       <div className={styles.page__home}>
 
-       <SEO title="Home" keywords={[`cylist`, `designer`, `design sprint`, `blog`, `gatsby`]} />
+       <SEO
+        title="Home"
+        keywords={[`cylist`, `designer`, `design sprint`, `blog`, `gatsby`]}
+      />
        <StickyMenu />
 
        {/*

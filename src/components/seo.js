@@ -11,7 +11,7 @@ function SEO({ description, lang, meta, keywords, title, img }) {
         const metaDescription =
           description || data.site.siteMetadata.description
         const ogImage =
-          img || 'http://rossmalpass.co.uk/wp-content/themes/rm/static/img/new-hero.jpg';
+          img || date.site.siteMetadata.image;
         return (
           <Helmet
             htmlAttributes={{
@@ -34,7 +34,7 @@ function SEO({ description, lang, meta, keywords, title, img }) {
               },
               {
                 property: `og:image`,
-                content: metaDescription,
+                content: ogImage,
               },
               {
                 property: `og:type`,
@@ -98,6 +98,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        image
       }
     }
   }
