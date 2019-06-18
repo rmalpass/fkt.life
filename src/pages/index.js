@@ -11,6 +11,7 @@ import StickyMenu from '../components/stickyMenu/stickyMenu';
 import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
 import Footer from '../components/footer';
+import DateCountdown from '../components/dateCountdown/dateCountdown';
 
 // style
 import '../styles/styles.scss';
@@ -96,7 +97,7 @@ class Home extends Component {
                   </HorizontalScrollerItem>
 
                   <HorizontalScrollerItem>
-                    <div className={classNames([styles.card])}>
+                    <div className={classNames([styles.card], [styles.scheduled])}>
                       <div className={styles.card__date}>
                         <p>22/09/2019</p>
                       </div>
@@ -104,6 +105,9 @@ class Home extends Component {
                         <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
                           <div className={styles.card__content__media}>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ribble_-_geograph.org.uk_-_42616.jpg" />
+                            <div className={styles.countdown}>
+                              <DateCountdown second="09/22/2019" />
+                            </div>
                           </div>
                           <h2>The Ribble Way FKT attempt</h2>
                           <ul className={styles.card__tags}>
@@ -119,27 +123,28 @@ class Home extends Component {
                   </HorizontalScrollerItem>
 
                   <HorizontalScrollerItem>
-                    <div className={classNames([styles.card], [styles.spacer])}>
+                    <div className={classNames([styles.card], [styles.scheduled])}>
                       <div className={styles.card__date}>
                         <p>8/09/2019</p>
                       </div>
                       <div className={styles.card__content}>
-                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
-                          <div className={styles.card__content__media}>
-                            <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
+                        <div className={styles.card__content__media}>
+                          <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
+                          <div className={styles.countdown}>
+                            <DateCountdown second="09/08/2019" />
                           </div>
-                          <h2>Ambleside Trail 60km</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Running</li>
-                            <li>Ultra</li>
-                          </ul>
-                        </a>
+                        </div>
+                        <h2>Ambleside Trail 60km</h2>
+                        <ul className={styles.card__tags}>
+                          <li>Running</li>
+                          <li>Ultra</li>
+                        </ul>
                       </div>
                     </div>
                   </HorizontalScrollerItem>
 
                   <HorizontalScrollerItem>
-                    <div className={classNames([styles.card])}>
+                    <div className={classNames([styles.card], [styles.scheduled])}>
                       <div className={styles.card__date}>
                         <p>03/08/2019</p>
                       </div>
@@ -147,6 +152,9 @@ class Home extends Component {
                         <a href="https://fastestknowntime.com/route/lancaster-canal-uk">
                           <div className={styles.card__content__media}>
                             <img src="https://fastestknowntime.com/sites/default/files/styles/very_large/public/2019-06/33117.jpg?itok=oWekc7jL" />
+                            <div className={styles.countdown}>
+                              <DateCountdown second="08/03/2019" />
+                            </div>
                           </div>
                           <h2>The Lancaster Canal FKT attempt</h2>
                           <ul className={styles.card__tags}>
@@ -160,34 +168,6 @@ class Home extends Component {
                       </div>
                     </div>
                   </HorizontalScrollerItem>
-
-                  {/*
-                  <HorizontalScrollerItem>
-                    <div className={styles.timeline__year}>
-                      2018
-                    </div>
-                  </HorizontalScrollerItem>
-
-                  <HorizontalScrollerItem>
-                    <div className={classNames([styles.card], [styles.spacer])}>
-                      <div className={styles.card__date}>
-                        <p>15/02/2018</p>
-                      </div>
-                      <div className={styles.card__content}>
-                        <a href="https://medium.com/@rmalpass/national-3-peaks-challenge-cycling-record-874211c1e200">
-                          <div className={styles.card__content__media}>
-                            <img src={ErikImg} alt="Baby Erik" />
-                          </div>
-                          <h2>Erik Malpass born</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Life</li>
-                            <li>Child</li>
-                          </ul>
-                        </a>
-                      </div>
-                    </div>
-                  </HorizontalScrollerItem>
-                  */}
 
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
@@ -217,51 +197,6 @@ class Home extends Component {
                       </div>
                     </div>
                   </HorizontalScrollerItem>
-
-                  {/*
-
-                  <HorizontalScrollerItem>
-                    <div className={styles.timeline__year}>
-                      2016
-                    </div>
-                  </HorizontalScrollerItem>
-
-                  <HorizontalScrollerItem>
-                    <div className={classNames([styles.card])}>
-                      <div className={styles.card__date}>
-                        <p>20/12/2016</p>
-                      </div>
-                      <div className={styles.card__content}>
-                        <a href="http://rossmalpass.co.uk">
-                          <h2>Named in the top 10% of writers on the Medium platform</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Writing</li>
-                          </ul>
-                        </a>
-                      </div>
-                    </div>
-                  </HorizontalScrollerItem>
-
-                  <HorizontalScrollerItem>
-                    <div className={classNames([styles.card], [styles.spacer])}>
-                      <div className={styles.card__date}>
-                        <p>11/04/2016</p>
-                      </div>
-                      <div className={styles.card__content}>
-                        <a href="http://rossmalpass.co.uk">
-                          <div className={styles.card__content__media}>
-                            <img src="https://scontent.fman1-1.fna.fbcdn.net/v/t1.0-9/12936781_10156829863855077_8255999253801425165_n.jpg?_nc_cat=103&_nc_ht=scontent.fman1-1.fna&oh=6fea257ed9e6736094b42ca9b250df5a&oe=5D725BA9" />
-                          </div>
-                          <h2>Arlo Malpass born</h2>
-                          <ul className={styles.card__tags}>
-                            <li>Life</li>
-                            <li>Child</li>
-                          </ul>
-                        </a>
-                      </div>
-                    </div>
-                  </HorizontalScrollerItem>
-                  */}
 
                   <HorizontalScrollerItem>
                     <div className={styles.timeline__year}>
