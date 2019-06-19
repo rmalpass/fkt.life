@@ -22,7 +22,7 @@ class Fkt extends Component {
     return (
       <div className={styles.page__fkt}>
 
-       <SEO title="Designer" keywords={[`design system`, `designer`, `design sprint`, `sketch`, `gatsby`]} />
+       <SEO title="Fastest Known Times" keywords={[`FKT`, `Fastest Known Time`, `Ultra`, `Record`]} />
        <StickyMenu />
 
         <section className={styles.hero}>

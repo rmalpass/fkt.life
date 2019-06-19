@@ -73,8 +73,12 @@
       }
 
       header {
+        position: relative;
+        z-index: 2;
         border-top: 4px solid $color-deep-blue;
         margin: 0 $padding-lg;
+        background: $color-white;
+        @include animate(0.16s);
 
         h2 {
           @include headline-text;
@@ -85,8 +89,9 @@
         }
       }
       footer {
+        @include animate(0.16s);
         display: block;
-        padding: 0 $padding-lg;
+        margin: 0 $padding-lg;
         ul {
           margin: 0;
           padding: 24px 0 0 0;
@@ -103,6 +108,16 @@
               line-height: 1;
             }
           }
+        }
+      }
+
+      &:hover {
+        header {
+          margin-top: -24px;
+          padding: 0 $padding-md;
+        }
+        footer {
+          padding: 0 $padding-md;
         }
       }
     }
