@@ -94,6 +94,9 @@ export const query = graphql`
           }
           frontmatter {
             fkt
+            start
+            finish
+            time
             strava_id
             excerpt
             title

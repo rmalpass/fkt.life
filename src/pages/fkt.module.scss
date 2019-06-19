@@ -78,22 +78,31 @@
 
         h2 {
           @include headline-text;
+          font-size: 18px;
         }
         p {
           font-size: 16px;
         }
       }
       footer {
+        display: block;
+        padding: 0 $padding-sm;
         ul {
           margin: 0;
-          padding: 0;
+          padding: 24px 0 0 0;
           list-style: none;
           li {
+            flex: 1 0 33%;
             margin: 0;
             padding: 0;
             font-family: $headline-font;
             text-transform: uppercase;
-            color: $color-grey-3;
+            color: $color-grey-5;
+            font-size: 16px;
+            strong {
+              display: block;
+              line-height: 1;
+            }
           }
         }
       }
@@ -101,11 +110,17 @@
 
     @include for-tablet-portrait-up {
       grid-column: col 7 / span 5;
-      padding-top: 24vh;
+      padding-top: 16vh;
 
       li {
         header {
           margin: 0 $padding-lg;
+        }
+        footer {
+          padding: 0 $padding-lg;
+          ul {
+            display: flex;
+          }
         }
       }
     }
