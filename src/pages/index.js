@@ -11,7 +11,6 @@ import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
-import Footer from '../components/footer';
 import DateCountdown from '../components/dateCountdown/dateCountdown';
 import ImageZoomComponent from '../components/imageZoom/imageZoom';
 import ImageZoom from 'react-medium-image-zoom';
@@ -269,8 +268,6 @@ class Home extends Component {
             ))}
           </ol>
         </section>
-
-        <Footer />
       </div>
     )
   }
