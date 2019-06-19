@@ -12,6 +12,8 @@ import HorizontalScroller from '../components/horizontalScroller/horizontalScrol
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
 import Footer from '../components/footer';
 import DateCountdown from '../components/dateCountdown/dateCountdown';
+import ImageZoomComponent from '../components/imageZoom/imageZoom';
+import ImageZoom from 'react-medium-image-zoom';
 
 // style
 import '../styles/styles.scss';
@@ -22,6 +24,7 @@ import M from '../images/M.svg';
 import NGImg from '../images/newgrounds.jpg';
 import ThreePeaksImg from '../images/timeline/3peaks.jpg';
 import C2cImg from '../images/timeline/c2c.jpg';
+import PeaksHero from '../images/3peaksHero.png';
 
 class Home extends Component {
 
@@ -67,7 +70,7 @@ class Home extends Component {
         </Fade>
 
         <section className={styles.threePeaks}>
-          <img src="https://cdn-images-1.medium.com/max/2600/1*dC80Up_uuuSwS8mUM1S0TA.png" alt="A lonely hill 7 hours into the National Three Peaks record" />
+          <img src={PeaksHero}/>
           <header className={styles.threePeaks__header}>
             <h1>The National Three Peaks by Bike. A Record-breaking Ride</h1>
             <p>In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours.</p>
@@ -249,23 +252,25 @@ class Home extends Component {
           <aside>
             <h2>Posts from my archives</h2>
             <ul>
-              <li><a href="/adventures">Adventures</a></li>
-              <li><a href="/category/cycling">Cycling</a></li>
-              <li><a href="/category/design">Design</a></li>
-              <li><a href="/category/food">Food</a></li>
-              <li><a href="/category/life">Life</a></li>
-              <li><a href="/category/outdoors">Outdoors</a></li>
+              <li><a href="http://archive.rossmalpass.co.uk/adventures">Adventures</a></li>
+              <li><a href="http://archive.rossmalpass.co.uk/category/cycling">Cycling</a></li>
+              <li><a href="http://archive.rossmalpass.co.uk/category/design">Design</a></li>
+              <li><a href="http://archive.rossmalpass.co.uk/category/food">Food</a></li>
+              <li><a href="http://archive.rossmalpass.co.uk/category/life">Life</a></li>
+              <li><a href="http://archive.rossmalpass.co.uk/category/outdoors">Outdoors</a></li>
             </ul>
           </aside>
           <ol>
             {data.postOverview.edges.map(({ node }) => (
               <li key={node.slug}>
                 <Link to={node.slug} css={{ textDecoration: `none` }}>
-                  <h3>{node.title}</h3>
+                  <h3 dangerouslySetInnerHTML={{ __html: node.title }} />
                   <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  <footer>
-                    <PostIcons node={node} />
-                  </footer>
+                  {/*
+                      <footer>
+                        <PostIcons node={node} />
+                      </footer>
+                  */}
                 </Link>
               </li>
             ))}

@@ -6,14 +6,14 @@ import { rhythm } from "../utils/typography"
 
 export default ({ node, className = `` }) => (
   <div css={{ marginTop: rhythm(-1 / 2) }} className={className}>
-    <span style={{ marginRight: rhythm(1) }}>
+    <span>
       <Clock size={14} style={{ position: `relative`, bottom: 1 }} />
       {` `}
       {node.date}
     </span>
     {node.categories &&
       node.categories.map(category => (
-        <span style={{ marginRight: rhythm(1) }} key={category.name}>
+        <span key={category.name}>
           <Zap size={14} style={{ position: `relative`, bottom: 1 }} />
           {` `}
           {category.name}

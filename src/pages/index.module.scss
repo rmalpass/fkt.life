@@ -162,24 +162,33 @@
   align-items: flex-start;
 
   aside {
-    grid-column: 3 / span 10;
+    grid-column: 2 / span 10;
     grid-row: 1;
     flex-direction: column;
     width: 100%;
+    border-top: 4px solid $color-deep-blue;
+
     @include for-tablet-portrait-up {
       position: sticky;
       top: 24vh;
       grid-row: 1;
       grid-column: col 2 / span 3;
-      border-top: 4px solid $color-deep-blue;
     }
 
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      
+      li {
+        flex: 1 0 50%;
+      }
       a {
+        @include tag-text;
         color: $color-link;
+        font-weight: 900;
       }
     }
 
@@ -229,6 +238,8 @@
       }
       h3 {
         @include title-text;
+        line-height: 1;
+        margin-bottom: 16px;
       }
     }
   }
