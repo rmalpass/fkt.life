@@ -69,6 +69,33 @@
           opacity: 0.24;
         }
       }
+      ul {
+        margin: 16px 0 0 0;
+        padding: 0;
+        display: block;
+        list-style: none;
+        li {
+          display: inline-block;
+          text-align: center;
+          a {
+            color: $color-grey-3;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            @include animate(0.16s);
+            svg {
+              margin: auto;
+            }
+            &:hover {
+              color: $color-deep-blue;
+              background: rgba($color-link,0.08);
+            }
+          }
+        }
+      }
       p {
         margin: 0;
         @include for-tablet-portrait-up {

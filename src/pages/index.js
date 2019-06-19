@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import classNames from 'classnames';
 import Fade from 'react-reveal/Fade';
+import { Twitter, Instagram, Type } from 'react-feather';
 
 // Component
 import PostIcons from "../components/post-icons";
@@ -49,6 +50,11 @@ class Home extends Component {
               <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
               <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">Three Peaks Challenge</a> record holder. Father of two.</p>
               <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
+              <ul className={styles.social}>
+                <li><a href="https://twitter.com/rmalpass" target="_blank"><Twitter size={18} /></a></li>
+                <li><a href="https://instagram.com/rmalpass" target="_blank"><Instagram size={18} /></a></li>
+                <li><a href="https://medium.com/@rmalpass" target="_blank"><Type size={18} /></a></li>
+              </ul>
             </header>
             <div className={styles.bouncyArrow}>
               <BouncyArrow />
