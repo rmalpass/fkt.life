@@ -44,7 +44,7 @@ class Home extends Component {
         <Fade>
           <section className={styles.hello}>
             <header>
-              <img src={M} alt="Malpass Mountains logo" />
+              <span className={styles.img}><img src={M} alt="Malpass Mountains logo" /></span>
               <h1><Link to="/records">Ross Malpass <span>FKT's</span></Link></h1>
               <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
               <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">Three Peaks Challenge</a> record holder. Father of two.</p>
