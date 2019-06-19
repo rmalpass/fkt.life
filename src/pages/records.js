@@ -30,13 +30,13 @@ class Fkt extends Component {
             <Link to="/"><img src={M} alt="Malpass Mountains logo" /></Link>
             <h1>Fastest Known Time</h1>
             <p><strong>FKT:</strong> The fastest time anyone has completed a given task, i.e., running a trail, climbing a mountain, etc.</p>
-            <p>Or sometimes just: <strong>"I'm FKT"</strong>.</p>
+            <p>Or sometimes just: "<strong className={styles.fkt}>I'm FKT</strong>".</p>
           </header>
         </section>
 
         <ul className={styles.fkt__docs}>
           {data.allPosts.edges.map(({ node }) => (
-            <li key={node.frontmatter.title}>
+            <li className={styles.fkt__card} key={node.frontmatter.title}>
               <Link to={node.fields.slug} css={{ textDecoration: `none` }}>
                 <Img
                   fluid={node.frontmatter.cover_image.childImageSharp.fluid}

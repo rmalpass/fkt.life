@@ -55,6 +55,9 @@
           font-size: 24px;
           line-height: 40px;
         }
+        .fkt {
+          color: $color-red;
+        }
       }
     }
   }
@@ -65,8 +68,22 @@
     list-style: none;
     grid-column: 1 / span 12;
 
-    li {
+    .fkt__card {
+      position: relative;
       margin-bottom: 40px;
+      // margin-bottom: 40px;
+      // margin-top: 40px;
+      // border-bottom: 1px solid $color-grey-2;
+      //
+      // &:before {
+      //   content: '';
+      //   position: absolute;
+      //   top: -40px;
+      //   left: 50%;
+      //   width: 2px;
+      //   background: $color-deep-blue;
+      //   height: 40px;
+      // }
 
       a {
         text-decoration: none;

@@ -154,10 +154,16 @@
 
 // Archive posts
 .archives {
+  // background: $color-deep-blue;
   position: relative;
   @include css-grid;
-  padding: 16vh 0;
+  // padding: 16vh 0;
   align-items: flex-start;
+  margin-top: 40px;
+
+  @include for-tablet-portrait-up {
+    margin-top: 16vh;
+  }
 
   aside {
     grid-column: 2 / span 10;
