@@ -21,7 +21,7 @@
 
   &.sidebar {
     transition: all 0.08s linear;
-    right: 38vw;
+    right: 38vw !important;
     @include for-tablet-portrait-up {
       display: flex;
     }
