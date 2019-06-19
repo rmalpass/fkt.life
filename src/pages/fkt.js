@@ -28,7 +28,7 @@ class Fkt extends Component {
         <section className={styles.hero}>
           <header>
             <img src={M} alt="Malpass Mountains logo" />
-            <h1>Fastest Know Time</h1>
+            <h1>Fastest Known Times</h1>
             <p>FKT: The fastest time anyone has completed a given task, i.e., running a trail, climbing a mountain, etc.</p>
             <p>Or sometimes just: <strong>"I'm FKT"</strong>.</p>
           </header>

@@ -55,6 +55,12 @@ $height-lg: 61.8vh;
   font-family: $body-font;
   margin: 16px 0;
 }
+@mixin headline-body {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 24px 0 0 0;
+  color: $color-grey-4;
+}
 @mixin title-text {
   font-size: 16px;
   line-height: 1.4;

@@ -57,16 +57,16 @@ class StickyMenu extends Component {
         <ul className={styles.navigation}>
           <li><Menu size={24} /></li>
           <li>
-            <Link to="/">Athlete</Link>
+            <Link to="/"><Home size={20} /></Link>
           </li>
           <li>
             <Link to="/fkt">FKTs</Link>
           </li>
           <li>
-            <a href="https://ombori.com" target="_blank">Designer</a>
+            <a href="https://ombori.com" target="_blank">Design</a>
           </li>
           <li>
-            <a href="https://medium.com/@rmalpass" target="_blank">Writer</a>
+            <a href="https://medium.com/@rmalpass" target="_blank">Writing</a>
           </li>
           <li>
             <a href="http://archive.rossmalpass.co.uk" target="_blank">Archive</a>

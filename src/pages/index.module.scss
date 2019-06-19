@@ -61,7 +61,7 @@
           &:hover {
             span {
               color: $color-link;
-              opacity: 1; 
+              opacity: 1;
             }
           }
         }
@@ -157,10 +157,7 @@
         @include headline-text;
       }
       p {
-        font-size: 14px;
-        line-height: 24px;
-        margin: 24px 0 0 0;
-        color: $color-grey-4;
+        @include headline-body;
       }
     }
   }

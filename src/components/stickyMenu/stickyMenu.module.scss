@@ -13,6 +13,8 @@
   transition: transform 0.16s ease-in-out;
   z-index: 999;
   overflow: hidden;
+  grid-column: col 1 / span 12;
+  grid-row: 1;
 
   @include for-tablet-portrait-up {
     position: fixed;
@@ -254,7 +256,7 @@
       // overflow-wrap: normal;
       // word-wrap: normal;
       // hyphens: none;
-      font-size: 16px;
+      font-size: 14px;
 
       &[aria-current]:not([aria-current="false"]) {
         &:before {
