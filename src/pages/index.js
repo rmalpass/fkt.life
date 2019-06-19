@@ -35,7 +35,7 @@ class Home extends Component {
       <div className={styles.page__home}>
 
        <SEO
-        title="Home"
+        title="Ross Malpass"
         keywords={[`cylist`, `designer`, `design sprint`, `blog`, `gatsby`]}
       />
 

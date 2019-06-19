@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Ross Malpass`,
     siteUrl: `http//rossmalpass.co.uk`,
-    description: `is a digital designer and endurance athlete`,
+    description: `is a digital designer and endurance athlete in the North West of England.`,
     author: `@rmalpass`,
     image: `src/images/timeline/3peaks.jpg`,
   },
