@@ -287,7 +287,7 @@
   header {
     grid-column: col 2 / span 10;
     border-top: 4px solid $color-deep-blue;
-    @include for-desktop-up {
+    @include for-tablet-portrait-up {
       position: absolute;
       border: 0;
       grid-column: col 3 / span 4;
