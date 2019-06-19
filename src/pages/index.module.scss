@@ -38,20 +38,20 @@
         grid-column: col 3 / span 9;
       }
 
-      .img {
-        margin: 0;
-        padding: 0;
-        width: 120px;
-        height: 120px;
-        border-radius: 120px;
-        padding: 16px;
-        background: $color-grey-1;
-        display: flex;
-        align-items: center;
-      }
+      // .img {
+      //   margin: 0;
+      //   padding: 0;
+      //   width: 200px;
+      //   height: 200px;
+      //   border-radius: 100px;
+      //   padding: 16px;
+      //   background: $color-grey-1;
+      //   display: flex;
+      //   align-items: center;
+      // }
 
       img {
-        margin: auto;
+        margin: 0 0 16px 0;
         align-self: flex-start;
         background: 0;
       }
@@ -59,13 +59,14 @@
       h1 {
         align-self: flex-start;
         margin: 48px 0 24px 0;
-        font-size: 32px;
+        font-size: 24px;
         line-height: 1;
         text-transform: uppercase;
         letter-spacing: 4px;
         font-weight: 900;
         @include for-desktop-up {
           margin: 48px 0 40px 0;
+          font-size: 40px;
         }
         a {
           text-decoration: none;
@@ -109,6 +110,7 @@
       }
       p {
         margin: 0;
+        // font-size: 16px;
         @include for-tablet-portrait-up {
           font-size: 20px;
           line-height: 40px;
@@ -145,57 +147,6 @@
       .ombori {
         color: $color-red !important;
         font-weight: bold;
-      }
-    }
-  }
-
-  // Three Peaks & Hill climb
-  .threePeaks {
-    position: relative;
-    @include css-grid;
-
-    img {
-      grid-column: col 1 / span 12;
-      margin: 0;
-
-      @include for-tablet-portrait-up {
-        transform: translate(0,-48px);
-        grid-column: col 5 / span 8;
-        grid-row: 1;
-        @include shadow-mega;
-      }
-
-      @include for-desktop-up {
-        grid-column: col 6 / span 7;
-      }
-    }
-
-    &__header {
-      grid-column: col 2 / span 10;
-      border-top: 4px solid $color-deep-blue;
-
-      @include for-tablet-portrait-up {
-        grid-column: col 1 / span 6;
-        grid-row: 1;
-        text-align: right;
-        max-width: 50%;
-
-        h1, p {
-          padding-left: 24px;
-        }
-      }
-
-      @include for-desktop-up {
-        grid-column: col 3 / span 4;
-        h1,p {
-          padding-left: 0;
-        }
-      }
-      h1 {
-        @include headline-text;
-      }
-      p {
-        @include headline-body;
       }
     }
   }
@@ -354,9 +305,11 @@
   @include css-grid;
   position: relative;
   margin-top: 40px;
+  margin-bottom: 40px;
 
   @include for-tablet-portrait-up {
-     margin-top: 24vh;
+     margin-top: 16vh;
+     margin-bottom: 16vh;
   }
 
   &__header {

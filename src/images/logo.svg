@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="148px" viewBox="0 0 148 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="74" cy="73.9142857" rx="74" ry="73.9142857"></ellipse>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" gradientTransform="translate(0.500000,0.000000),scale(0.998842,1.000000),rotate(90.000000),scale(1.000000,0.780167),translate(-0.500000,-0.000000)" id="radialGradient-3">
+            <stop stop-color="#FFBD55" offset="0%"></stop>
+            <stop stop-color="#EF472F" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#AAAAAA" offset="0%"></stop>
+            <stop stop-color="#D0D0D0" offset="81.9322917%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="94.0416667%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-6" points="94.8717949 0 189.74359 142.142857 0 142.142857"></polygon>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-7">
+            <stop stop-color="#AAAAAA" offset="0%"></stop>
+            <stop stop-color="#D0D0D0" offset="81.9322917%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="94.0416667%" id="linearGradient-8">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-9" points="71.1538462 0 142.307692 106.133333 0 106.133333"></polygon>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-10">
+            <stop stop-color="#AAAAAA" offset="0%"></stop>
+            <stop stop-color="#D0D0D0" offset="81.9322917%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="94.0416667%" id="linearGradient-11">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-12" points="40.7948718 0 81.5897436 60.647619 0 60.647619"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-236.000000, -146.000000)">
+            <g id="logo" transform="translate(236.000000, 146.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="bg" fill="#D6EFFA" xlink:href="#path-1"></use>
+                <g id="sky" mask="url(#mask-2)" fill="#000000">
+                    <g transform="translate(0.000000, 41.695238)" id="Rectangle">
+                        <polygon opacity="0.1" points="0 34.1142857 148 34.1142857 148 68.2285714 0 68.2285714"></polygon>
+                        <rect opacity="0.05" x="0" y="0" width="148" height="34.1142857"></rect>
+                    </g>
+                </g>
+                <ellipse id="sun" stroke="#333333" stroke-width="0.949999988" fill="url(#radialGradient-3)" mask="url(#mask-2)" cx="106.25641" cy="58.752381" rx="18.974359" ry="18.952381"></ellipse>
+                <g id="mountain" mask="url(#mask-2)">
+                    <g transform="translate(-20.871795, 15.161905)">
+                        <g id="Triangle" fill="none">
+                            <use fill="url(#linearGradient-4)" xlink:href="#path-6"></use>
+                            <use stroke="#333333" stroke-width="0.949999988" fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+                        </g>
+                        <polygon id="Triangle-2" fill-opacity="0.300000012" fill="#FFFFFF" points="94.8717949 5.68571429 113.846154 34.1142857 103.21896 26.536324 95.3960935 32.3231618 87.5739645 27.4809524 75.8974359 34.1142857"></polygon>
+                    </g>
+                </g>
+                <g id="mountain" mask="url(#mask-2)">
+                    <g transform="translate(-20.871795, 51.171429)">
+                        <g id="Triangle" fill="none">
+                            <use fill="url(#linearGradient-7)" xlink:href="#path-9"></use>
+                            <use stroke="#333333" stroke-width="0.949999988" fill="url(#linearGradient-8)" xlink:href="#path-9"></use>
+                        </g>
+                        <polygon id="Triangle-2" fill-opacity="0.300000012" fill="#FFFFFF" points="71.1538462 5.68571429 85.3846154 26.5333333 77.4142196 20.9761614 71.5470701 25.2198425 65.6804734 21.6688889 56.9230769 26.5333333"></polygon>
+                    </g>
+                </g>
+                <g id="mountain" mask="url(#mask-2)">
+                    <g transform="translate(32.256410, 85.285714)">
+                        <g id="Triangle" fill="none">
+                            <use fill="url(#linearGradient-10)" xlink:href="#path-12"></use>
+                            <use stroke="#333333" stroke-width="0.949999988" fill="url(#linearGradient-11)" xlink:href="#path-12"></use>
+                        </g>
+                        <polygon id="Triangle-2" fill-opacity="0.300000012" fill="#FFFFFF" points="40.7948718 3.79047619 45.5384615 11.3714286 42.881663 9.35063878 40.9259465 10.8937955 38.9704142 9.60253968 36.0512821 11.3714286"></polygon>
+                    </g>
+                </g>
+                <g id="waves-back" mask="url(#mask-2)">
+                    <g transform="translate(11.384615, 123.190476)">
+                        <g id="waves">
+                            <g id="Group" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(3.794872, 1.895238)" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                        </g>
+                        <g id="waves" transform="translate(0.000000, 5.685714)">
+                            <g id="Group" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(3.794872, 1.895238)" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                        </g>
+                        <g id="waves-front" opacity="0.900000036" transform="translate(30.358974, 0.000000)">
+                            <g id="waves" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <g id="Group">
+                                    <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                                </g>
+                                <g id="Group" transform="translate(3.794872, 1.895238)">
+                                    <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                                </g>
+                            </g>
+                            <g id="waves" transform="translate(0.000000, 5.685714)" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <g id="Group">
+                                    <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                                </g>
+                                <g id="Group" transform="translate(3.794872, 1.895238)">
+                                    <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                    <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="tent" mask="url(#mask-2)" stroke="#333333" stroke-width="0.949999988">
+                    <g transform="translate(39.846154, 100.447619)">
+                        <path d="M15.0839744,15.6915915 L15.0839744,15.0051587 L12.5470735,15.0051587 L15.0839744,9.3741312 L15.0839744,8.68769841 L12.5470735,8.68769841 L16.1282051,0.73884593 L19.7093368,8.68769841 L17.1724359,8.68769841 L17.1724359,9.3741312 L19.7093368,15.0051587 L17.1724359,15.0051587 L17.1724359,15.6915915 L19.7093368,21.322619 L17.1724359,21.322619 L17.1724359,27.8540503 C17.1724359,28.4307115 16.6987032,28.9035714 16.1282051,28.9035714 C15.5502828,28.9035714 15.0839744,28.4335149 15.0839744,27.8540503 L15.0839744,21.322619 L12.5470735,21.322619 L15.0839744,15.6915915 Z" id="tree" fill="#00975E" transform="translate(16.128205, 15.161905) rotate(-14.000000) translate(-16.128205, -15.161905) "></path>
+                        <path d="M51.1352564,15.6915915 L51.1352564,15.0051587 L48.5983555,15.0051587 L51.1352564,9.3741312 L51.1352564,8.68769841 L48.5983555,8.68769841 L52.1794872,0.73884593 L55.7606188,8.68769841 L53.2237179,8.68769841 L53.2237179,9.3741312 L55.7606188,15.0051587 L53.2237179,15.0051587 L53.2237179,15.6915915 L55.7606188,21.322619 L53.2237179,21.322619 L53.2237179,27.8540503 C53.2237179,28.4307115 52.7499852,28.9035714 52.1794872,28.9035714 C51.6015648,28.9035714 51.1352564,28.4335149 51.1352564,27.8540503 L51.1352564,21.322619 L48.5983555,21.322619 L51.1352564,15.6915915 Z" id="tree" fill="#00975E" transform="translate(52.179487, 15.161905) scale(-1, 1) rotate(-14.000000) translate(-52.179487, -15.161905) "></path>
+                        <polygon id="tent" fill="#E5AA4C" transform="translate(34.153846, 14.214286) rotate(-1.000000) translate(-34.153846, -14.214286) " points="45.5384615 24.6380952 37.9124034 24.6380952 34.0176665 18.3759819 34.0176665 24.6380952 22.7692308 24.6380952 30.3408171 12.5052506 33.7180714 7.10417784 31.6481413 3.79047619 32.5196908 3.79047619 34.0176665 6.16486084 34.1538462 6.39969009 35.7607656 3.79047619 36.6867869 3.79047619 34.6168568 7.13026998"></polygon>
+                        <ellipse id="hill" fill="#00975E" cx="34.1538462" cy="56.8571429" rx="34.1538462" ry="34.1142857"></ellipse>
+                    </g>
+                </g>
+                <g id="waves-front" opacity="0.900000036" mask="url(#mask-2)">
+                    <g transform="translate(28.461538, 132.666667)" id="waves">
+                        <g>
+                            <g id="Group" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(3.794872, 1.895238)" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                        </g>
+                        <g transform="translate(0.000000, 5.685714)">
+                            <g id="Group" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                            <g id="Group" transform="translate(3.794872, 1.895238)" fill="#365299" stroke="#333333" stroke-width="0.949999988">
+                                <polygon id="Triangle-3" points="3.79487179 0 7.58974359 7.58095238 0 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="11.3846154 0 15.1794872 7.58095238 7.58974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="18.974359 0 22.7692308 7.58095238 15.1794872 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="26.5641026 0 30.3589744 7.58095238 22.7692308 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="34.1538462 0 37.9487179 7.58095238 30.3589744 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="41.7435897 0 45.5384615 7.58095238 37.9487179 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="49.3333333 0 53.1282051 7.58095238 45.5384615 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="56.9230769 0 60.7179487 7.58095238 53.1282051 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="64.5128205 0 68.3076923 7.58095238 60.7179487 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="72.1025641 0 75.8974359 7.58095238 68.3076923 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="79.6923077 0 83.4871795 7.58095238 75.8974359 7.58095238"></polygon>
+                                <polygon id="Triangle-3" points="87.2820513 0 91.0769231 7.58095238 83.4871795 7.58095238"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

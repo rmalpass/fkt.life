@@ -262,7 +262,8 @@
         p {
           width: calc(100% + 56px);
           transform: translate(-56px, 0);
-          font-weight: bold;
+          font-weight: 700;
+          font-style: italic;
           &:before, &:after {
             content: "'";
           }
