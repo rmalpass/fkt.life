@@ -1,6 +1,9 @@
 ---
 path: '/activities/national-three-peaks-by-bike-record'
-date: '2019-05-07'
+date: '2016-08-11'
+start: '04:23am 11/08/16'
+finish: '17:56 12/18/16'
+time: '37hr 33min'
 title: 'The National Three Peaks By Bike Record'
 excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort."
 strava_id: 1130275642
@@ -9,6 +12,7 @@ social_image: '10 hill.png'
 location: United Kingdom
 author: Ross Malpass
 publish: true
+fkt: true
 route_file: 'National_Three_Peaks_by_Bike.gpx'
 ---
 

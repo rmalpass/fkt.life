@@ -17,9 +17,11 @@
     grid-row: 1;
 
     @include for-tablet-portrait-up {
+      position: sticky;
+      top: 0;
       padding: 0;
-      grid-column: col 3 / span 4;
-      height: calc(100vh - 64px);
+      grid-column: col 2 / span 4;
+      height: 100vh;
     }
 
     header {
@@ -48,7 +50,7 @@
         }
       }
       p {
-        margin: 0;
+        margin: 0 0 24px;
         @include for-tablet-portrait-up {
           font-size: 24px;
           line-height: 40px;
@@ -57,10 +59,62 @@
     }
   }
 
+  .fkt__docs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-column: 2 / span 10;
+
+    li {
+      margin-bottom: 40px;
+
+      a {
+        text-decoration: none;
+      }
+
+      header {
+        border-top: 4px solid $color-deep-blue;
+        margin: 0 $padding-sm;
+
+        h2 {
+          @include headline-text;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      footer {
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            margin: 0;
+            padding: 0;
+            font-family: $headline-font;
+            text-transform: uppercase;
+            color: $color-grey-3;
+          }
+        }
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      grid-column: col 7 / span 5;
+      padding-top: 24vh;
+
+      li {
+        header {
+          margin: 0 $padding-lg;
+        }
+      }
+    }
+  }
+
   .fkt__content {
     grid-column: 2 / span 10;
     @include for-tablet-portrait-up {
-      grid-column: col 3 / span 6;
+      grid-column: col 3 / span 4;
     }
   }
 }
