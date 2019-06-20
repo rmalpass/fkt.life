@@ -50,6 +50,7 @@ class PostTemplate extends Component {
   };
 
   render() {
+    const data = this.props.data;
     const post = this.props.data.wordpressPost;
     const categories = this.props.data.allWordpressCategory;
 
@@ -60,9 +61,22 @@ class PostTemplate extends Component {
       title: post.title,
     };
 
+    let ogImage = data.site.siteMetadata.image;
+
+    if (post.featured_media == null) {
+      console.log(ogImage);
+    } else {
+      ogImage = post.featured_media.source_url;
+      console.log(ogImage);
+    }
+
     return (
       <div className={styles.page__post}>
-        <SEO title={post.title} />
+        <SEO
+          title={post.title}
+          description={post.excerpt}
+          image={ogImage}
+        />
 
         <StickyMenu hidden sidebar={this.state.isToggleOn} title={post.title} />
 
@@ -188,6 +202,7 @@ export const pageQuery = graphql`
       title
     date(formatString: "MMMM DD, YYYY")
     content
+    excerpt
     featured_media {
       source_url
     }
@@ -209,6 +224,7 @@ export const pageQuery = graphql`
     siteMetadata {
       title
       description
+      image
     }
   }
 }`
