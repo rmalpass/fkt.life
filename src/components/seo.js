@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
+import PeaksHero from '../images/3peaksHero.png';
+
 function SEO({ description, lang, meta, keywords, title, image }) {
   return (
     <StaticQuery
@@ -11,7 +13,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         const metaDescription =
           description || data.site.siteMetadata.description
         const ogImage =
-          image || data.site.siteMetadata.image
+          PeaksHero || data.site.siteMetadata.image
         return (
           <Helmet
             htmlAttributes={{
