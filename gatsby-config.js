@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Ross Malpass`,
-    siteUrl: `http//rossmalpass.co.uk`,
+    siteUrl: `https//fkt.life`,
     description: `is a digital designer and endurance athlete in the North West of England.`,
     author: `@rmalpass`,
     image: `src/images/timeline/3peaks.jpg`,

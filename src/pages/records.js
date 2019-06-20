@@ -22,7 +22,12 @@ class Fkt extends Component {
     return (
       <div className={styles.page__fkt}>
 
-       <SEO title="Fastest Known Times" keywords={[`FKT`, `Fastest Known Time`, `Ultra`, `Record`]} />
+       <SEO
+        title="Ross Malpass Fastest Known Times"
+        description="FKT: The fastest time anyone has completed a given task, i.e., running a trail, climbing a mountain, etc."
+        keywords={[`FKT`, `Fastest Known Time`, `Ultra`, `Record`, `Running`, `cycling`]}
+      />
+
        <StickyMenu />
 
         <section className={styles.hero}>
