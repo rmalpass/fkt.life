@@ -54,23 +54,36 @@
         margin: 0 0 24px 0;
         align-self: flex-start;
         background: 0;
+        display: inline-block;
       }
 
       h1 {
         align-self: flex-start;
-        margin: 48px 0 24px 0;
+        margin: 0;
         font-size: 24px;
         line-height: 1;
         text-transform: uppercase;
         letter-spacing: 4px;
         font-weight: bold;
+        div {
+          transform: translate(24px,-48px);
+          opacity: 0;
+          display: inline-block;
+          @include animate(0.24s);
+        }
+        span {
+          text-transform: none;
+        }
         @include for-desktop-up {
-          margin: 48px 0 40px 0;
           font-size: 40px;
         }
         a {
           text-decoration: none;
           &:hover {
+            div {
+              transform: translate(24px,-24px);
+              opacity: 1;
+            }
             span {
               color: $color-link;
               opacity: 1;

@@ -27,7 +27,11 @@ class Designer extends Component {
     return (
       <div className={styles.page__designer}>
 
-       <SEO title="Designer" keywords={[`design system`, `designer`, `design sprint`, `sketch`, `gatsby`]} />
+       <SEO
+        title="Design"
+        keywords={[`design system`, `designer`, `design sprint`, `sketch`, `gatsby`]}
+      />
+      
        <StickyMenu />
 
        {/*
