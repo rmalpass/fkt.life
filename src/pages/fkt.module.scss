@@ -51,8 +51,9 @@
       }
       p {
         margin: 0 0 24px;
+        font-size: 18px;
         @include for-tablet-portrait-up {
-          font-size: 24px;
+          font-size: 20px;
           line-height: 40px;
         }
         .fkt {
