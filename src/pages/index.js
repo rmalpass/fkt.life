@@ -39,6 +39,7 @@ class Home extends Component {
        <SEO
         title="Ross Malpass"
         keywords={[`cylist`, `designer`, `design sprint`, `blog`, `gatsby`]}
+        image={PeaksHero}
       />
 
        <StickyMenu />

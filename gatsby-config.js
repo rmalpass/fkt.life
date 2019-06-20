@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: `https//fkt.life`,
     description: `is a digital designer and endurance athlete in the North West of England.`,
     author: `@rmalpass`,
-    image: `src/images/timeline/3peaks.jpg`,
+    image: `src/images/3peaksHero.png`,
   },
   plugins: [
     // 'gatsby-plugin-sitemap',

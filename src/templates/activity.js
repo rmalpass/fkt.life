@@ -93,7 +93,7 @@ class PostPage extends Component {
     return (
       <div className={styles.page__activity}>
         <SEO
-          title={this.state.post.frontmatter.title}
+          title={this.state.post.frontmatter.title + ` by ` + this.state.post.frontmatter.author}
           keywords={[`gatsby`, `application`, `react`]}
           description={this.state.post.frontmatter.excerpt}
           image={
