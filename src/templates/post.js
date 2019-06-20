@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
 import classNames from 'classnames';
 import { DiscussionEmbed } from "disqus-react";
@@ -105,7 +105,7 @@ class PostTemplate extends Component {
           <div className={styles.post__content}>
             <header className={styles.post__content__header}>
               <div>
-                <img src={M} alt="Go back home" id="content" name="content" />
+                <Link to="/"><img src={M} alt="Go back home" id="content" name="content" /></Link>
                 <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                 <p className={styles.post__content__categories}>
                   {post.categories.map(category => (
