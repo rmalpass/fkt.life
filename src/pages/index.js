@@ -47,9 +47,9 @@ class Home extends Component {
           <section className={styles.hello}>
             <header>
 
-              <img src={M} alt="Malpass Mountains logo" />
-              <h1><Link to="/records">Ross Malpass <span>FKT</span></Link></h1>
-              <p>An <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
+              <Link to="/records"><img src={M} alt="Malpass Mountains logo" /></Link>
+              {/* <h1><Link to="/records">Ross Malpass <span>FKT</span></Link></h1> */}
+              <p>Ross is an <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
               <p>Current <a href="https://www.threepeakschallenge.net/213070/national-three-peaks-by-bike-solo-no-drafting">Three Peaks Challenge</a> record holder. Father of two.</p>
               <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
               <ul className={styles.social}>
