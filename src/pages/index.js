@@ -238,7 +238,7 @@ class Home extends Component {
         <Fade>
           <HomeFeature
             title="Breaking New Ground"
-            content="Why I decided to start chasing Fastest Known Times on North West England's finest trails."
+            content="I have decided to start chasing Fastest Known Times on North West England's finest trails."
             link="/records"
             image={NGImg}
             reverse
