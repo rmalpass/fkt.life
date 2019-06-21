@@ -9,6 +9,13 @@
 .homeFeature {
   position: relative;
   @include css-grid;
+  border-bottom: 1px solid $color-grey-2;
+  padding-bottom: 40px;
+
+  @include for-tablet-portrait-up {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
 
   img {
     margin: 0;

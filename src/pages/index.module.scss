@@ -10,7 +10,7 @@
   .hello {
     position: relative;
     @include css-grid;
-    padding: 80px 0;
+    padding: 80px 0 40px 0;
 
     @include for-tablet-portrait-up {
       height: calc(100vh - 64px);
