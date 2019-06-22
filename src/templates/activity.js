@@ -254,6 +254,7 @@ export const query = graphql`
         excerpt
         crew
         distance
+        time
         route_file {
           publicURL
         }
