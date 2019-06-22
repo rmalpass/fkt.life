@@ -121,11 +121,11 @@ class PostPage extends Component {
           <ul className={styles.activity__data}>
             <li>
               <strong>Total Time</strong>
-              37 hr 33 min
+              {this.state.post.frontmatter.time}
             </li>
             <li>
               <strong>Total Distance</strong>
-              37 hr 33 min
+              {this.state.post.frontmatter.distance}
             </li>
           </ul>
 
@@ -156,6 +156,7 @@ class PostPage extends Component {
           </div>
 
           <section className={styles.post__content}>
+            <p className={styles.post__crew}>Special thanks to <span>{this.state.post.frontmatter.crew}</span></p>
             {renderAst(this.state.post.htmlAst)}
             <footer className={styles.post__footer}>
               <a
@@ -252,6 +253,7 @@ export const query = graphql`
         location
         excerpt
         crew
+        distance
         route_file {
           publicURL
         }

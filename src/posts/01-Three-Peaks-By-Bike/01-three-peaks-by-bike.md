@@ -4,6 +4,7 @@ date: '2016-08-11'
 start: '04:23am 11/08/16'
 finish: '17:56 12/18/16'
 time: '37hr 33min'
+distance: '453.2mi'
 title: 'The National Three Peaks By Bike. A 37 year old record-breaking ride.'
 excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort."
 strava_id: 1130275642

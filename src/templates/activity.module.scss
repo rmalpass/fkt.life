@@ -190,6 +190,12 @@ $chartHeight: 16vh;
         grid-column: 8 / span 4;
         grid-row: 2 / span 5;
       }
+      .post__crew {
+        color: $color-grey-3;
+        span {
+          display: block;
+        }
+      }
     }
   }
 }
