@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import Fade from 'react-reveal/Fade';
 
 // Component
-import PostIcons from "../components/post-icons";
 import BouncyArrow from '../components/bouncyArrow';
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -31,7 +30,7 @@ class Designer extends Component {
         title="Design"
         keywords={[`design system`, `designer`, `design sprint`, `sketch`, `gatsby`]}
       />
-      
+
        <StickyMenu />
 
        {/*

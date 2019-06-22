@@ -6,7 +6,6 @@ import ImageZoom from 'react-medium-image-zoom';
 import { Twitter, Instagram, Type } from 'react-feather';
 
 // Component
-import PostIcons from "../components/post-icons";
 import BouncyArrow from '../components/bouncyArrow';
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
@@ -244,35 +243,6 @@ class Home extends Component {
             reverse
           />
         </Fade>
-
-        <section className={styles.archives}>
-          <aside>
-            <h2>Posts from my archives</h2>
-            <ul>
-              <li><a href="http://archive.rossmalpass.co.uk/adventures">Adventures</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/cycling">Cycling</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/design">Design</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/food">Food</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/life">Life</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/outdoors">Outdoors</a></li>
-            </ul>
-          </aside>
-          <ol>
-            {data.postOverview.edges.map(({ node }) => (
-              <li key={node.slug}>
-                <Link to={node.slug} css={{ textDecoration: `none` }}>
-                  <h3 dangerouslySetInnerHTML={{ __html: node.title }} />
-                  <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  {/*
-                      <footer>
-                        <PostIcons node={node} />
-                      </footer>
-                  */}
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </section>
       </div>
     )
   }
@@ -282,46 +252,7 @@ export default Home;
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`
-  query getCats ($catname: String = "National Hill Climb 2015"){
-    hillclimb: allWordpressPost(
-      filter: {categories: {elemMatch: {name: { eq: $catname }}}}
-      sort: {
-        fields: [date]
-        order: ASC
-      }
-    ){
-      edges {
-        node {
-          guid
-          title
-          date(formatString: "MMMM DD, YYYY")
-          excerpt
-          slug
-          featured_media {
-            source_url
-          }
-        }
-      }
-    }
-    postOverview: allWordpressPost(
-      limit: 100
-      sort: {
-        fields: [date]
-        order: DESC
-      }
-    ) {
-      edges {
-        node {
-          title
-          excerpt
-          slug
-          ...PostIcons
-          featured_media {
-            source_url
-          }
-        }
-      }
-    }
+  query {
     site {
       id
       siteMetadata {

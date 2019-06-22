@@ -2,13 +2,15 @@
 path: '/activities/coast-to-coast'
 date: '2015-08-01'
 title: 'Coast to Coast'
-excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort."
+excerpt: "Morecambe to Scarborough. Coast to coast. As fast as we can pedal."
 strava_id: 359051541
 cover_image: 'big.jpg'
 social_image: 'big.jpg'
 location: United Kingdom
 author: Ross Malpass
 publish: true
+timeline: 'timeline.json'
+crew: 'Ian Pinnock, Will Horton, Jeremy Horton'
 route_file: 'National_Three_Peaks_by_Bike.gpx'
 ---
 

@@ -1,0 +1,32 @@
+{
+  "timeline":
+  [
+    {
+      "key": "one",
+      "title": "Snowdon, Wales",
+      "lat": "53.0685032",
+      "lng": "-4.0850314",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "A",
+      "zoom": "14"
+    },
+    {
+      "key": "two",
+      "title": "Scafell Pike, England",
+      "lat": "54.4542347",
+      "lng": "-3.2203568",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "three",
+      "title": "Ben Nevis, Scotland",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    }
+  ]
+}

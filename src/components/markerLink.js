@@ -28,13 +28,9 @@ class MarkerLink extends Component {
   render() {
     return (
       <button
-        className="c-maker-link link pa0 b0 input-reset dim button-reset"
         onClick={this.showOnMap.bind(this)}
       >
-        →
         {this.props.children}
-        📍
-        <sup className="black c-marker-link-label">{this.props.label}</sup>
       </button>
     )
   }

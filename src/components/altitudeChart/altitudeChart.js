@@ -45,6 +45,7 @@ const AltitudeChart = props => {
     let distanceStreamKm = _.map(distanceStream, mToKm)
 
     let altitudeChartDataOptions = {
+      maintainAspectRatio: false,
       tooltips: {
         mode: 'index',
         intersect: false,
@@ -145,16 +146,13 @@ const AltitudeChart = props => {
     }
     return (
       <div className={styles.altitudeChart}>
-        <div className="br2 c-altitude-card near-black">
-          <label>Elevation</label>
-          <div className="pa4">
-            <Line
-              data={altitudeChartData}
-              options={altitudeChartDataOptions}
-              width={100}
-              height={30}
-            />
-          </div>
+        <div className={styles.chartHeight}>
+          <Line
+            data={altitudeChartData}
+            options={altitudeChartDataOptions}
+            width={100}
+            height={50}
+          />
         </div>
       </div>
     )
