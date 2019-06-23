@@ -8,12 +8,24 @@
 
 $chartHeight: 16vh;
 
-
 .page__activity {
   display: block;
 
   .activity {
     @include css-grid;
+
+    :global {
+      ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgba($color-deep-blue,0.64);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+      }
+    }
 
     &__header,
     &__excerpt,
@@ -158,6 +170,8 @@ $chartHeight: 16vh;
         grid-column: 6 / span 2;
         grid-row: 2 / span 4;
         padding-top: 8px;
+        max-height: 100vh;
+        overflow: scroll;
       }
     }
 
