@@ -13,27 +13,27 @@
     {
       "key": "two",
       "title": "Hawes",
-      "lat": "54.4542347",
-      "lng": "-3.2203568",
-      "date": "04:25am, 11 Aug 2017",
+      "lat": "54.3035506",
+      "lng": "-2.2007286",
+      "date": " ",
       "label": "C",
       "zoom": "14"
     },
     {
       "key": "three",
       "title": "Thirsk",
-      "lat": "1",
-      "lng": "2",
-      "date": "04:25am, 11 Aug 2017",
+      "lat": "54.2339253",
+      "lng": "-1.3654306",
+      "date": "",
       "label": "C",
       "zoom": "14"
     },
     {
       "key": "three",
       "title": "Scarborough",
-      "lat": "1",
-      "lng": "2",
-      "date": "04:25am, 11 Aug 2017",
+      "lat": "54.2755481",
+      "lng": "-0.4477916",
+      "date": "16:02pm, 01 Aug 2015",
       "label": "C",
       "zoom": "14"
     }
