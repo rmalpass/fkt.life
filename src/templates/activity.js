@@ -141,14 +141,14 @@ class PostPage extends Component {
             ))}
           </ul>
 
-          <div className={styles.activity__chart}>
+          <div className={classNames([styles.activity__chart], {[styles.loading]: this.state.loading})}>
             <AltitudeChart
               loading={this.state.loading}
               data={this.state.streams}
             />
           </div>
 
-          <div className={styles.activity__map}>
+          <div className={classNames([styles.activity__map], {[styles.loading]: this.state.loading})}>
             <Map
               loading={this.state.loading}
               activityData={this.state.activityData}

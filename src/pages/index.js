@@ -24,6 +24,7 @@ import M from '../images/M.svg';
 import Logo from '../images/logo.svg';
 import NGImg from '../images/newgrounds.jpg';
 import ThreePeaksImg from '../images/timeline/3peaks.jpg';
+import C2cImg from '../images/timeline/c2c.jpg';
 import PeaksHero from '../images/3peaksHero.png';
 
 class Home extends Component {
@@ -206,7 +207,6 @@ class Home extends Component {
                   </div>
                 </HorizontalScrollerItem>
 
-                {/*
                 <HorizontalScrollerItem>
                   <div className={classNames([styles.card])}>
                     <div className={styles.card__date}>
@@ -223,11 +223,11 @@ class Home extends Component {
                           <li>Ultra</li>
                         </ul>
                         <div className={styles.arrow} />
+                        {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
                       </Link>
                     </div>
                   </div>
                 </HorizontalScrollerItem>
-                */}
 
               </HorizontalScroller>
             </div>
