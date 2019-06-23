@@ -132,7 +132,7 @@ class PostPage extends Component {
           <ul className={classNames([styles.activity__timeline], {[styles.loading]: this.state.loading})}>
             {timelineData.map(item => (
               <li>
-                <MarkerLink lat={item.lat} lng={item.lng} label='A' zoom='14'>
+                <MarkerLink lat={item.lat} lng={item.lng} label={item.label} zoom={item.zoom}>
                   <MapPin size={24} />
                   <strong>{item.title}</strong>
                   {item.date}

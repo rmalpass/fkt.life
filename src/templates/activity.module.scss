@@ -128,6 +128,7 @@ $chartHeight: 16vh;
           width: 100%;
           height: 100%;
           cursor: not-allowed;
+          @include animate(0.16s);
         }
         &:after {
           position: absolute;
@@ -146,6 +147,7 @@ $chartHeight: 16vh;
           transform: translate(-50%, -50%);
           padding: 8px;
           font-weight: bold;
+          @include animate(0.16s);
         }
         &:hover {
           cursor: not-allowed;

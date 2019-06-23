@@ -22,7 +22,8 @@ class MarkerLink extends Component {
 
     window.map.flyTo({
       center: myLatLng,
-      zoom: zoom
+      zoom: zoom,
+      label: label
     })
   }
 
