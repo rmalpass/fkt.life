@@ -22,11 +22,11 @@
     {
       "key": "three",
       "title": "Ben Nevis, Scotland",
-      "lat": "1",
-      "lng": "2",
+      "lat": "56.796868",
+      "lng": "-5.0123053",
       "date": "17:56am, 12 Aug 2017",
-      "label": "C",
-      "zoom": "14"
+      "label": "D",
+      "zoom": "15"
     }
   ]
 }
