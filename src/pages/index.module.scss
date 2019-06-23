@@ -563,9 +563,11 @@
       border-bottom: 1px solid $color-black;
       margin-bottom: 16px;
       position: relative;
-      padding-right: 40px;
       @include tag-text;
       color: $color-grey-5;
+      @include for-tablet-portrait-up {
+        padding-right: 40px;
+      }
 
       p {
         margin: 0 0 8px 0;
@@ -576,13 +578,16 @@
         content: '';
         position: absolute;
         bottom: -4px;
-        left: calc(50% - 24px);
+        left: 50%;
         transform: translate(-50%, 0);
         width: 8px;
         height: 8px;
         border-radius: 8px;
         z-index: 2;
         background: $color-black;
+        @include for-tablet-portrait-up {
+          left: calc(50% - 24px);
+        }
       }
     }
 
