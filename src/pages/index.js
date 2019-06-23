@@ -25,6 +25,7 @@ import Logo from '../images/logo.svg';
 import NGImg from '../images/newgrounds.jpg';
 import ThreePeaksImg from '../images/timeline/3peaks.jpg';
 import C2cImg from '../images/timeline/c2c.jpg';
+import BadassImg from '../posts/04-bowland-badass/badass.jpg';
 import PeaksHero from '../images/3peaksHero.png';
 
 class Home extends Component {
@@ -179,7 +180,7 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.spacer])}>
+                  <div className={classNames([styles.card], [styles.spacer], [styles.record])}>
                     <div className={styles.card__date}>
                       <p>11/08/2017</p>
                     </div>
@@ -213,11 +214,39 @@ class Home extends Component {
                       <p>01/08/2015</p>
                     </div>
                     <div className={styles.card__content}>
-                      <Link to="activities/coast-to-coast/">
+                      <Link to="/activities/coast-to-coast/">
                         <div className={styles.card__content__media}>
                           <img src={C2cImg} alt="Bombing a hill on the coast to coast ride" />
                         </div>
                         <h2>Morecambe to Scarborough Coast 2 Coast</h2>
+                        <ul className={styles.card__tags}>
+                          <li>Cycling</li>
+                          <li>Ultra</li>
+                        </ul>
+                        <div className={styles.arrow} />
+                        {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                      </Link>
+                    </div>
+                  </div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div className={styles.timeline__year}>
+                    2013
+                  </div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div className={classNames([styles.card])}>
+                    <div className={styles.card__date}>
+                      <p>06/07/2013</p>
+                    </div>
+                    <div className={styles.card__content}>
+                      <Link to="/activities/bowland-badass/">
+                        <div className={styles.card__content__media}>
+                          <img src={BadassImg} alt="Feeling sore on one of the many climbs of the Badass" />
+                        </div>
+                        <h2>Bowland Badass</h2>
                         <ul className={styles.card__tags}>
                           <li>Cycling</li>
                           <li>Ultra</li>

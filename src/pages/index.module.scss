@@ -620,6 +620,23 @@
         }
       }
     }
+    &.record {
+      h2 {
+        &:after {
+          display: inline-block;
+          content: 'Record';
+          @include tag-text;
+          background: $color-red;
+          color: $color-white;
+          margin: 0 0 0 4px;
+          padding: 0 4px;
+          border-radius: 2px;
+          font-weight: 900;
+          font-size: 12px;
+          transform: translate(0,-1px);
+        }
+      }
+    }
   }
 
   &__posts {
