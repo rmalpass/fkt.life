@@ -70,7 +70,7 @@ class Home extends Component {
 
         <HomeFeature
           title="The National Three Peaks by Bike. A Record-breaking Ride"
-          content="In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours."
+          content="In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 430 mile distance between them. It took 37 hours."
           link="/activities/national-three-peaks-by-bike-record"
           image={PeaksHero}
         />
