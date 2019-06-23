@@ -2,7 +2,6 @@
   "timeline":
   [
     {
-      "key": "one",
       "title": "Morecambe Bay",
       "lat": "53.0685032",
       "lng": "-4.0850314",
@@ -11,25 +10,22 @@
       "zoom": "14"
     },
     {
-      "key": "two",
       "title": "Hawes",
       "lat": "54.3035506",
       "lng": "-2.2007286",
-      "date": " ",
+      "date": "40 miles",
       "label": "C",
       "zoom": "14"
     },
     {
-      "key": "three",
       "title": "Thirsk",
-      "lat": "54.2339253",
-      "lng": "-1.3654306",
-      "date": "",
+      "lat": "54.233951360502374",
+      "lng": "-1.332728837505556",
+      "date": "85 miles",
       "label": "C",
       "zoom": "14"
     },
     {
-      "key": "three",
       "title": "Scarborough",
       "lat": "54.2755481",
       "lng": "-0.4477916",
