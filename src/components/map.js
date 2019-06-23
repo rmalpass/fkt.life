@@ -209,6 +209,14 @@ class Map extends Component {
       title: 'End',
     })
 
+    window.map.on('mousemove', function (e) {
+      console.log(
+        JSON.stringify(e.point) + '<br />' +
+        // e.lngLat is the longitude, latitude geographical position of the event
+        JSON.stringify(e.lngLat)
+      )
+    })
+
     setPolyline.setMap(window.map)
     window.map.fitBounds(bounds)
   }
