@@ -110,7 +110,7 @@ class PostPage extends Component {
 
         <StickyMenu hidden title={this.state.post.frontmatter.title} />
 
-        <article className={styles.activity}>
+        <article className={classNames([styles.activity])}>
 
           <header className={styles.activity__header}>
             <h1>{this.state.post.frontmatter.title}</h1>

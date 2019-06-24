@@ -268,10 +268,10 @@ $chartHeight: 16vh;
 
       @include shadow-3;
       @include for-tablet-portrait-up {
-        margin: 0;
+        margin: 0 0 0 8px;
         grid-column: 1 / span 5;
         grid-row: 5;
-        height: calc((100vh - #{$chartHeight}) - 80px);
+        height: calc((100vh - #{$chartHeight}) - 88px);
         top: calc(#{$chartHeight} + 80px);
         box-shadow: 0 0 0;
       }
@@ -297,6 +297,35 @@ $chartHeight: 16vh;
         align-content: space-around;
         a, button {
           margin: auto;
+        }
+      }
+    }
+    &.reverse {
+      @include for-tablet-portrait-up {
+        .activity__data {
+          margin: $padding-md 0;
+        }
+        .activity__chart {
+          grid-column: 8 / span 5;
+          grid-row: 3;
+        }
+        .activity__excerpt {
+          grid-column: 2 / span 5;
+        }
+        .activity__map {
+          grid-column: 8 / span 5;
+          grid-row: 4 / span 2;
+        }
+        .activity__timeline {
+          grid-row: 3 / span 4;
+          padding-top: 0;
+        }
+        .post__content {
+          grid-column: 2 / span 4;
+          grid-row: 4;
+          margin: 0 0 $padding-md 0;
+          padding: $padding-md 0;
+          border-top: 1px solid $color-grey-2;
         }
       }
     }
