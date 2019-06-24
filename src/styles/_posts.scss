@@ -118,17 +118,17 @@
     color: $color-link;
   }
   h2, h3, h4 {
-    font-family: $headline-font;
+    font-family: $body-font;
     font-size: 20px;
     color: $color-deep-blue;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    // letter-spacing: 1px;
+    // text-transform: uppercase;
     margin-bottom: 8px;
     line-height: 1.4;
 
     @include for-tablet-portrait-up {
       font-size: 32px;
-      letter-spacing: 2px;
+      // letter-spacing: 2px;
     }
   }
   h3 {
