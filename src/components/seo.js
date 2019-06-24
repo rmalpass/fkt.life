@@ -78,7 +78,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  img: [],
+  image: [],
 }
 
 SEO.propTypes = {
@@ -87,7 +87,7 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
-  img: PropTypes.string,
+  image: PropTypes.string,
 }
 
 export default SEO
