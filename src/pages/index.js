@@ -54,8 +54,7 @@ class Home extends Component {
                 </Link>
               </h1>
               <p>Ross is an <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
-              <p>Current <Link to="/activities/national-three-peaks-by-bike-record">Three Peaks Challenge</Link> record holder. Father of two.</p>
-              <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
+              <p>Lover of the outdoors; Father of Two; Working at <a href="https://ombori.com" className={styles.ombori}>Ombori</a>;  <span>and always plotting and scheming.</span></p>
               <ul className={styles.social}>
                 <li><a href="https://twitter.com/rmalpass" target="_blank"><Twitter size={18} /></a></li>
                 <li><a href="https://instagram.com/rmalpass" target="_blank"><Instagram size={18} /></a></li>

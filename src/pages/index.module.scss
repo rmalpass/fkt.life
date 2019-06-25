@@ -127,6 +127,10 @@
         @include for-tablet-portrait-up {
           font-size: 20px;
           line-height: 40px;
+
+          span {
+            display: block;
+          }
         }
         a {
           position: relative;
