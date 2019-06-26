@@ -41,6 +41,8 @@
   }
 
   @include for-tablet-portrait-up {
+    $offset: $padding-md;
+
     // 3 peaks
     .col_8__row_1__span_4 {
       grid-column: 8 / span 4;
@@ -49,11 +51,13 @@
     .col_4__row_1__span_2 {
       grid-column: 4 / span 2;
       grid-row: 1 / span 2;
+      transform: translate(0, #{$offset*2});
     }
     // Shoes
     .col_3__row_3__span_3 {
       grid-column: 3 / span 3;
       grid-row: 3 / span 3;
+      transform: translate(0, #{$offset*2});
     }
     // bike
     .col_8__row_5__span_3 {
@@ -64,23 +68,28 @@
     .col_6__row_1__span_2 {
       grid-column: 6 / span 2;
       grid-row: 1 / span 2;
+      transform: translate(0, $offset);
     }
     .col_6__row_3__span_2 {
       grid-column: 6 / span 2;
       grid-row: 3 / span 2;
+      transform: translate(0, $offset);
     }
     .col_6__row_6__span_2 {
       grid-column: 6 / span 2;
       grid-row: 5 / span 2;
+      transform: translate(0, $offset);
     }
     // Pigs
     .col_3__row_2__span_1 {
       grid-column: 3 / span 1;
       grid-row: 2 / span 1;
+      transform: translate(0, #{$offset*2});
     }
     .col_2__row_4__span_1 {
       grid-column: 2 / span 1;
       grid-row: 4 / span 1;
+      transform: translate(0, #{$offset*2});
     }
     .col_11__row_5__span_1 {
       grid-column: 11 / span 1;
