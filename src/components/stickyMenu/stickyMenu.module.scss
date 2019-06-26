@@ -260,6 +260,10 @@
       // hyphens: none;
       font-size: 14px;
 
+      svg {
+        transform: translate(0,4px);
+      }
+
       &[aria-current]:not([aria-current="false"]) {
         &:before {
           content: '';
@@ -293,7 +297,7 @@
           bottom: 0;
           left: -4px;
           right: calc(100% + 4px);
-          height: 50%;
+          height: 32%;
           background: $color-yellow;
           transition: all 0.16s ease-in-out;
         }

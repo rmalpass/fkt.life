@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import classNames from 'classnames';
 import Fade from 'react-reveal/Fade';
-import ImageZoom from 'react-medium-image-zoom';
 import { Twitter, Instagram, Type } from 'react-feather';
 
 // Component
@@ -12,8 +11,8 @@ import StickyMenu from '../components/stickyMenu/stickyMenu';
 import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
 import DateCountdown from '../components/dateCountdown/dateCountdown';
-import ImageZoomComponent from '../components/imageZoom/imageZoom';
 import HomeFeature from '../components/homeFeature/homeFeature';
+import Insta from '../components/insta/insta';
 
 // style
 import '../styles/styles.scss';
@@ -66,6 +65,8 @@ class Home extends Component {
             </div>
           </section>
         </Fade>
+
+        <Insta />
 
         <HomeFeature
           title="The National Three Peaks by Bike. A Record-breaking Ride"

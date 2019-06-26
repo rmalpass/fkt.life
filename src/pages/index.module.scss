@@ -20,7 +20,7 @@
     .bouncyArrow {
       position: absolute;
       bottom: 64px;
-      grid-column: col 12 / span 1;
+      grid-column: col 11 / span 1;
       display: none;
       @include for-tablet-portrait-up {
         display: block;

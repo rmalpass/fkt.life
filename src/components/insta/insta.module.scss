@@ -1,16 +1,90 @@
-@import '../styles/variables.scss';
+@import '../../styles/variables.scss';
 
-.footer {
-  display: block;
-  width: 100%;
+.insta__grid {
+  @include css-grid;
+  grid-template-rows: 7;
+  row-gap: 8px;
   margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include for-tablet-portrait-up {
+    row-gap: 16px;
+    margin-bottom: $padding-lg * 2;
+  }
 
   img {
-    float: left;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    background: 0;
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    @include shadow-2;
+    object-fit: cover;
+    align-self: flex-start;
+  }
+
+  li {
+    height: 0;
+    padding: 100% 0 0 0;
+    margin: 0;
+    align-self: flex-start;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    // 3 peaks
+    .col_8__row_1__span_4 {
+      grid-column: 8 / span 4;
+      grid-row: 1 / span 4;
+    }
+    .col_4__row_1__span_2 {
+      grid-column: 4 / span 2;
+      grid-row: 1 / span 2;
+    }
+    // Shoes
+    .col_3__row_3__span_3 {
+      grid-column: 3 / span 3;
+      grid-row: 3 / span 3;
+    }
+    // bike
+    .col_8__row_5__span_3 {
+      grid-column: 8 / span 3;
+      grid-row: 5 / span 3;
+    }
+    // loughrigg
+    .col_6__row_1__span_2 {
+      grid-column: 6 / span 2;
+      grid-row: 1 / span 2;
+    }
+    .col_6__row_3__span_2 {
+      grid-column: 6 / span 2;
+      grid-row: 3 / span 2;
+    }
+    .col_6__row_6__span_2 {
+      grid-column: 6 / span 2;
+      grid-row: 5 / span 2;
+    }
+    // Pigs
+    .col_3__row_2__span_1 {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+    }
+    .col_2__row_4__span_1 {
+      grid-column: 2 / span 1;
+      grid-row: 4 / span 1;
+    }
+    .col_11__row_5__span_1 {
+      grid-column: 11 / span 1;
+      grid-row: 5 / span 1;
+    }
   }
 }
