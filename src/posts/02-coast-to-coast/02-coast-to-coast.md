@@ -2,14 +2,18 @@
 path: '/activities/coast-to-coast'
 date: '2015-08-01'
 title: 'Coast to Coast'
-excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort."
+excerpt: "Morecambe to Scarborough. Coast to coast. We rode it fast, finishing the 133 miles route at an average speed of 22mph flat."
+time: '6:03:43'
+distance: '133mi'
 strava_id: 359051541
-cover_image: 'big.jpg'
-social_image: 'big.jpg'
+cover_image: 'massive.jpg'
+social_image: 'massive.jpg'
 location: United Kingdom
 author: Ross Malpass
 publish: true
-route_file: 'National_Three_Peaks_by_Bike.gpx'
+timeline: 'timeline.json'
+crew: 'Ian Pinnock, Will Horton, Jeremy Horton'
+route_file: 'The_fastest_wettest_most_enjoyable_coast_to_coast_ever.gpx'
 ---
 
 On a ride of this distance and intensity kit choice is important. The aim was to ride our route from Morecambe to Scarborough as quickly as possible. This meant equipment needed to be comfortable, as well as stiff, aero, and tight fitting.
@@ -27,8 +31,6 @@ Although we aren't sponsored or endorsed by these companies in any way we'd stil
 We used Strava to map our route and log our rides. We're both active members of our local community on the website and use it daily.
 
 I'm sure everyone is familiar with Strava already but I find it helps keep cycling interesting. There's always a new challenge or segment to have a crack at. Or an epic ride you friends have done to motivate you.
-
-Our ride meant we completed the Gran Fondo challenge on Strava.
 
 For us though, It's not just fantastic way to socialise with other cyclists, it's actually how we met. So without Strava this ride would never have happened and I wouldn't have met one of my closest friends.
 

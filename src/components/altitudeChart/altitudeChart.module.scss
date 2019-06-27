@@ -7,6 +7,15 @@
 
 .altitudeChart {
   padding-bottom: $padding-md;
+  &.loading {
+    background: $color-grey-3;
+  }
+  .chartHeight {
+    height: 16vh;
+  }
+  canvas {
+    height: 100% !important;
+  }
   label {
     @include tag-text;
     text-align: left;

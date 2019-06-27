@@ -21,13 +21,13 @@ class Map extends Component {
             container: 'map',
             style: 'mapbox://styles/p0pmaker/cjrf0kzjd4xde2tqwor6ltd0u',
             center: [
-                startLatlng[1], startLatlng[0]
+              startLatlng[1], startLatlng[0]
             ],
             zoom: 10,
         });
 
         let nav = new mapboxgl.NavigationControl({
-            showCompass: true
+            showCompass: false
         })
 
         // Add navigation control
@@ -43,7 +43,6 @@ class Map extends Component {
 
         // Add scale control
         window.map.addControl(scale);
-
 
         window.map.on('load', function () {
 
@@ -131,7 +130,18 @@ class Map extends Component {
 
             window.map.fitBounds(bounds, { padding: 24 });
         })
+
+        window.map.on('click', function (e) {
+          console.log(
+            JSON.stringify(e.point) + '<br />' +
+            // e.lngLat is the longitude, latitude geographical position of the event
+            JSON.stringify(e.lngLat) + '<br />' +
+            JSON.stringify(decodedPolyline)
+          )
+        })
     }
+
+
     render() {
         if (this.props.loading) {
             return <div id="map" className="bg-near-white c-post-map" />

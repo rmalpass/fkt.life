@@ -2,19 +2,18 @@ import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
 import classNames from 'classnames';
 import Fade from 'react-reveal/Fade';
-import ImageZoom from 'react-medium-image-zoom';
 import { Twitter, Instagram, Type } from 'react-feather';
 
 // Component
-import PostIcons from "../components/post-icons";
 import BouncyArrow from '../components/bouncyArrow';
 import SEO from '../components/seo';
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
 import DateCountdown from '../components/dateCountdown/dateCountdown';
-import ImageZoomComponent from '../components/imageZoom/imageZoom';
 import HomeFeature from '../components/homeFeature/homeFeature';
+import Insta from '../components/insta/insta';
+import ActivityCard from '../components/activityCard/activityCard';
 
 // style
 import '../styles/styles.scss';
@@ -26,6 +25,7 @@ import Logo from '../images/logo.svg';
 import NGImg from '../images/newgrounds.jpg';
 import ThreePeaksImg from '../images/timeline/3peaks.jpg';
 import C2cImg from '../images/timeline/c2c.jpg';
+import BadassImg from '../posts/04-bowland-badass/badass.jpg';
 import PeaksHero from '../images/3peaksHero.png';
 
 class Home extends Component {
@@ -38,7 +38,7 @@ class Home extends Component {
 
        <SEO
         title="Ross Malpass"
-        keywords={[`cylist`, `designer`, `design sprint`, `blog`, `gatsby`]}
+        keywords={[`cylist`, `designer`, `ultra`, `blog`, `fkt`]}
         image={PeaksHero}
       />
 
@@ -54,8 +54,7 @@ class Home extends Component {
                 </Link>
               </h1>
               <p>Ross is an <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
-              <p>Current <Link to="/activities/national-three-peaks-by-bike-record">Three Peaks Challenge</Link> record holder. Father of two.</p>
-              <p>Working @ <a href="https://ombori.com" className={styles.ombori}>Ombori</a>. Always plotting and scheming.</p>
+              <p>Lover of the outdoors; Father of Two; Working at <a href="https://ombori.com" className={styles.ombori}>Ombori</a>;  <span>and always plotting and scheming.</span></p>
               <ul className={styles.social}>
                 <li><a href="https://twitter.com/rmalpass" target="_blank"><Twitter size={18} /></a></li>
                 <li><a href="https://instagram.com/rmalpass" target="_blank"><Instagram size={18} /></a></li>
@@ -68,22 +67,37 @@ class Home extends Component {
           </section>
         </Fade>
 
+        <Insta />
+
+        <section id="records" className={styles.activities}>
+          <header className={styles.activities__intro}>
+            <h1>
+              <strong>FKT:</strong>
+              <span>The fastest known time</span>
+              <span>anyone has completed a given task;</span>
+              <span>i.e. running a trail, climbing a mountain, etc…</span>
+            </h1>
+          </header>
+          <div className={styles.activities__grid}>
+            {data.allPosts.edges.map(({ node }) => (
+              <ActivityCard
+                title={node.frontmatter.title}
+                excerpt={node.frontmatter.excerpt}
+                strava_id={node.frontmatter.strava_id}
+                slug={node.fields.slug}
+                relativePath={node.frontmatter.timeline.relativePath}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/*
         <HomeFeature
           title="The National Three Peaks by Bike. A Record-breaking Ride"
-          content="In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours."
+          content="In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 430 mile distance between them. It took 37 hours."
           link="/activities/national-three-peaks-by-bike-record"
           image={PeaksHero}
         />
-
-        {/*}
-        <section className={styles.threePeaks}>
-          <img src={PeaksHero}/>
-          <header className={styles.threePeaks__header}>
-            <h1>The National Three Peaks by Bike. A Record-breaking Ride</h1>
-            <p>In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours.</p>
-            <p><Link to="/activities/national-three-peaks-by-bike-record" data-link-external>Read More</Link></p>
-          </header>
-        </section>
         */}
 
         <section className={styles.timeline}>
@@ -180,7 +194,7 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.spacer])}>
+                  <div className={classNames([styles.card], [styles.spacer], [styles.record])}>
                     <div className={styles.card__date}>
                       <p>11/08/2017</p>
                     </div>
@@ -214,11 +228,39 @@ class Home extends Component {
                       <p>01/08/2015</p>
                     </div>
                     <div className={styles.card__content}>
-                      <Link to="activities/coast-to-coast/">
+                      <Link to="/activities/coast-to-coast/">
                         <div className={styles.card__content__media}>
                           <img src={C2cImg} alt="Bombing a hill on the coast to coast ride" />
                         </div>
                         <h2>Morecambe to Scarborough Coast 2 Coast</h2>
+                        <ul className={styles.card__tags}>
+                          <li>Cycling</li>
+                          <li>Ultra</li>
+                        </ul>
+                        <div className={styles.arrow} />
+                        {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                      </Link>
+                    </div>
+                  </div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div className={styles.timeline__year}>
+                    2013
+                  </div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div className={classNames([styles.card])}>
+                    <div className={styles.card__date}>
+                      <p>06/07/2013</p>
+                    </div>
+                    <div className={styles.card__content}>
+                      <Link to="/activities/bowland-badass/">
+                        <div className={styles.card__content__media}>
+                          <img src={BadassImg} alt="Feeling sore on one of the many climbs of the Badass" />
+                        </div>
+                        <h2>Bowland Badass</h2>
                         <ul className={styles.card__tags}>
                           <li>Cycling</li>
                           <li>Ultra</li>
@@ -244,35 +286,6 @@ class Home extends Component {
             reverse
           />
         </Fade>
-
-        <section className={styles.archives}>
-          <aside>
-            <h2>Posts from my archives</h2>
-            <ul>
-              <li><a href="http://archive.rossmalpass.co.uk/adventures">Adventures</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/cycling">Cycling</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/design">Design</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/food">Food</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/life">Life</a></li>
-              <li><a href="http://archive.rossmalpass.co.uk/category/outdoors">Outdoors</a></li>
-            </ul>
-          </aside>
-          <ol>
-            {data.postOverview.edges.map(({ node }) => (
-              <li key={node.slug}>
-                <Link to={node.slug} css={{ textDecoration: `none` }}>
-                  <h3 dangerouslySetInnerHTML={{ __html: node.title }} />
-                  <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  {/*
-                      <footer>
-                        <PostIcons node={node} />
-                      </footer>
-                  */}
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </section>
       </div>
     )
   }
@@ -282,50 +295,45 @@ export default Home;
 
 // Set here the ID of the home page.
 export const pageQuery = graphql`
-  query getCats ($catname: String = "National Hill Climb 2015"){
-    hillclimb: allWordpressPost(
-      filter: {categories: {elemMatch: {name: { eq: $catname }}}}
-      sort: {
-        fields: [date]
-        order: ASC
-      }
-    ){
-      edges {
-        node {
-          guid
-          title
-          date(formatString: "MMMM DD, YYYY")
-          excerpt
-          slug
-          featured_media {
-            source_url
-          }
-        }
-      }
-    }
-    postOverview: allWordpressPost(
-      limit: 100
-      sort: {
-        fields: [date]
-        order: DESC
-      }
-    ) {
-      edges {
-        node {
-          title
-          excerpt
-          slug
-          ...PostIcons
-          featured_media {
-            source_url
-          }
-        }
-      }
-    }
+  query {
     site {
       id
       siteMetadata {
         title
+      }
+    }
+    allPosts: allMarkdownRemark(
+      filter: { frontmatter: { publish: { eq: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            fkt
+            start
+            finish
+            time
+            strava_id
+            excerpt
+            title
+            timeline {
+              relativePath
+            }
+            date(formatString: "DD MMMM, YYYY")
+            cover_image {
+              childImageSharp {
+                fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

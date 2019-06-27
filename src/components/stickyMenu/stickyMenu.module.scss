@@ -27,7 +27,7 @@
     @include for-tablet-portrait-up {
       display: flex;
       right: 38vw !important;
-      top: 0 !important; 
+      top: 0 !important;
     }
   }
 
@@ -260,6 +260,10 @@
       // hyphens: none;
       font-size: 14px;
 
+      svg {
+        transform: translate(0,4px);
+      }
+
       &[aria-current]:not([aria-current="false"]) {
         &:before {
           content: '';
@@ -274,7 +278,8 @@
 
       @include for-tablet-portrait-up {
         margin: 0 16px;
-        font-size: 18px;
+        font-size: 16px;
+        letter-spacing: 1px;
         &:before {
           content: '';
           position: absolute;
@@ -292,7 +297,7 @@
           bottom: 0;
           left: -4px;
           right: calc(100% + 4px);
-          height: 50%;
+          height: 32%;
           background: $color-yellow;
           transition: all 0.16s ease-in-out;
         }

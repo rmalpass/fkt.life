@@ -1,0 +1,76 @@
+/*
+  Author:   Ross Malpass
+  Email:    ross.malpass@gmail.com
+*/
+
+@import '../../styles/variables.scss';
+
+.activityCard {
+  background: $color-white;
+  @include shadow-mega;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: $padding-lg;
+
+  a {
+    text-decoration: none;
+    display: flex;
+  }
+
+  &__info {
+    padding: 32px 16px 32px 32px;
+    width: 100%;
+    flex: 1 0 32%;
+    header {
+      h2 {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+        font-family: $body-font;
+        color: $color-deep-blue;
+        margin: 0;
+      }
+      p {
+        margin: 24px 0;
+        font-size: 14px;
+        line-height: 24px;
+
+        span {
+          display: block;
+          color: $color-link;
+          font-weight: bold;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+  &__map {
+    flex: 1 0 68%;
+    height: 0;
+    padding-top: 56%;
+    position: relative;
+    div {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      bottom: 8px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    img {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      bottom: 8px;
+      left: 8px;
+      object-fit: cover;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      margin: 0;
+      border-radius: 4px;
+    }
+  }
+}

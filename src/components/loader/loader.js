@@ -5,7 +5,6 @@ import styles from './loader.module.scss';
 const Loader = () => {
   return (
     <div className={styles.loader}>
-
       <svg
         className="loader mb3"
         width="28px"
@@ -31,7 +30,6 @@ const Loader = () => {
           />
         </g>
       </svg>
-      <span>Loading data from Strava...</span>
     </div>
   )
 }

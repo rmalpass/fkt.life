@@ -1,0 +1,122 @@
+{
+  "timeline":
+  [
+    {
+      "key": "one",
+      "title": "Kendal",
+      "lat": "53.0685032",
+      "lng": "-4.0850314",
+      "date": "09:09am, 01 Aug 2015",
+      "label": "A",
+      "zoom": "14"
+    },
+    {
+      "key": "two",
+      "title": "Oxenholme",
+      "lat": "54.4542347",
+      "lng": "-3.2203568",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "three",
+      "title": "Endmoor",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "four",
+      "title": "Holme",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Capernwray",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "six",
+      "title": "Inglebrick",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "seven",
+      "title": "Lancaster",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Galgate",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Scorton",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Garstang",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Barton",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Treales",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "five",
+      "title": "Preston",
+      "lat": "1",
+      "lng": "2",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    }
+  ]
+}

@@ -4,8 +4,9 @@ date: '2016-08-11'
 start: '04:23am 11/08/16'
 finish: '17:56 12/18/16'
 time: '37hr 33min'
-title: 'The National Three Peaks By Bike Record'
-excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort."
+distance: '453.2mi'
+title: 'The National Three Peaks By Bike. A 37 year old record-breaking ride.'
+excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then cycling the distance between then in one continuous effort. I broke a 37 year old record."
 strava_id: 1130275642
 cover_image: '10 hill.png'
 social_image: '10 hill.png'
@@ -13,6 +14,8 @@ location: United Kingdom
 author: Ross Malpass
 publish: true
 fkt: true
+timeline: 'timeline.json'
+crew: 'Ian Pinnock, Will Horton, Jeremy Horton'
 route_file: 'National_Three_Peaks_by_Bike.gpx'
 ---
 
@@ -22,7 +25,7 @@ My Grandad said to me when I was a young lad,
 
 And Those words have stuck with me. Ever since hearing them, I’ve done my best to see how far I can push myself.
 
-I’ll try and be brief with the backstory. If you’re interested in my past cycling experience, then check out the training archives. The National Hill Climb (failure) is a good place to start — it’s the reason I started this blog, and partly why I’ve moved away from racing and towards endurance challenges instead. But I also wrote a few pieces about my build up to this challenge that could be interesting.
+I’ll try and be brief with the backstory. If you’re interested in my past cycling experience, then check out the [training archives](https://archive.rossmalpass.co,uk/category/training). The National Hill Climb (failure) is a good place to start — it’s the reason I started this blog, and partly why I’ve moved away from racing and towards endurance challenges instead. But I also wrote a few pieces about my build up to this challenge that could be interesting.
 
 I’ve had some success racing bikes. Competing in hill climbs, time trials, and road races — but it never satisfied me. I always felt as though I had underachieved, even when I won. It often felt like a lost weekend. Sit around all day, rest, travel hundreds of miles. Then ride your bike from between 2 minutes and 2 hours — often just round and round and round the same industrial estate.
 
@@ -141,7 +144,7 @@ Before I knew it, 4 am arrived to the sound of my alarm. I changed into my cycli
 
 <image-zoom caption='About to set off up Snowdon Friday morning'><img src='5 snowdon.png'/></image-zoom>
 
-## Snowdon 3,560 ft<marker-link lat='53.0685032' lng='-4.0850314' label='A' zoom='14'>Go to location</marker-link>
+## Snowdon 3,560 ft <marker-link lat='53.0685032' lng='-4.0850314' label='A' zoom='14'>Go to location</marker-link>
 https://www.strava.com/activities/1127831991
 
 At 04:23 I set off on my first ascent. Mount Snowdon, Wales 3,560 ft.

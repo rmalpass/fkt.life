@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
-import Map from '../components/mapbox'
 import rehypeReact from 'rehype-react'
+import classNames from 'classnames';
+import { get } from 'lodash';
+
 // import Footer from '../components/footer'
 import MarkerLink from '../components/markerLink'
 import StravaStats from '../components/stravaStats/stravaStats'
@@ -13,8 +15,9 @@ import InfoCard from '../components/infoCard'
 import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
 import StickyMenu from '../components/stickyMenu/stickyMenu';
-import M from '../images/M.svg';
-import classNames from 'classnames';
+import { MapPin } from 'react-feather';
+import Map from '../components/mapbox';
+import Timeline from '../components/timeline/timeline';
 
 import styles from './activity.module.scss';
 
@@ -90,24 +93,87 @@ class PostPage extends Component {
       .replace(/(\r\n\t|\n|\r\t)/gm, '')
       .split(' ')[0]
 
+    // Fetch timeline
+    let getTimeline = require('../posts/' + this.state.post.frontmatter.timeline.relativePath);
+    const timelineData = getTimeline.timeline;
+
     return (
       <div className={styles.page__activity}>
         <SEO
           title={this.state.post.frontmatter.title + ` by ` + this.state.post.frontmatter.author}
-          keywords={[`gatsby`, `application`, `react`]}
+          keywords={[`fkt`, `record`, `ultra`]}
           description={this.state.post.frontmatter.excerpt}
           image={
             this.state.post.frontmatter.social_image.childImageSharp.fixed.src
           }
         />
 
-        <StickyMenu hidden activity title={this.state.post.frontmatter.title} />
+        <StickyMenu hidden title={this.state.post.frontmatter.title} />
 
-        <article className={classNames(
-          [styles.post],
-          [styles.sidebar_active],
-          {[styles.sidebar_active]: this.state.isToggleOn}
-        )}>
+        <article className={classNames([styles.activity])}>
+
+          <header className={styles.activity__header}>
+            <h1>{this.state.post.frontmatter.title}</h1>
+          </header>
+
+          <div className={styles.activity__excerpt} dangerouslySetInnerHTML={{ __html: this.state.post.frontmatter.excerpt }}  />
+
+          <ul className={styles.activity__data}>
+            <li>
+              <strong>Total Time</strong>
+              {this.state.post.frontmatter.time}
+            </li>
+            <li>
+              <strong>Total Distance</strong>
+              {this.state.post.frontmatter.distance}
+            </li>
+          </ul>
+
+          <div className={styles.activity__timeline}>
+            <Timeline
+              relativePath={this.state.post.frontmatter.timeline.relativePath}
+              loading={this.state.loading}
+            />
+          </div>
+
+          <div className={classNames([styles.activity__chart], {[styles.loading]: this.state.loading})}>
+            <AltitudeChart
+              loading={this.state.loading}
+              data={this.state.streams}
+            />
+          </div>
+
+          <div className={classNames([styles.activity__map], {[styles.loading]: this.state.loading})}>
+            <Map
+              loading={this.state.loading}
+              activityData={this.state.activityData}
+            />
+          </div>
+
+          <section className={styles.post__content}>
+            <p className={styles.post__crew}>Special thanks to <span>{this.state.post.frontmatter.crew}</span></p>
+            {renderAst(this.state.post.htmlAst)}
+            <footer className={styles.post__footer}>
+              <a
+                className="btn btn__white"
+                href={this.state.post.frontmatter.route_file.publicURL}
+              >
+                download gpx
+              </a>
+              <a
+                className="btn btn__primary"
+                href={
+                  'https://www.strava.com/activities/' +
+                  this.state.post.frontmatter.strava_id
+                }
+              >
+                view strava activity
+              </a>
+            </footer>
+          </section>
+
+
+          {/*
           <div className={styles.post__content}>
             <header className={styles.post__content__header}>
               <div>
@@ -168,12 +234,6 @@ class PostPage extends Component {
           */}
 
         </article>
-        <section className={classNames([styles.sidebar], [styles.active], {[styles.active]: this.state.isToggleOn})}>
-          <Map
-            loading={this.state.loading}
-            activityData={this.state.activityData}
-          />
-        </section>
       </div>
     )
   }
@@ -187,8 +247,14 @@ export const query = graphql`
         title
         location
         excerpt
+        crew
+        distance
+        time
         route_file {
           publicURL
+        }
+        timeline {
+          relativePath
         }
         author
         strava_id

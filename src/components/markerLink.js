@@ -19,22 +19,20 @@ class MarkerLink extends Component {
       .addTo(window.map)
 
     console.log(window.map)
+
     window.map.flyTo({
       center: myLatLng,
-      zoom: zoom
+      zoom: zoom,
+      label: label
     })
   }
 
   render() {
     return (
       <button
-        className="c-maker-link link pa0 b0 input-reset dim button-reset"
         onClick={this.showOnMap.bind(this)}
       >
-        →
         {this.props.children}
-        📍
-        <sup className="black c-marker-link-label">{this.props.label}</sup>
       </button>
     )
   }
