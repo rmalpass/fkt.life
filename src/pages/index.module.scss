@@ -203,6 +203,11 @@
     }
     @include for-tablet-portrait-up {
       article {
+        grid-column: 2 / span 10;
+      }
+    }
+    @include for-desktop-up {
+      article {
         grid-column: 3 / span 8;
       }
     }
