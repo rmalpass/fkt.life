@@ -6,13 +6,20 @@ import MarkerLink from '../markerLink';
 
 import styles from './timeline.module.scss';
 
-const Timeline = ({ relativePath, loading })  => {
+const Timeline = ({ relativePath, loading, trim, disabled })  => {
   // Fetch timeline
   let getTimeline = require('../../posts/' + relativePath);
   const timelineData = getTimeline.timeline;
 
   return (
-    <ul className={classNames([styles.timeline], {[styles.loading]: loading})}>
+    <ul className={
+      classNames(
+        [styles.timeline],
+        {[styles.loading]: loading},
+        {[styles.trim]: trim},
+        {[styles.disabled]: disabled},
+      )}
+    >
       {timelineData.map(item => (
         <li>
           <MarkerLink lat={item.lat} lng={item.lng} label={item.label} zoom={item.zoom}>

@@ -13,6 +13,21 @@
   list-style: none;
   @include animate(0.16s);
 
+  &.disabled {
+    &:before {
+      z-index: 3;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover button:not(:hover) {
+      opacity: 1;
+    }
+  }
+
   &.loading {
 
     &:before {
@@ -107,6 +122,16 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+
+  &.trim {
+    li:first-child:nth-last-child(n + 5) ~ li {
+      display: none;
+      &:first-child,
+      &:last-child {
+        display: block;
+      }
     }
   }
 

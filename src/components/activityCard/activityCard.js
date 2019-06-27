@@ -69,6 +69,8 @@ class ActivityCard extends Component {
             </header>
             <Timeline
               relativePath={this.props.relativePath}
+              trim
+              disabled
             />
           </div>
           <div className={styles.activityCard__map}>
