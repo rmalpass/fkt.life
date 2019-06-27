@@ -114,6 +114,7 @@ class Home extends Component {
                 <HorizontalScrollerItem>
                   <header className={styles.timeline__header}>
                     <h1>Schedule, events & achievements</h1>
+                    <p>It's not just records (for the record)! Here's some of the fun stuff I've got planned or have done in the past.</p>
                   </header>
                 </HorizontalScrollerItem>
 
