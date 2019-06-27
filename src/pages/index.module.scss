@@ -177,23 +177,45 @@
   &__intro {
     text-align: center;
     background-image: linear-gradient(180deg, $color-white 0%, $color-grey-1 100%);
-    padding: $padding-lg*2 0;
+    padding: $padding-lg 0;
     h1 {
       font-family: $body-font;
-      font-size: 20px;
-      line-height: 40px;
+      line-height: 24px;
       font-weight: 500;
-
+      font-size: 14px;
+      margin: 0;
       span, strong {
         display: block;
+      }
+    }
+    @include for-tablet-portrait-up {
+      padding: $padding-lg*2 0;
+      h1 {
+        font-size: 20px;
+        line-height: 40px;
       }
     }
   }
   &__grid {
     @include css-grid;
-
     article {
-      grid-column: 3 / span 8; 
+      grid-column: 1 / span 12;
+    }
+    @include for-tablet-portrait-up {
+      article {
+        grid-column: 3 / span 8;
+      }
+    }
+  }
+  &__footer {
+    text-align: center;
+    background-image: linear-gradient(180deg, $color-grey-1 0%, $color-white 100%);
+    padding: $padding-lg*2 0;
+    p {
+      font-family: $body-font;
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: 500;
     }
   }
 }
