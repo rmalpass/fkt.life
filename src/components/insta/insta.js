@@ -13,7 +13,7 @@ import Loughrigg from './loughrigg.png';
 import OldMan from './oldMan.png';
 import Pigs from './pigs.png';
 import Scotland from './scotland.png';
-import Shoes from './shoes.jpg';
+import Shoes from './shoes.png';
 import Waterfall from './waterfall.png';
 
 const Insta = () => (
