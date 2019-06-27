@@ -49,15 +49,23 @@ class ActivityCard extends Component {
 
     Promise.all(requests).then(responses => {
       this.setState({ loading: false })
+      this.GetActivityImages();
     })
   }
 
   componentDidMount() {
-    this.fetchData()
-    console.log(this.props);
+    this.fetchData();
+  }
+
+  GetActivityImages = () => {
+    const getImages = require('../../posts/' + this.props.imagesPath);
+    const imagesData = getImages.images;
+    this.setState({ imagesData: imagesData});
   }
 
   render() {
+
+    const activityImgs = this.state.imagesData;
 
     return (
       <article className={styles.activityCard}>
@@ -79,6 +87,15 @@ class ActivityCard extends Component {
               activityData={this.state.activityData}
             />
           </div>
+          {activityImgs &&
+            <ul className={styles.activityCard__images}>
+              {activityImgs.map(item => (
+                <li>
+                  <img src={item.url} />
+                </li>
+              ))}
+            </ul>
+          }
         </Link>
       </article>
     )

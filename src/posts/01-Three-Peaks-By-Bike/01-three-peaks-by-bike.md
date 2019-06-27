@@ -15,6 +15,7 @@ author: Ross Malpass
 publish: true
 fkt: true
 timeline: 'timeline.json'
+images: 'images.json'
 crew: 'Ian Pinnock, Will Horton, Jeremy Horton'
 route_file: 'National_Three_Peaks_by_Bike.gpx'
 ---

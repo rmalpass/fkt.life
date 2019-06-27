@@ -86,6 +86,7 @@ class Home extends Component {
                 strava_id={node.frontmatter.strava_id}
                 slug={node.fields.slug}
                 relativePath={node.frontmatter.timeline.relativePath}
+                imagesPath={node.frontmatter.images.relativePath}
               />
             ))}
           </div>
@@ -322,6 +323,9 @@ export const pageQuery = graphql`
             excerpt
             title
             timeline {
+              relativePath
+            }
+            images {
               relativePath
             }
             date(formatString: "DD MMMM, YYYY")

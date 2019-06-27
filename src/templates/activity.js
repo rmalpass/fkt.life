@@ -50,7 +50,10 @@ class PostPage extends Component {
     let activityStreamApiUrl =
       activityApiUrl + '/streams/altitude,latlng?resolution=medium'
 
-    let urls = [activityApiUrl, activityStreamApiUrl]
+    let photoStreamUrl =
+      activityApiUrl + '/photos?photo_sources=true'
+
+    let urls = [activityApiUrl, activityStreamApiUrl, photoStreamUrl]
 
     let requests = urls.map(url =>
       fetch(url, {
@@ -69,6 +72,7 @@ class PostPage extends Component {
             this.setState({ streams: json })
           } else {
             this.setState({ activityData: json })
+            console.log('streams:', this.state.streams);
           }
         })
     )
