@@ -49,7 +49,7 @@ class ActivityCard extends Component {
 
     Promise.all(requests).then(responses => {
       this.setState({ loading: false })
-      this.GetActivityImages();
+      //this.GetActivityImages();
     })
   }
 
@@ -57,15 +57,10 @@ class ActivityCard extends Component {
     this.fetchData();
   }
 
-  GetActivityImages = () => {
-    const getImages = require('../../posts/' + this.props.imagesPath);
-    const imagesData = getImages.images;
-    this.setState({ imagesData: imagesData});
-  }
-
   render() {
 
-    const activityImgs = this.state.imagesData;
+    const activityImgs = this.props.activityImages;
+    console.log("img;", activityImgs);
 
     return (
       <article className={styles.activityCard}>
@@ -81,6 +76,9 @@ class ActivityCard extends Component {
               disabled
             />
           </div>
+          <div className={styles.activityCard__hero}>
+            <img src={this.props.coverImage} />
+          </div>
           <div className={styles.activityCard__map}>
             <StaticMap
               loading={this.state.loading}
@@ -91,7 +89,7 @@ class ActivityCard extends Component {
             <ul className={styles.activityCard__images}>
               {activityImgs.map(item => (
                 <li>
-                  <img src={item.url} />
+                  <img src={item.src.childImageSharp.sizes.src} />
                 </li>
               ))}
             </ul>

@@ -32,6 +32,7 @@ class Home extends Component {
 
   render() {
     const data = this.props.data
+    console.log("Data",data);
 
     return (
       <div className={styles.page__home}>
@@ -86,7 +87,8 @@ class Home extends Component {
                 strava_id={node.frontmatter.strava_id}
                 slug={node.fields.slug}
                 relativePath={node.frontmatter.timeline.relativePath}
-                imagesPath={node.frontmatter.images.relativePath}
+                activityImages={node.frontmatter.images}
+                coverImage={node.frontmatter.cover_image.childImageSharp.sizes.src}
               />
             ))}
           </div>
@@ -326,13 +328,19 @@ export const pageQuery = graphql`
               relativePath
             }
             images {
-              relativePath
+              src {
+                childImageSharp {
+                  sizes(maxWidth: 200, maxHeight: 200, cropFocus: CENTER) {
+                    ...GatsbyImageSharpSizes
+                  }
+                }
+              }
             }
             date(formatString: "DD MMMM, YYYY")
             cover_image {
               childImageSharp {
-                fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
-                  ...GatsbyImageSharpFluid
+                sizes(maxWidth: 1400, maxHeight: 1000, cropFocus: CENTER) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }

@@ -10,12 +10,16 @@ excerpt: "Hiking the three highest peaks in England, Scotland, and Wales. Then c
 strava_id: 1130275642
 cover_image: '10 hill.png'
 social_image: '10 hill.png'
-location: United Kingdom
-author: Ross Malpass
+location: 'United Kingdom'
+author: 'Ross Malpass'
 publish: true
 fkt: true
 timeline: 'timeline.json'
-images: 'images.json'
+images:
+  - src: ./10 hill.png
+  - src: ./1 accident.png
+  - src: ./3 snowdon.png
+  - src: ./8 setting off.png
 crew: 'Ian Pinnock, Will Horton, Jeremy Horton'
 route_file: 'National_Three_Peaks_by_Bike.gpx'
 ---

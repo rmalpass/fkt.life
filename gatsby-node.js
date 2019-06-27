@@ -28,12 +28,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-// Implement the Gatsby API “createPages”. This is
-// called after the Gatsby bootstrap is finished so you have
-// access to any information necessary to programmatically
-// create pages.
-// Will create pages for Wordpress pages (route : /{slug})
-// Will create pages for Wordpress posts (route : /post/{slug})
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
