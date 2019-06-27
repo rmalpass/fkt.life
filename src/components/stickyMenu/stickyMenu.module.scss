@@ -261,7 +261,13 @@
       font-size: 14px;
 
       svg {
-        transform: translate(0,4px);
+        display: block;
+        margin: auto;
+        @include for-tablet-portrait-up {
+          display: inline;
+          margin: 0;
+          transform: translate(0,4px);
+        }
       }
 
       &[aria-current]:not([aria-current="false"]) {
@@ -313,6 +319,18 @@
           // color: $color-black;
           // background: $color-grey-1;
           // text-decoration: none;
+        }
+      }
+      &.active {
+        @include for-tablet-portrait-up {
+          &:before {
+            z-index: -2;
+            display: none;
+          }
+          &:after {
+            z-index: -1;
+            right: 4px;
+          }
         }
       }
     }
