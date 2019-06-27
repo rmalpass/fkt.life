@@ -106,7 +106,7 @@ class Home extends Component {
         />
         */}
 
-        <section className={styles.timeline}>
+        <section className={styles.timeline} id="schedule">
           <Fade right>
             <div className={styles.timeline__posts}>
               <HorizontalScroller fullWidth>
@@ -283,6 +283,8 @@ class Home extends Component {
           </Fade>
         </section>
 
+        {/*
+
         <Fade>
           <HomeFeature
             title="Breaking New Ground"
@@ -292,6 +294,8 @@ class Home extends Component {
             reverse
           />
         </Fade>
+
+        */}
       </div>
     )
   }
