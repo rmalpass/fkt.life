@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
-import Map from '../components/mapbox'
 import rehypeReact from 'rehype-react'
 import classNames from 'classnames';
 import { get } from 'lodash';
@@ -17,6 +16,8 @@ import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 import { MapPin } from 'react-feather';
+import Map from '../components/mapbox';
+import Timeline from '../components/timeline/timeline';
 
 import styles from './activity.module.scss';
 
@@ -95,7 +96,6 @@ class PostPage extends Component {
     // Fetch timeline
     let getTimeline = require('../posts/' + this.state.post.frontmatter.timeline.relativePath);
     const timelineData = getTimeline.timeline;
-    console.log(timelineData);
 
     return (
       <div className={styles.page__activity}>
@@ -129,17 +129,12 @@ class PostPage extends Component {
             </li>
           </ul>
 
-          <ul className={classNames([styles.activity__timeline], {[styles.loading]: this.state.loading})}>
-            {timelineData.map(item => (
-              <li>
-                <MarkerLink lat={item.lat} lng={item.lng} label={item.label} zoom={item.zoom}>
-                  <MapPin size={24} />
-                  <strong>{item.title}</strong>
-                  {item.date}
-                </MarkerLink>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.activity__timeline}>
+            <Timeline
+              relativePath={this.state.post.frontmatter.timeline.relativePath}
+              loading={this.state.loading}
+            />
+          </div>
 
           <div className={classNames([styles.activity__chart], {[styles.loading]: this.state.loading})}>
             <AltitudeChart

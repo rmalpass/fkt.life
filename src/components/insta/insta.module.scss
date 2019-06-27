@@ -1,14 +1,15 @@
 @import '../../styles/variables.scss';
 
 .insta__grid {
-  @include css-grid;
   grid-template-rows: 7;
   row-gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: none;
 
   @include for-tablet-portrait-up {
+    @include css-grid;
     row-gap: 16px;
     margin-bottom: $padding-lg * 2;
   }
@@ -19,9 +20,9 @@
     width: 100%;
     height: 100%;
     border-radius: 2px;
-    @include shadow-2;
     object-fit: cover;
     align-self: flex-start;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.16);
   }
 
   li {

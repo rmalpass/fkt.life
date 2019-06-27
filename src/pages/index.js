@@ -13,6 +13,7 @@ import HorizontalScrollerItem from '../components/horizontalScroller/horizontalS
 import DateCountdown from '../components/dateCountdown/dateCountdown';
 import HomeFeature from '../components/homeFeature/homeFeature';
 import Insta from '../components/insta/insta';
+import ActivityCard from '../components/activityCard/activityCard';
 
 // style
 import '../styles/styles.scss';
@@ -68,22 +69,35 @@ class Home extends Component {
 
         <Insta />
 
+        <section id="records" className={styles.activities}>
+          <header className={styles.activities__intro}>
+            <h1>
+              <strong>FKT:</strong>
+              <span>The fastest known time</span>
+              <span>anyone has completed a given task;</span>
+              <span>i.e. running a trail, climbing a mountain, etc…</span>
+            </h1>
+          </header>
+          <div className={styles.activities__grid}>
+            {data.allPosts.edges.map(({ node }) => (
+              <ActivityCard
+                title={node.frontmatter.title}
+                excerpt={node.frontmatter.excerpt}
+                strava_id={node.frontmatter.strava_id}
+                slug={node.fields.slug}
+                relativePath={node.frontmatter.timeline.relativePath}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/*
         <HomeFeature
           title="The National Three Peaks by Bike. A Record-breaking Ride"
           content="In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 430 mile distance between them. It took 37 hours."
           link="/activities/national-three-peaks-by-bike-record"
           image={PeaksHero}
         />
-
-        {/*}
-        <section className={styles.threePeaks}>
-          <img src={PeaksHero}/>
-          <header className={styles.threePeaks__header}>
-            <h1>The National Three Peaks by Bike. A Record-breaking Ride</h1>
-            <p>In August 2017 I set the record for hiking the three largest hills in the UK and cycling the 800 mile distance between them. It took 37 hours.</p>
-            <p><Link to="/activities/national-three-peaks-by-bike-record" data-link-external>Read More</Link></p>
-          </header>
-        </section>
         */}
 
         <section className={styles.timeline}>
@@ -286,6 +300,40 @@ export const pageQuery = graphql`
       id
       siteMetadata {
         title
+      }
+    }
+    allPosts: allMarkdownRemark(
+      filter: { frontmatter: { publish: { eq: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            fkt
+            start
+            finish
+            time
+            strava_id
+            excerpt
+            title
+            timeline {
+              relativePath
+            }
+            date(formatString: "DD MMMM, YYYY")
+            cover_image {
+              childImageSharp {
+                fluid(maxWidth: 700, maxHeight: 500, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

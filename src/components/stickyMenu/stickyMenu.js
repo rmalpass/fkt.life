@@ -30,7 +30,6 @@ class StickyMenu extends Component {
   };
 
   render() {
-    const { scrolling } = this.state;
     const data = this.props
 
     return (

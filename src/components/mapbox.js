@@ -21,13 +21,13 @@ class Map extends Component {
             container: 'map',
             style: 'mapbox://styles/p0pmaker/cjrf0kzjd4xde2tqwor6ltd0u',
             center: [
-                startLatlng[1], startLatlng[0]
+              startLatlng[1], startLatlng[0]
             ],
             zoom: 10,
         });
 
         let nav = new mapboxgl.NavigationControl({
-            showCompass: true
+            showCompass: false
         })
 
         // Add navigation control
@@ -135,7 +135,8 @@ class Map extends Component {
           console.log(
             JSON.stringify(e.point) + '<br />' +
             // e.lngLat is the longitude, latitude geographical position of the event
-            JSON.stringify(e.lngLat)
+            JSON.stringify(e.lngLat) + '<br />' +
+            JSON.stringify(decodedPolyline)
           )
         })
     }
