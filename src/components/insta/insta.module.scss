@@ -7,7 +7,7 @@
   padding: 0;
   list-style: none;
   text-align: center;
-  max-width: 78vw;
+  max-width: 88vw;
 
   @include for-tablet-portrait-up {
     text-align: left;
@@ -33,8 +33,8 @@
     align-self: flex-start;
     position: relative;
     display: inline-block;
-    width: 24vw;
-    height: 24vw;
+    width: 25vw;
+    height: 25vw;
     margin: 0 1vw;
     padding: 0;
 

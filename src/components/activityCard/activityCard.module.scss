@@ -8,12 +8,15 @@
 .activityCard {
   background: $color-white;
   @include shadow-3;
-  border-radius: 8px;
   overflow: hidden;
   position: relative;
   max-width: 1080px;
   margin: 0 auto $padding-lg auto;
   @include animate(0.16s);
+
+  @include for-tablet-portrait-up {
+    border-radius: 8px;
+  }
 
   &:hover {
     transform: translate(0,-4px);
@@ -59,7 +62,6 @@
       flex: 1 0 32%;
       padding: 32px 16px 32px 32px;
     }
-
   }
 
   &__hero {
