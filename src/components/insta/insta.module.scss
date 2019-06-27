@@ -3,12 +3,16 @@
 .insta__grid {
   grid-template-rows: 7;
   row-gap: 8px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
-  display: none;
+  text-align: center;
+  max-width: 78vw;
 
   @include for-tablet-portrait-up {
+    text-align: left;
+    max-width: none;
+    margin: 0;
     @include css-grid;
     row-gap: 16px;
     margin-bottom: $padding-lg * 2;
@@ -26,11 +30,21 @@
   }
 
   li {
-    height: 0;
-    padding: 100% 0 0 0;
-    margin: 0;
     align-self: flex-start;
     position: relative;
+    display: inline-block;
+    width: 24vw;
+    height: 24vw;
+    margin: 0 1vw;
+    padding: 0;
+
+    @include for-tablet-portrait-up {
+      margin: 0;
+      height: 0;
+      width: auto;
+      padding: 100% 0 0 0;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -44,6 +58,11 @@
       bottom: 0;
       left: 0;
       right: 0;
+      display: none;
+
+      @include for-tablet-portrait-up {
+        display: block;
+      }
 
       svg {
         position: relative;
