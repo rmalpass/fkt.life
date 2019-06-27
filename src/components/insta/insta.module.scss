@@ -39,6 +39,45 @@
       left: 0;
       object-fit: cover;
     }
+    .info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      svg {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        margin: 0 0 0 8px;
+      }
+
+      span {
+        @include animate(0.16s);
+        opacity: 0;
+        color: #fff;
+        font-family: $headline-font;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 8px 8px 10px 40px;
+        text-align: left;
+        line-height: 1.24;
+        color: $color-white;
+        background: rgba($color-deep-blue,0.4);
+      }
+    }
+    &:hover {
+      .info {
+        span {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   @include for-tablet-portrait-up {

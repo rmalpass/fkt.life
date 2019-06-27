@@ -15,7 +15,6 @@ import InfoCard from '../components/infoCard'
 import Hidden from '../components/hidden'
 import ImageZoom from 'react-medium-image-zoom'
 import StickyMenu from '../components/stickyMenu/stickyMenu';
-import { MapPin } from 'react-feather';
 import Map from '../components/mapbox';
 import Timeline from '../components/timeline/timeline';
 

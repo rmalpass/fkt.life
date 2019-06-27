@@ -303,7 +303,7 @@ export const pageQuery = graphql`
       }
     }
     allPosts: allMarkdownRemark(
-      filter: { frontmatter: { publish: { eq: true } } }
+      filter: { frontmatter: { fkt: { eq: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       totalCount
