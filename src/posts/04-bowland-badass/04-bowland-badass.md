@@ -11,6 +11,8 @@ social_image: 'badass.jpg'
 location: 'Bowland AONB, NW England'
 author: Ross Malpass
 publish: true
+images:
+  - src: ./badass.jpg
 crew: 'Professor Badass, for creating such a stupid route.'
 timeline: 'timeline.json'
 route_file: 'Bowland_Badass.gpx'

@@ -10,6 +10,11 @@ location: United Kingdom
 author: Ross Malpass
 publish: true
 timeline: 'timeline.json'
+images:
+  - src: ./massive.jpg
+  - src: ./massive-1.jpg
+  - src: ./big-1.jpg
+  - src: ./3-2.jpg
 crew: 'Phill Sharpe, Will Horton'
 route_file: 'National_Three_Peaks_by_Bike.gpx'
 ---

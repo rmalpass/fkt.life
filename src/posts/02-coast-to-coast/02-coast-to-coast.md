@@ -12,6 +12,11 @@ location: United Kingdom
 author: Ross Malpass
 publish: true
 timeline: 'timeline.json'
+images:
+  - src: ./massive.jpg
+  - src: ./massive-1.jpg
+  - src: ./big-1.jpg
+  - src: ./3-2.jpg
 crew: 'Ian Pinnock, Will Horton, Jeremy Horton'
 route_file: 'The_fastest_wettest_most_enjoyable_coast_to_coast_ever.gpx'
 ---

@@ -60,7 +60,7 @@ class ActivityCard extends Component {
   render() {
 
     const activityImgs = this.props.activityImages;
-    console.log("img;", activityImgs);
+    console.log(activityImgs);
 
     return (
       <article className={styles.activityCard}>
