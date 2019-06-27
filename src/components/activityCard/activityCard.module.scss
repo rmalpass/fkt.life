@@ -34,6 +34,13 @@
         margin: 24px 0;
         font-size: 14px;
         line-height: 24px;
+
+        span {
+          display: block;
+          color: $color-link;
+          font-weight: bold;
+          margin-top: 16px;
+        }
       }
     }
   }

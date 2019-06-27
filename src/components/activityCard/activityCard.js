@@ -65,7 +65,7 @@ class ActivityCard extends Component {
           <div className={styles.activityCard__info}>
             <header>
               <h2>{this.props.title}</h2>
-              <p>{this.props.excerpt}</p>
+              <p>{this.props.excerpt} <span>/ Read more</span></p>
             </header>
             <Timeline
               relativePath={this.props.relativePath}
