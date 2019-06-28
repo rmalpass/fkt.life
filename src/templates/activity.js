@@ -17,6 +17,7 @@ import ImageZoom from 'react-medium-image-zoom'
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 import Map from '../components/mapbox';
 import Timeline from '../components/timeline/timeline';
+import { ChevronLeft } from 'react-feather';
 
 import styles from './activity.module.scss';
 
@@ -115,7 +116,24 @@ class PostPage extends Component {
 
         <article className={classNames([styles.activity])}>
 
+          <div className={styles.activity__hero}>
+            <ImageZoom
+              image={{
+                src: coverImageSrc,
+                alt: 'main',
+                className: 'w-100',
+              }}
+              zoomMargin={10}
+              zoomImage={{
+                src: coverImageSrcSetFullFlatten,
+                alt: 'main',
+                className: 'w-100',
+              }}
+            />
+          </div>
+
           <header className={styles.activity__header}>
+            <Link className={styles.btn__back} to="/"><ChevronLeft size={24} />Back</Link>
             <h1>{this.state.post.frontmatter.title}</h1>
           </header>
 

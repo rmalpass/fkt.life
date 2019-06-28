@@ -27,6 +27,13 @@
       border-radius: 4px;
       @include shadow-mega;
     }
+    .activityCard__info {
+      header {
+        p span {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   a {

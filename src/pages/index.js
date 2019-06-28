@@ -93,7 +93,7 @@ class Home extends Component {
             ))}
           </div>
           <footer className={styles.activities__footer}>
-            <p>Or more simply put — <strong>“I’m FKT.”</strong></p>
+            <p>Or just &mdash; <strong>“I’m FKT.”</strong></p>
           </footer>
         </section>
 
