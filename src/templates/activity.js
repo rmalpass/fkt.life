@@ -73,7 +73,6 @@ class PostPage extends Component {
             this.setState({ streams: json })
           } else {
             this.setState({ activityData: json })
-            console.log('streams:', this.state.streams);
           }
         })
     )
@@ -100,6 +99,9 @@ class PostPage extends Component {
     // Fetch timeline
     let getTimeline = require('../posts/' + this.state.post.frontmatter.timeline.relativePath);
     const timelineData = getTimeline.timeline;
+
+    let fbLink = 'https://www.facebook.com/sharer/sharer.php?u=https://fkt.life/' + this.state.post.fields.slug;
+    let twLink = 'https://twitter.com/home?status=https://fkt.life/' + this.state.post.fields.slug + this.state.post.frontmatter.excerpt;
 
     return (
       <div className={styles.page__activity}>
@@ -174,6 +176,10 @@ class PostPage extends Component {
           <section className={styles.post__content}>
             <p className={styles.post__crew}>Special thanks to <span>{this.state.post.frontmatter.crew}</span></p>
             {renderAst(this.state.post.htmlAst)}
+            <div className={styles.activity__share}>
+              <a href={twLink}>Tweet this</a>
+              <a href={fbLink}>Share on Facebook</a>
+            </div>
             <footer className={styles.post__footer}>
               <a
                 className="btn btn__white"
@@ -192,68 +198,6 @@ class PostPage extends Component {
               </a>
             </footer>
           </section>
-
-
-          {/*
-          <div className={styles.post__content}>
-            <header className={styles.post__content__header}>
-              <div>
-                <Link to="/"><img src={M} alt="Go back home" id="content" name="content" /></Link>
-                <h1>{this.state.post.frontmatter.title}</h1>
-                <p className={styles.post__content__categories}>
-                  {this.state.post.frontmatter.location} •{' '}
-                  {this.state.post.frontmatter.date} • by{' '}
-                  {this.state.post.frontmatter.author}
-                </p>
-              </div>
-            </header>
-            <div className={styles.activity__stats}>
-              <AltitudeChart
-                loading={this.state.loading}
-                data={this.state.streams}
-              />
-              <StravaStats
-                loading={this.state.loading}
-                activityData={
-                  this.state.activityData ? this.state.activityData : 0
-                }
-              />
-            </div>
-            {renderAst(this.state.post.htmlAst)}
-            <footer className={styles.post__footer}>
-              <a
-                className="btn btn__white"
-                href={this.state.post.frontmatter.route_file.publicURL}
-              >
-                download gpx
-              </a>
-              <a
-                className="btn btn__primary"
-                href={
-                  'https://www.strava.com/activities/' +
-                  this.state.post.frontmatter.strava_id
-                }
-              >
-                view strava activity
-              </a>
-            </footer>
-          </div>
-          {/*
-          <ImageZoom
-            image={{
-              src: coverImageSrc,
-              alt: 'main',
-              className: 'w-100',
-            }}
-            zoomMargin={10}
-            zoomImage={{
-              src: coverImageSrcSetFullFlatten,
-              alt: 'main',
-              className: 'w-100',
-            }}
-          />
-          */}
-
         </article>
       </div>
     )
@@ -264,6 +208,9 @@ export const query = graphql`
   query($slug: String!) {
     queryPost: markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
+      fields {
+        slug
+      }
       frontmatter {
         title
         location

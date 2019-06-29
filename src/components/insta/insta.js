@@ -53,7 +53,7 @@ const Insta = () => (
     </li>
     <li className={styles.col_6__row_1__span_2}>
       <Fade>
-        <img src={Loughrigg} alt="View of Ridal Water from Loughrigg fell" />
+        <img src={Loughrigg} alt="View of Rydal Water from Loughrigg fell" />
         <div className={styles.info}>
           <Camera size={16} />
           <span>

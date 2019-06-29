@@ -227,7 +227,7 @@ $chartHeight: 16vh;
         }
       }
       footer {
-        margin: $padding-md;
+        margin: 0 0 $padding-md 0;
         border-top: 1px solid $color-grey-2;
         padding-top: $padding-md;
         display: flex;
@@ -235,6 +235,20 @@ $chartHeight: 16vh;
         a, button {
           margin: auto;
         }
+      }
+    }
+    &__share {
+      width: 100%;
+      border-top: 1px solid $color-grey-2;
+      text-align: center;
+      margin: $padding-md 0 0 0;
+
+      a {
+        @include tag-text;
+        color: $color-link;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 16px;
       }
     }
     &.reverse {
