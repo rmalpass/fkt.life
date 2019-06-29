@@ -247,8 +247,33 @@ $chartHeight: 16vh;
         @include tag-text;
         color: $color-link;
         text-decoration: none;
-        display: inline-block;
-        padding: 0 16px;
+        display: inline-flex;
+        padding: 0;
+        margin: 16px;
+        background: $color-link;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        color: $color-white;
+
+        svg {
+          margin: auto;
+        }
+      }
+      @include for-tablet-portrait-up {
+        border: 0;
+        position: fixed;
+        bottom: 0;
+        right: 16px;
+        width: auto;
+        a {
+          display: flex;
+          border-radius: 4px;
+          &:hover {
+            color: $color-link;
+            background: $color-grey-1;
+          }
+        }
       }
     }
     &.reverse {

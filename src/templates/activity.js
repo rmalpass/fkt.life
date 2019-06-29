@@ -17,7 +17,7 @@ import ImageZoom from 'react-medium-image-zoom'
 import StickyMenu from '../components/stickyMenu/stickyMenu';
 import Map from '../components/mapbox';
 import Timeline from '../components/timeline/timeline';
-import { ChevronLeft } from 'react-feather';
+import { ChevronLeft, Twitter, Facebook } from 'react-feather';
 
 import styles from './activity.module.scss';
 
@@ -177,8 +177,8 @@ class PostPage extends Component {
             <p className={styles.post__crew}>Special thanks to <span>{this.state.post.frontmatter.crew}</span></p>
             {renderAst(this.state.post.htmlAst)}
             <div className={styles.activity__share}>
-              <a href={twLink}>Tweet this</a>
-              <a href={fbLink}>Share on Facebook</a>
+              <a href={twLink}><Twitter size={24} /></a>
+              <a href={fbLink}><Facebook size={24} /></a>
             </div>
             <footer className={styles.post__footer}>
               <a
