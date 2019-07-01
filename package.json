@@ -44,8 +44,10 @@
     "react-helmet": "^5.2.0",
     "react-medium-image-zoom": "^3.0.16",
     "react-reveal": "^1.2.2",
+    "react-scrollspy": "^3.4.0",
     "react-typography": "^0.16.18",
     "rehype-react": "^3.1.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "typography": "^0.16.18",
     "typography-theme-sutro": "^0.16.18"
   },

@@ -7,7 +7,7 @@ import { Twitter, Instagram, Type } from 'react-feather';
 // Component
 import BouncyArrow from '../components/bouncyArrow';
 import SEO from '../components/seo';
-import StickyMenu from '../components/stickyMenu/stickyMenu';
+import HomeMenu from '../components/stickyMenu/homeMenu';
 import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
 import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
 import DateCountdown from '../components/dateCountdown/dateCountdown';
@@ -43,10 +43,10 @@ class Home extends Component {
         image={PeaksHero}
       />
 
-       <StickyMenu />
+       <HomeMenu />
 
         <Fade>
-          <section className={styles.hello}>
+          <section className={styles.hello} id="hello">
             <header>
               <h1>
                 <Link to="/records">

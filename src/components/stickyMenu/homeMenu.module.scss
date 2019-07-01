@@ -1,0 +1,172 @@
+@import '../../styles/variables.scss';
+
+.homeMenu {
+  height: 64px;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  // transform: translate(0, -100%);
+  transition: transform .5s ease-in-out;
+  z-index: 999;
+  overflow: hidden;
+  grid-column: col 1 / span 12;
+  grid-row: 1;
+
+  @include for-tablet-portrait-up {
+    position: fixed;
+    height: 80px;
+  }
+
+  .btn__back {
+    display: none;
+  }
+
+  .wordmark {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.16s ease-out;
+    display: none;
+    @include for-tablet-portrait-up {
+      display: flex;
+    }
+    a {
+      display: block;
+      margin: auto;
+    }
+    img {
+      background: 0;
+      height: 32px;
+      margin: auto 24px;
+      display: block;
+    }
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 64px;
+    align-items: center;
+    // background: #fff;
+    border-bottom: 1px solid $color-grey-1;
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      width: auto;
+      height: 80px;
+      border: 0;
+      margin: 0 16px 0 auto;
+    }
+  }
+  li {
+    position: relative;
+    margin: 0 auto;
+    @include for-tablet-portrait-up {
+      margin: 0 8px 0 0;
+    }
+
+    a {
+      color: $color-deep-blue;
+      line-height: 24px;
+      padding: 0;
+      margin: 0 8px;
+      border-radius: $radius-lg;
+      display: block;
+      background: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      @include animate(0.16s);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      position: relative;
+      // overflow-wrap: normal;
+      // word-wrap: normal;
+      // hyphens: none;
+      font-size: 14px;
+
+      svg {
+        display: block;
+        margin: auto;
+        @include for-tablet-portrait-up {
+          display: inline;
+          margin: 0;
+          transform: translate(0,4px);
+        }
+      }
+
+      &[aria-current]:not([aria-current="false"]) {
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: $color-yellow;
+        }
+      }
+
+      @include for-tablet-portrait-up {
+        margin: 0 16px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: -4px;
+          right: 4px;
+          height: 50%;
+          background: rgba($color-deep-blue,0.08);
+          display: none;
+        }
+        &:after {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: -4px;
+          right: calc(100% + 4px);
+          height: 32%;
+          background: $color-yellow;
+          transition: all 0.16s ease-in-out;
+        }
+        &:hover, &[aria-current]:not([aria-current="false"]) {
+          &:before {
+            z-index: -2;
+            display: none;
+          }
+          &:after {
+            z-index: -1;
+            right: 4px;
+          }
+          // color: $color-black;
+          // background: $color-grey-1;
+          // text-decoration: none;
+        }
+      }
+    }
+    &.active {
+      a {
+        &:before {
+          z-index: -2;
+          display: none;
+        }
+        &:after {
+          z-index: -1;
+          right: 4px;
+        }
+      }
+    }
+  }
+}
