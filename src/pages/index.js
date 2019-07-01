@@ -27,6 +27,7 @@ import ThreePeaksImg from '../images/timeline/3peaks.jpg';
 import C2cImg from '../images/timeline/c2c.jpg';
 import BadassImg from '../posts/04-bowland-badass/badass.jpg';
 import PeaksHero from '../images/3peaksHero.png';
+import ratpackImg from '../images/ratpack.png';
 
 class Home extends Component {
 
@@ -43,30 +44,28 @@ class Home extends Component {
         image={PeaksHero}
       />
 
-       <HomeMenu />
+        <HomeMenu />
 
-        <Fade>
-          <section className={styles.hello} id="hello">
-            <header>
-              <h1>
-                <Link to="/records">
-                  <img src={M} alt="Malpass Mountains logo" />
-                  <div>Ross Malpass <span>FKTs →</span></div>
-                </Link>
-              </h1>
-              <p>Ross is an <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
-              <p>Lover of the outdoors; Father of Two; Working at <a href="https://ombori.com" className={styles.ombori}>Ombori</a>;  <span>and always plotting and scheming.</span></p>
-              <ul className={styles.social}>
-                <li><a href="https://twitter.com/rmalpass" target="_blank"><Twitter size={18} /></a></li>
-                <li><a href="https://instagram.com/rmalpass" target="_blank"><Instagram size={18} /></a></li>
-                <li><a href="https://medium.com/@rmalpass" target="_blank"><Type size={18} /></a></li>
-              </ul>
-            </header>
-            <div className={styles.bouncyArrow}>
-              <BouncyArrow />
-            </div>
-          </section>
-        </Fade>
+        <section className={styles.hello} id="hello">
+          <header>
+            <h1>
+              <Link to="/records">
+                <img src={M} alt="Malpass Mountains logo" />
+                <div>Ross Malpass <span>FKTs →</span></div>
+              </Link>
+            </h1>
+            <p>Ross is an <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
+            <p>Lover of the outdoors; Father of Two; Working at <a href="https://ombori.com" className={styles.ombori}>Ombori</a>;  <span>and always plotting and scheming.</span></p>
+            <ul className={styles.social}>
+              <li><a href="https://twitter.com/rmalpass" target="_blank"><Twitter size={18} /></a></li>
+              <li><a href="https://instagram.com/rmalpass" target="_blank"><Instagram size={18} /></a></li>
+              <li><a href="https://medium.com/@rmalpass" target="_blank"><Type size={18} /></a></li>
+            </ul>
+          </header>
+          <div className={styles.bouncyArrow}>
+            <BouncyArrow />
+          </div>
+        </section>
 
         <Insta />
 
@@ -283,6 +282,18 @@ class Home extends Component {
             </div>
           </Fade>
         </section>
+
+        <Fade>
+          <section className={styles.ratpack}>
+            <div className={styles.ratpack__content}>
+              <a href="https://www.strava.com/clubs/NWRATS">
+                <img src={ratpackImg} className={styles.ratpack__logo} alt="NW RATS on Strava." />
+                <p>A Strava club to discover and share the best unknown routes in the North West of England.</p>
+                <p><span className="btn btn__primary">Join the Rats</span></p>
+              </a>
+            </div>
+          </section>
+        </Fade>
 
         {/*
 

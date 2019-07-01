@@ -167,6 +167,27 @@
       }
     }
   }
+
+  .ratpack {
+    @include css-grid;
+    text-align: center;
+    &__content {
+      grid-column: 2 / span 10;
+      a {
+        text-decoration: none;
+      }
+      @include for-tablet-portrait-up {
+        grid-column: 5 / span 4;
+      }
+    }
+    .ratpack__logo {
+      max-width: 320px;
+      margin: auto auto 32px auto;
+      background: 0;
+      display: block;
+    }
+  }
+
 }
 
 // activities
