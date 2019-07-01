@@ -159,12 +159,23 @@
     &.active {
       a {
         &:before {
-          z-index: -2;
-          display: none;
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: $color-yellow;
         }
-        &:after {
-          z-index: -1;
-          right: 4px;
+        @include for-tablet-portrait-up {
+          &:before {
+            z-index: -2;
+            display: none;
+          }
+          &:after {
+            z-index: -1;
+            right: 4px;
+          }
         }
       }
     }
