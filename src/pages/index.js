@@ -14,6 +14,7 @@ import DateCountdown from '../components/dateCountdown/dateCountdown';
 import HomeFeature from '../components/homeFeature/homeFeature';
 import Insta from '../components/insta/insta';
 import ActivityCard from '../components/activityCard/activityCard';
+import Scroll from '../components/scroll';
 
 // style
 import '../styles/styles.scss';
@@ -49,7 +50,7 @@ class Home extends Component {
         <section className={styles.hello} id="hello">
           <header>
             <h1>
-              <Link to="/records">
+              <Link to="/#records">
                 <img src={M} alt="Malpass Mountains logo" />
                 <div>Ross Malpass <span>FKTs →</span></div>
               </Link>
