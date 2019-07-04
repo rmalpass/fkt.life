@@ -70,6 +70,12 @@ class ActivityCard extends Component {
               <h2>{this.props.title}</h2>
               <p>{this.props.excerpt} <span>/ Read more</span></p>
             </header>
+            <div className={styles.activityCard__map}>
+              <StaticMap
+                loading={this.state.loading}
+                activityData={this.state.activityData}
+              />
+            </div>
             <Timeline
               relativePath={this.props.relativePath}
               trim
@@ -88,12 +94,6 @@ class ActivityCard extends Component {
           </div>
           <div className={styles.activityCard__hero}>
             <img src={this.props.coverImage} />
-          </div>
-          <div className={styles.activityCard__map}>
-            <StaticMap
-              loading={this.state.loading}
-              activityData={this.state.activityData}
-            />
           </div>
           {activityImgs &&
             <ul className={styles.activityCard__images}>
