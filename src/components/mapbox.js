@@ -135,8 +135,7 @@ class Map extends Component {
           console.log(
             JSON.stringify(e.point) + '<br />' +
             // e.lngLat is the longitude, latitude geographical position of the event
-            JSON.stringify(e.lngLat) + '<br />' +
-            JSON.stringify(decodedPolyline)
+            JSON.stringify(e.lngLat) + '<br />'
           )
         })
     }

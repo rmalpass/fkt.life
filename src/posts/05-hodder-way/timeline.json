@@ -1,0 +1,45 @@
+{
+  "timeline":
+  [
+    {
+      "title": "Source",
+      "lat": "53.90914444604903",
+      "lng": "-2.7790994850176105",
+      "date": "06:40am, 06 Jul 2013",
+      "label": "A",
+      "zoom": "15"
+    },
+    {
+      "title": "Slaidburn",
+      "lat": "53.95719910",
+      "lng": "-2.68095193",
+      "date": "637ft / 3.6%",
+      "label": "B",
+      "zoom": "15"
+    },
+    {
+      "title": "Dunsop Bridge",
+      "lat": "53.0685032",
+      "lng": "-4.0850314",
+      "date": "327ft / 8%",
+      "label": "C",
+      "zoom": "15"
+    },
+    {
+      "title": "Doeford Bridge",
+      "lat": "54.040712411674946",
+      "lng": "-2.7541109724897126",
+      "date": "445ft / 4.5%",
+      "label": "D",
+      "zoom": "15"
+    },
+    {
+      "title": "River Ribble",
+      "lat": "54.01392473645802",
+      "lng": "-2.7056142377749666",
+      "date": "930ft / 5.4%",
+      "label": "F",
+      "zoom": "15"
+    }
+  ]
+}

@@ -134,7 +134,7 @@ class PostPage extends Component {
             />
           </div>
 
-          <header className={styles.activity__header}>
+          <header className={classNames([styles.activity__header], {[styles.record]: this.state.post.frontmatter.fkt})}>
             <Link className={styles.btn__back} to="/"><ChevronLeft size={24} />Back</Link>
             <h1>{this.state.post.frontmatter.title}</h1>
           </header>
@@ -218,6 +218,7 @@ export const query = graphql`
         crew
         distance
         time
+        fkt
         route_file {
           publicURL
         }

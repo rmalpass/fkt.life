@@ -171,6 +171,7 @@
   .ratpack {
     @include css-grid;
     text-align: center;
+    padding-bottom: $padding-lg;
     &__content {
       grid-column: 2 / span 10;
       a {
@@ -258,11 +259,9 @@
 .timeline {
   @include css-grid;
   position: relative;
-  margin-top: 40px;
   margin-bottom: 40px;
 
   @include for-tablet-portrait-up {
-     margin-top: 0;
      margin-bottom: 16vh;
   }
 

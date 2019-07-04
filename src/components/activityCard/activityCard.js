@@ -75,6 +75,16 @@ class ActivityCard extends Component {
               trim
               disabled
             />
+            <ul className={styles.activityCard__data}>
+              <li>
+                <strong>Total Time</strong>
+                {this.props.time}
+              </li>
+              <li>
+                <strong>Total Distance</strong>
+                {this.props.distance}
+              </li>
+            </ul>
           </div>
           <div className={styles.activityCard__hero}>
             <img src={this.props.coverImage} />

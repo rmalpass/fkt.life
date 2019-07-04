@@ -7,15 +7,17 @@
 
 .activityCard {
   background: $color-white;
-  @include shadow-3;
+  @include shadow-1;
   overflow: hidden;
   position: relative;
-  max-width: 1080px;
-  margin: 0 auto $padding-lg auto;
+  max-width: 1280px;
+  margin: 0 auto $padding-md auto;
   @include animate(0.16s);
 
   @include for-tablet-portrait-up {
     border-radius: 8px;
+    @include shadow-2;
+    margin-bottom: $padding-lg;
   }
 
   &:hover {
@@ -44,7 +46,7 @@
   }
 
   &__info {
-    padding: 32px 16px 16px 24px;
+    padding: 32px 24px 16px 24px;
     width: 100%;
     ul {
       margin-bottom: 0;
@@ -73,7 +75,7 @@
     }
     @include for-tablet-portrait-up {
       flex: 1 0 32%;
-      padding: 32px 16px 32px 32px;
+      padding: 32px 24px 32px 32px;
     }
   }
 
@@ -94,6 +96,28 @@
     }
   }
 
+  &__data {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex: 1 0 50%;
+      min-width: 120px;
+      font-family: $headline-font;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    strong {
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      font-size: 14px;
+    }
+  }
+
   &__map {
     margin: 0;
     padding: 0;
@@ -108,6 +132,7 @@
     img {
       object-fit: cover;
       margin: 0;
+      float: left;
     }
     @include for-tablet-portrait-up {
       width: 200px;
@@ -155,6 +180,7 @@
     z-index: 8;
     display: flex;
     list-style: none;
+    display: none;
     li {
       width: 56px;
       height: 56px;
@@ -181,6 +207,7 @@
       position: absolute;
       padding: 0 0 0 16px;
       bottom: 24px;
+      display: flex;
 
       li {
         width: 72px;

@@ -29,6 +29,7 @@ import C2cImg from '../images/timeline/c2c.jpg';
 import BadassImg from '../posts/04-bowland-badass/badass.jpg';
 import PeaksHero from '../images/3peaksHero.png';
 import ratpackImg from '../images/ratpack.png';
+import hodderImg from '../posts/05-hodder-way/hodder.jpg';
 
 class Home extends Component {
 
@@ -86,6 +87,8 @@ class Home extends Component {
                 excerpt={node.frontmatter.excerpt}
                 strava_id={node.frontmatter.strava_id}
                 slug={node.fields.slug}
+                time={node.frontmatter.time}
+                distance={node.frontmatter.distance}
                 relativePath={node.frontmatter.timeline.relativePath}
                 activityImages={node.frontmatter.images}
                 coverImage={node.frontmatter.cover_image.childImageSharp.sizes.src}
@@ -190,6 +193,32 @@ class Home extends Component {
                         <div className={styles.arrow} />
                         {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
                       </a>
+                    </div>
+                  </div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div className={classNames([styles.card], [styles.spacer])}>
+                    <div className={styles.card__date}>
+                      <p>05/06/2019</p>
+                    </div>
+                    <div className={styles.card__content}>
+                      <Link to="/">
+                        <div className={styles.card__content__media}>
+                          <img src={hodderImg} alt="The River Hodder at Whitewell" />
+                          <div className={styles.countdown}>
+                            <DateCountdown second="07/05/2019" />
+                          </div>
+                        </div>
+                        <h2>The Hodder Way</h2>
+                        <ul className={styles.card__tags}>
+                          <li>Running</li>
+                          <li>Ultra</li>
+                          <li>FKT Attempt</li>
+                        </ul>
+                        <div className={styles.arrow} />
+                        {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                      </Link>
                     </div>
                   </div>
                 </HorizontalScrollerItem>
@@ -341,6 +370,7 @@ export const pageQuery = graphql`
             start
             finish
             time
+            distance
             strava_id
             excerpt
             title
