@@ -199,7 +199,21 @@
       }
       &:hover {
         transform: scale(1.6) translate(0,-8px);
-
+      }
+    }
+    li:first-child:nth-last-child(n + 6) ~ li {
+      display: none;
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:last-child {
+        display: block;
+      }
+      @include for-desktop-up {
+        &:nth-child(4),
+        &:nth-child(5) {
+          display: block;
+        }
       }
     }
     @include for-tablet-portrait-up {

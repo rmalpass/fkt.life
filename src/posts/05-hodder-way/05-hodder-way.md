@@ -11,6 +11,7 @@ social_image: 'hodder.jpg'
 location: 'Bowland AONB, NW England'
 author: Ross Malpass
 publish: true
+fkt: true
 images:
   - src: ./hodder.jpg
   - src: ./1-start.jpg
