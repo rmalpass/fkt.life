@@ -13,7 +13,20 @@ author: Ross Malpass
 publish: true
 images:
   - src: ./hodder.jpg
-crew: 'Angela Malpass for driving out to pick me up 🥰'
+  - src: ./1-start.jpg
+  - src: ./2-downvalley.jpg
+  - src: ./3-baby-river.jpg
+  - src: ./4-reservoir.jpg
+  - src: ./5-reservoir.jpg
+  - src: ./6-slaidburn.jpg
+  - src: ./7-bigger-river.jpg
+  - src: ./8-newton.jpg
+  - src: ./9-bouncy-bridge.jpg
+  - src: ./10-old-bridge.jpg
+  - src: ./11-angry-cows.jpg
+  - src: ./12-end.jpg
+  - src: ./13-so-many-nettles.jpg
+crew: 'My lovely wife for driving out to pick me up 🥰'
 timeline: 'timeline.json'
 route_file: 'hodder.gpx'
 ---
