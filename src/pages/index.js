@@ -198,7 +198,7 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.spacer])}>
+                  <div className={classNames([styles.card], [styles.record])}>
                     <div className={styles.card__date}>
                       <p>05/06/2019</p>
                     </div>
@@ -211,7 +211,7 @@ class Home extends Component {
                         <ul className={styles.card__tags}>
                           <li>Running</li>
                           <li>Ultra</li>
-                          <li>FKT Attempt</li>
+                          <li>FKT</li>
                         </ul>
                         <div className={styles.arrow} />
                         {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
