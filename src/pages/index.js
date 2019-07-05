@@ -203,7 +203,7 @@ class Home extends Component {
                       <p>05/06/2019</p>
                     </div>
                     <div className={styles.card__content}>
-                      <Link to="/activity/hodder-way">
+                      <Link to="/activities/hodder-way">
                         <div className={styles.card__content__media}>
                           <img src={hodderImg} alt="The River Hodder at Whitewell" />
                         </div>
