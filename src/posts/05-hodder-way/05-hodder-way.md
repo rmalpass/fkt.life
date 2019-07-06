@@ -60,13 +60,13 @@ At the top of Feltham Moor (Cross o' Greet), The start is easy enough to find an
 
 It was fresh setting off. I wore a jacket, which was a mistake. I always tell my wife when she goes out to "dress for the second mile", but today I neglected that advice. And so within a few minutes, I found myself running down a hill attempting to roll up and stuff a jacket into my pack.
 
-The landscape and terrain for the first 10 miles are fantastic. My legs felt good, and I tapped away at a nice pace. At the Cross of Greet Bridge, a narrow single-track flows parallel to the river.
+The landscape and terrain for the first 10 miles are fantastic. My legs felt good, and I tapped away at a nice pace.
 
-After a small section of access land where I somehow deviated wildly from the path, I found myself closing in on Gisburn forest. The best part of the route and a place I highly recommend visiting. Whether on foot on with a mountain bike.
+At the Cross of Greet Bridge, a narrow single-track flows parallel to the river. After a small section of access land where I somehow deviated wildly from the path, I found myself closing in on Gisburn forest. The best part of the route and a place I highly recommend visiting. Whether on foot on with a mountain bike.
 
 <image-zoom><img src='into-gisburn.jpg'/></image-zoom>
 
-I followed undulating trails through woodland, then alongside Stocks Reservoir. The views were spectacular, and the sun was starting to shine.
+I followed undulating trails through woodland, then alongside Stocks Reservoir. The views were mega and the sun was starting to shine.
 
 <div class='photo-cluster'>
 <div class='flex'>
