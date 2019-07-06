@@ -32,17 +32,17 @@ timeline: 'timeline.json'
 route_file: 'hodder.gpx'
 ---
 
-*Verified on the FKT website*
+*[Verified](https://fastestknowntime.com/route/hodder-way-uk) on the FKT website*
 
-I stumbled on this route while browsing the [Fastest Known Time](https://fastestknowntime.com) website a few weeks back. It caught my eye as something that I could do with little preparation, and serve as excellent training for some of [the longer runs I have planned](/#schedule).
+I stumbled on this route while browsing the [Fastest Known Time](https://fastestknowntime.com) website a few weeks back. At only 28 miles it caught my eye as something that I could do with little preparation, and serve as excellent training for some of [the longer runs I have planned](/#schedule).
 
 There is an [official website](http://hodderway.co.uk) with history, route description, and maps. Along with pages on the [LDWA website](https://www.ldwa.org.uk/ldp/members/show_path.php?path_name=Hodder+Way) and [Fastest Known Time](https://fastestknowntime.com).
 
-The elevation profile trends downhill, which cunningly disguises the difficulty of the terrain; It's very overgrown and technical in places; There are sticky, boggy sections, and some of the black and white residents in the access land can be a bit grumpy.
+The elevation profile trends downhill, which cunningly disguises the difficulty of the terrain. It's very overgrown and technical in places; There are sticky, boggy sections, and some of the black and white residents in the access land can be a bit grumpy.
 
-I decided to go ahead with run on a bit of a whim. And so was unsupported and running by myself the entire time. In fact, it's so quiet here compared to the Lake District I barely saw another person all day.
+I decided to go ahead with this run on a bit of a whim. And so was unsupported and running by myself the entire time. In fact, it's so quiet here compared to the Lake District I barely saw another person all day.
 
-## The Source (09:53am)
+## The start (09:53am)
 
 <div class='photo-cluster'>
 <div class='flex'>
