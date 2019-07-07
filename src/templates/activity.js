@@ -182,13 +182,11 @@ class PostPage extends Component {
             </div>
             <footer className={styles.post__footer}>
               <a
-                className="btn btn__white"
                 href={this.state.post.frontmatter.route_file.publicURL}
               >
                 download gpx
               </a>
               <a
-                className="btn btn__primary"
                 href={
                   'https://www.strava.com/activities/' +
                   this.state.post.frontmatter.strava_id
