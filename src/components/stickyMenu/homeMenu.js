@@ -45,7 +45,7 @@ class HomeMenu extends Component {
               </Scroll>
           </li>
           <li>
-            <a href="http://archive.rossmalpass.co.uk">
+            <a href="http://archive.rossmalpass.co.uk" target="_blank">
               <Archive size={20} /> Archive
             </a>
           </li>
