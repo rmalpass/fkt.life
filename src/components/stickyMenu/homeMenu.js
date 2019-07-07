@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import { Menu, Home, Award, Calendar } from 'react-feather';
+import { Menu, Home, Award, Calendar, Archive } from 'react-feather';
 import Scrollspy from 'react-scrollspy';
 
 import Scroll from '../scroll';
@@ -43,6 +43,11 @@ class HomeMenu extends Component {
               <Scroll type="id" element="schedule">
                   <a href="#"><Calendar size={20} /> Schedule</a>
               </Scroll>
+          </li>
+          <li>
+            <a href="http://archive.rossmalpass.co.uk">
+              <Archive size={20} /> Archive
+            </a>
           </li>
         </Scrollspy>
         {/*
