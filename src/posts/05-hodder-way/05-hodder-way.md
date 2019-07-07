@@ -27,7 +27,7 @@ images:
   - src: ./11-angry-cows.jpg
   - src: ./12-end.jpg
   - src: ./13-so-many-nettles.jpg
-crew: 'My lovely wife for driving out to pick me up 🥰'
+crew: 'My lovely wife for driving me out to a hill in the middle of nowhere, dropping me off, and then picking me up again five hours and 28 miles down the road later 🥰'
 timeline: 'timeline.json'
 route_file: 'hodder.gpx'
 ---
