@@ -82,13 +82,15 @@ Somewhere between Gisburn and Slaidburn, I received a call from our solicitors,
 
 > Congratulations, we just wanted to tell you that you have now completed on your house purchase.
 
-<image-zoom><img src='completion.jpg'/></image-zoom>
-
-This was a *long* time coming, and so a quick selfie to mark the occasion was required! I wonder how many people have bought a house during an FKT attempt?
+<image-zoom caption="This was a *long* time coming, and so a quick selfie to mark the occasion was required! I wonder how many people have bought a house during an FKT attempt?"><img src='completion.jpg'/></image-zoom>
 
 <image-zoom><img src='7-bigger-river.jpg'/></image-zoom>
 
-Shortly after I found myself passing through the lovely village of Slaidburn and into vast grassy fields. Running alongside the river for the first time in miles. I find thick grassy fields drain the energy out of the legs a bit, but still, before long I had reached Newton. Now well on my way to Whitewell, which would be roughly halfway.
+Shortly after I found myself passing through the lovely village of Slaidburn and into vast grassy fields. Running alongside the river for the first time in miles.
+
+<video src="./river.mp4" controls></video>
+
+I find thick grass drains the energy out of the legs a bit, but still, before long I had reached Newton. Thinking I'm now well on my way to the half way point, The Inn At Whitewell.
 
 <image-zoom><img src='8-newton.jpg'/></image-zoom>
 
@@ -104,13 +106,12 @@ The way to Whitewell is mostly access land and fields with several river crossin
 </div>
 </div>
 
-I expect to hit Whitewell somewhere inside mile 14. Worryingly I was at 17 miles when I passed the place I got married - The Inn At Whitewell. Had I really managed to cover an extra 2/3 miles retracing my steps and deviating from the route? I don't think so, but for an area that holds so many happy memories, this was probably a low point of the day.
+I expect to hit Whitewell somewhere inside mile 14. Worryingly I was at 17 miles when I passed the place I got married - The Inn At Whitewell. Had I really managed to cover an extra 2/3 miles retracing my steps and deviating from the route? I think I must have just remembered this information wrong when reviewing the route the day before.
 
-The climb out of Whitewell is one of the biggest of the course. By now my legs were fading thanks to pounding the downhills earlier. I live in a flat part of the world, so consistent downhill isn't something I'm used to.
+I've done a lot of walking in this area and am pretty confident I know what to expect for the next section: Boggy fields.
+(I'm not a huge fan). Yet, because of the dry spell we've enjoyed lately, most of the bogs were instead ankle-snapping craters. Of course this being Bowland there was still plenty of mud about (and there still will be on my feet for many days).
 
-I've done a lot of walking in this area and am confident I know what to expect for the next section: Boggy fields. (I'm not a huge fan). Yet, because of the dry spell we've enjoyed lately, most of the bogs were instead ankle-snapping craters.
-
-I shuffled up the climb and made my way through seemingly endless fields filled with livestock and no clear path marked. It was slow going. I don't spend enough time with a map, so I'm pretty rusty but thanks to taking on this challenge my map reading has dramatically improved!
+I shuffle up the climb out of Whitewell, one of the biggest of the course. By now my legs were fading thanks to pounding the downhills earlier. I live in a flat part of the world, so consistent downhill isn't something I'm used to. Making my way through seemingly endless fields filled with livestock and no clear path marked. For an area that holds so many happy memories, this was probably a low point of the day. It's slow going. I don't spend enough time with a map, so I'm pretty rusty quickly getting my bearings at first. Thanks to today though, my map reading has dramatically improved.
 
 <image-zoom><img src='fkt-angry-cows.jpg'/></image-zoom>
 
@@ -120,20 +121,24 @@ At 23 miles in I entered *another* field, one with cows. But the vibe was all of
 
 They weren't interested.
 
-They charged, I ran.
+They charged. I ran. No, I sprinted. Looking at the data now I was doing 5min/mi on tired legs during my hasty exit. I could've done without that surge of adrenaline. But I made it out unscathed.
 
-No, I sprinted. Looking at the data now I was doing 5min/mi on tired legs during my hasty exit. I could've done without that surge of adrenaline. But I made it out unscathed.
+<video src="./cows.mp4" controls></video>
 
 Not many miles left at least, I remember thinking to myself.
 
-Occasionally I found myself deep in overgrown woodland. Thick with nettles and brambles. Desperate to trip you up or snag your clothing. My legs took a real beating and are still tingling a day later from the stings and scrapes. That said, I found this battle more enjoyable than slogging across fields.
+Occasionally I found myself deep in overgrown woodland. Thick with nettles and brambles desperate to trip you up or snag your clothing. My legs took a real beating and are still tingling a day later from the stings and scrapes. That said, I found this battle more enjoyable than slogging across fields.
 
-Progress was slow, though. Navigation was difficult. The map as dense as the foliage, I spent a lot of time retracing my steps, second-guessing my decisions. It was taking longer than anticipated on this technical section. I lost a lot of time. It felt like a long time I was walking or standing still.
+The map as dense as the foliage, I spent a lot of time retracing my steps, second-guessing my decisions. Making progress as slow as my navigation skills. I was taking longer than anticipated on this technical section, lost a lot of time. It felt like I was only either walking or standing still.
 
 From mile 24 onwards, I was able to run again. It was great to open my stride up and roll a steady pace. Remarkably, my legs, although tired still felt they could cope with the task at hand. I knew I was going to finish strong.
+
+<video src="./trails.mp4" controls></video>
 
 The final miles are some of the best. The undulating single-track path snakes next to the river. You're in and out of woodland, crossing streams, and generally enjoying faster, more varied ground again.
 
 There's a small road section followed by a final "F*ck You" from a field before the River Ribble comes into view and the adventure draws to a rapid conclusion.
 
 I stopped the clock at 5h 10m 48s.
+
+<image-zoom caption="The River Hodder joining the River Ribble near Hurst Green."><img src='12-end.jpg'/></image-zoom>
