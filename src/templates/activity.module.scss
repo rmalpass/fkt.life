@@ -258,15 +258,16 @@ $chartHeight: 16vh;
         display: flex;
         flex-wrap: wrap;
         a, button {
-          flex: 1 0 45%;
-          margin: auto 4px;
+          flex: 1 0 100%;
+          margin: 4px;
           @include tag-text;
           color: $color-link;
           background: $color-grey-1;
           font-weight: 900;
-          height: 40px;
-          line-height: 40px;
+          height: 48px;
+          line-height: 48px;
           border-radius: $radius-sm;
+          text-decoration: none;
           &:hover {
             background: $color-link;
             color: $color-white;
