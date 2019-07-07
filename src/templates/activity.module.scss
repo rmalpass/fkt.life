@@ -259,7 +259,7 @@ $chartHeight: 16vh;
         flex-wrap: wrap;
         a, button {
           flex: 1 0 100%;
-          margin: 4px;
+          margin: 4px 0;
           @include tag-text;
           color: $color-link;
           background: $color-grey-1;
