@@ -73,6 +73,10 @@
     }
   }
 
+  &.activityPage {
+    z-index: 99;
+  }
+
   &:hover button:not(:hover) {
     opacity: 0.48;
   }

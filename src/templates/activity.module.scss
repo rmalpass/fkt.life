@@ -6,8 +6,6 @@
 @import '../styles/variables.scss';
 @import '../styles/posts.scss';
 
-$chartHeight: 16vh;
-
 .page__activity {
   display: block;
 
@@ -186,6 +184,18 @@ $chartHeight: 16vh;
         max-height: 100vh;
         overflow: scroll;
         border-right: 1px solid $color-grey-2;
+        z-index: 99;
+        backdrop-filter: blur(4px);
+        align-self: flex-start;
+        background: rgba($color-white,0.96);
+        padding-left: 16px;
+
+        ul {
+          margin-bottom: 0;
+          &:last-child {
+            padding-bottom: 0 !important;
+          }
+        }
       }
     }
 
@@ -234,7 +244,7 @@ $chartHeight: 16vh;
 
       @include for-tablet-portrait-up {
         margin: 0 0 0 16px;
-        grid-column: 1 / span 5;
+        grid-column: 1 / span 7;
         grid-row: 5;
         height: calc((100vh - #{$chartHeight}) - 96px);
         top: calc(#{$chartHeight} + 80px);

@@ -6,7 +6,7 @@ import MarkerLink from '../markerLink';
 
 import styles from './timeline.module.scss';
 
-const Timeline = ({ relativePath, loading, trim, disabled })  => {
+const Timeline = ({ relativePath, loading, trim, disabled, activityPage })  => {
   // Fetch timeline
   let getTimeline = require('../../posts/' + relativePath);
   const timelineData = getTimeline.timeline;
@@ -18,6 +18,7 @@ const Timeline = ({ relativePath, loading, trim, disabled })  => {
         {[styles.loading]: loading},
         {[styles.trim]: trim},
         {[styles.disabled]: disabled},
+        {[styles.activityPage]: activityPage}
       )}
     >
       {timelineData.map(item => (

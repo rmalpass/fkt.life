@@ -128,7 +128,14 @@ class Map extends Component {
                 return bounds.extend(coord);
             }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
 
-            window.map.fitBounds(bounds, { padding: 24 });
+            window.map.fitBounds(bounds, {
+              padding: {
+                top: 24,
+                bottom: 24,
+                left: 24,
+                right: 140
+              }
+            });
         })
 
         window.map.on('click', function (e) {

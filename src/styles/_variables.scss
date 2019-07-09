@@ -46,6 +46,8 @@ $gutter-lg: $gutter-sm * 3;
 $height-sm: 61.8vh;
 $height-lg: 61.8vh;
 
+$chartHeight: 240px;
+
 @import "breakpoints";
 
 @mixin headline-text {

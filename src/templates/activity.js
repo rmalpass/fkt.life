@@ -156,6 +156,7 @@ class PostPage extends Component {
             <Timeline
               relativePath={this.state.post.frontmatter.timeline.relativePath}
               loading={this.state.loading}
+              activityPage
             />
           </div>
 
