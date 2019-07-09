@@ -201,11 +201,17 @@
     background-image: linear-gradient(180deg, $color-white 0%, $color-grey-1 100%);
     padding: $padding-lg 0;
     h1 {
-      font-family: $body-font;
+      font-family: $headline-font;
+      text-transform: uppercase;
       line-height: 24px;
       font-weight: 500;
       font-size: 14px;
       margin: 0;
+      font-weight: bold;
+      color: $color-grey-5;
+      strong {
+        color: $color-deep-blue;
+      }
       span, strong {
         display: block;
       }
@@ -215,6 +221,7 @@
       h1 {
         font-size: 20px;
         line-height: 40px;
+        letter-spacing: 1px;
       }
     }
   }
