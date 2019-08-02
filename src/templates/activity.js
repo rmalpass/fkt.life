@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import rehypeReact from 'rehype-react'
 import classNames from 'classnames';
 import { get } from 'lodash';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 // import Footer from '../components/footer'
 import MarkerLink from '../components/markerLink'
@@ -135,7 +136,7 @@ class PostPage extends Component {
           </div>
 
           <header className={classNames([styles.activity__header], {[styles.record]: this.state.post.frontmatter.fkt})}>
-            <Link className={styles.btn__back} to="/"><ChevronLeft size={24} />Back</Link>
+            <AniLink cover direction="left" to={this.props.slug} bg="#111" className={styles.btn__back} to="/"><ChevronLeft size={24} />Back</AniLink>
             <h1>{this.state.post.frontmatter.title}</h1>
           </header>
 

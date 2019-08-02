@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import StaticMap from '../staticMap';
 import Timeline from '../timeline/timeline';
@@ -64,7 +65,7 @@ class ActivityCard extends Component {
 
     return (
       <article className={styles.activityCard}>
-        <Link to={this.props.slug}>
+        <AniLink cover direction="right" to={this.props.slug} bg="#111">
           <div className={styles.activityCard__info}>
             <header>
               <h2>{this.props.title}</h2>
@@ -104,7 +105,7 @@ class ActivityCard extends Component {
               ))}
             </ul>
           }
-        </Link>
+        </AniLink>
       </article>
     )
   }
