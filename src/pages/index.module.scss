@@ -571,7 +571,7 @@
       h2 {
         &:after {
           display: inline-block;
-          content: 'Record';
+          content: 'FKT';
           @include tag-text;
           background: $color-red;
           color: $color-white;

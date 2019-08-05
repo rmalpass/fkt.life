@@ -30,6 +30,7 @@ import BadassImg from '../posts/04-bowland-badass/badass.jpg';
 import PeaksHero from '../images/3peaksHero.png';
 import ratpackImg from '../images/ratpack.png';
 import hodderImg from '../posts/05-hodder-way/hodder.jpg';
+import canalImg from '../posts/03-lancaster-canal/IMG_5419.jpg';
 
 class Home extends Component {
 
@@ -172,27 +173,24 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.scheduled])}>
+                  <div className={classNames([styles.card], [styles.record])}>
                     <div className={styles.card__date}>
                       <p>03/08/2019</p>
                     </div>
                     <div className={styles.card__content}>
-                      <a href="https://fastestknowntime.com/route/lancaster-canal-uk">
+                      <Link to="/activities/lancaster-canal">
                         <div className={styles.card__content__media}>
-                          <img src="https://fastestknowntime.com/sites/default/files/styles/very_large/public/2019-06/33117.jpg?itok=oWekc7jL" />
-                          <div className={styles.countdown}>
-                            <DateCountdown second="08/03/2019" />
-                          </div>
+                          <img src={canalImg} />
                         </div>
-                        <h2>The Lancaster Canal FKT attempt</h2>
+                        <h2>The Lancaster Canal</h2>
                         <ul className={styles.card__tags}>
                           <li>Running</li>
                           <li>Ultra</li>
-                          <li>FKT Attempt</li>
+                          <li>FKT</li>
                         </ul>
                         <div className={styles.arrow} />
                         {/* <div dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </HorizontalScrollerItem>

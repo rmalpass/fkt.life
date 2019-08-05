@@ -1,22 +1,27 @@
 ---
 path: '/activities/lancaster-canal'
 date: '2019-08-03'
+start: '08:12 03/08/19'
+finish: '18:05 03/08/19'
+time: '09hr 53min'
+distance: '57mi'
 title: 'Lancaster Canal'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam et ex vestibulum scelerisque. Proin accumsan mauris quis augue euismod tincidunt. Nulla in lorem tristique, fermentum enim sodales, tempor lacus. Mauris interdum eget leo ac suscipit.'
-strava_id: 2468215343
-cover_image: 'big.jpg'
-social_image: 'big.jpg'
+strava_id: 2588394875
+cover_image: 'IMG_5419.jpg'
+social_image: 'IMG_5419.jpg'
 location: United Kingdom
 author: Ross Malpass
 publish: true
+fkt: true
 timeline: 'timeline.json'
 images:
-  - src: ./massive.jpg
-  - src: ./massive-1.jpg
-  - src: ./big-1.jpg
-  - src: ./3-2.jpg
-crew: 'Phill Sharpe, Will Horton'
-route_file: 'National_Three_Peaks_by_Bike.gpx'
+  - src: ./IMG_5419.jpg
+  - src: ./IMG_5420.jpg
+  - src: ./IMG_5429.jpg
+  - src: ./IMG_5423.jpg
+crew: 'Phill Sharpe, Ian and Julie Sibbert'
+route_file: 'Lancaster_Canal.gpx'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam et ex vestibulum scelerisque. Proin accumsan mauris quis augue euismod tincidunt. Nulla in lorem tristique, fermentum enim sodales, tempor lacus. Mauris interdum eget leo ac suscipit. Maecenas porttitor ultricies gravida. Duis aliquet ipsum laoreet facilisis sodales. Nulla facilisi. Mauris vitae rutrum enim. Suspendisse a neque turpis. Curabitur in orci odio.
