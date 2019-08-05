@@ -6,10 +6,10 @@ finish: '18:05 03/08/19'
 time: '09hr 53min'
 distance: '57mi'
 title: 'Lancaster Canal'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam et ex vestibulum scelerisque. Proin accumsan mauris quis augue euismod tincidunt. Nulla in lorem tristique, fermentum enim sodales, tempor lacus. Mauris interdum eget leo ac suscipit.'
+excerpt: 'The Lancaster Canal is 57 miles long linking Preston to Kendal on the North West coast of England. The first 14 miles are on abandoned sections of the old canal and make for interesting scenery and landscape. But for a route that is so flat, I had lots of ups and downs.'
 strava_id: 2588394875
-cover_image: 'IMG_5419.jpg'
-social_image: 'IMG_5419.jpg'
+cover_image: 'hero.jpg'
+social_image: 'hero.jpg'
 location: United Kingdom
 author: Ross Malpass
 publish: true
