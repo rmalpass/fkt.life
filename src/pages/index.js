@@ -173,7 +173,7 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card])}>
+                  <div className={classNames([styles.card], [styles.record])}>
                     <div className={styles.card__date}>
                       <p>03/08/2019</p>
                     </div>

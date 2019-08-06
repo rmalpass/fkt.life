@@ -13,7 +13,7 @@ social_image: 'hero.jpg'
 location: United Kingdom
 author: Ross Malpass
 publish: true
-fkt: false
+fkt: true
 timeline: 'timeline.json'
 images:
   - src: ./IMG_5419.jpg
