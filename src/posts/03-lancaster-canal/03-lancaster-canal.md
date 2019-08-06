@@ -13,7 +13,7 @@ social_image: 'hero.jpg'
 location: United Kingdom
 author: Ross Malpass
 publish: true
-fkt: true
+fkt: false
 timeline: 'timeline.json'
 images:
   - src: ./IMG_5419.jpg
@@ -115,7 +115,7 @@ I'm new to running, and it constantly surprises me. Because now I'm starting to 
 <image-zoom><img src='IMG_5430.jpg'/></image-zoom>
 </div>
 <p style='text-align: center'>
-<marker-link lat='54.04020160115954' lng='-2.490204776669657' label='A' zoom='15'>Lancaster</marker-link>
+<marker-link lat='54.048216645592504' lng='-2.794655274726267' label='A' zoom='15'>Lancaster</marker-link>
 </p>
 </div>
 
