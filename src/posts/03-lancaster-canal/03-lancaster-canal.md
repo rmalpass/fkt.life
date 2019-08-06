@@ -96,7 +96,7 @@ Soon we're back where we should be. The canal to our left, endless towpath ahead
 
 But it's just not what you expect.
 
-There are so many characters end up here: Lads enjoying a few tins fishing; families on a day out; dog walkers; cyclists; joggers; folk who look like they've spent their life on a boat. All with a story playing out in front of you, one stride at a time. Yes, we're on the same path for hours a time, but we're (often literally) weaving in and out of so many lives.
+There are so many characters end up here: Lads enjoying a few tins fishing; families on a day out; dog walkers; cyclists; joggers; folk who look like they've spent their life on a boat. All with a story playing out in front of you. Every mile a new chapter. Yes, we're on the same path for hours a time, but we're (often literally) weaving in and out of so many lives.
 
 <div class='photo-cluster'>
 <div class='flex'>
