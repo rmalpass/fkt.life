@@ -29,13 +29,15 @@ route_file: 'Lancaster_Canal.gpx'
 
 I see this as the first real Ultra distance test for my legs. Before now, the longest run I have done is the [Hodder Way](/activities/hodder-way).
 
-The day started at 5am. I ate a quick breakfast and packed up the car with gels and spare kit. At about 6, the boys and wife were bundled in too, and we made our way an hour north to meet Phill.
-
 For this challenge, a good friend and excellent bike rider [Phill Sharpe](https://www.instagram.com/pedalinsquares/) followed me on his Mountain Bike with food and water. He's a saint. I think Phill had a tougher day than me. At times he was carrying up to 10x500ml bottles of water and 20 gels on his back! Considering the distance and heat, I'm so grateful for only needing to carry a bottle of water and my phone.
 
 ## Kendal (08:12)
 
-We arrive at Kendal around 8am, where the "Lancaster Canal Trail" starts, rather uninspiringly, next to a recycling centre. A quick pic and kit check, and we are off. I start the clock at 08:12.
+We arrive at Kendal around 8am, where the "Lancaster Canal Trail" starts, rather uninspiringly, next to a recycling centre.
+
+A quick pic and kit check, and we are off.
+
+I start the clock at 08:12.
 
 <div class='photo-cluster'>
 <div class='flex'>
@@ -46,7 +48,7 @@ The footpath is paved to allow a gentle warm-up as I ease myself into the unknow
 
 We're only a mile in before someone asks;
 
-> "Going far lads?"
+> Going far lads?
 
 Yeah! To Preston actually!
 
@@ -77,9 +79,9 @@ It feels as though I'm gliding along effortlessly. The miles roll past as we fol
 </div>
 </div>
 
-I make it through unscathed, but Phill takes a tumble or two. The path emerges on the road at the other side of Hincaster Hill. I stop and sip some drink (I'm not drinking enough I think) while I wait for Phill to catch up. He'll have to push his bike through some parts, but he's taking a while. There was a switch-back on the descent with a gate. I hope he hasn't gone wrong...
+I make it through unscathed, but Phill takes a tumble or two. The path emerges on the road at the other side of Hincaster Hill. I stop and sip some drink (I'm not drinking enough I think) while I wait for Phill to catch up. He'll have to push his bike through some parts, but even so he's taking a while. There was a switch-back on the descent with a gate. I hope he hasn't gone wrong...
 
-> "There are two gates up there, and I wasn't sure which you'd gone through. I thought I'd just wait for you to come back, so I thought I'd go for a poo. I looked around and saw a path leading down between some thick trees and thought it looked like a decent way to get down... then realised oh shit! That *IS* the path!"
+> There are two gates up there, and I wasn't sure which you'd gone through. I thought I'd just wait for you to come back, so I thought I'd go for a poo. I looked around and saw a path leading down between some thick trees and thought it looked like a decent way to get down... then realised oh shit! That *IS* the path!
 
 That's the most technically challenging part of the day done. We make steady progress towards the start of the actual canal at Stainton. The towpath here is closed for repair. A small diversion means running on the road for a few hundred metres.
 
@@ -105,7 +107,7 @@ There are so many characters end up here: Lads enjoying a few tins fishing; fami
 
 24 miles in we're closing in on our only scheduled stop. I'm flying, feeling great considering. I need to hold back. Good friends Julie and Ian Sibbert are waiting for us with some fresh kit, food, and water. I said I would carry on at a walk as Phill stashed our goodies in his bag. Before we set off I said I wanted to try and not take on too much fluid or food at once, but the heat of the day (now 23c) got the better of me, and as I slowed properly for the first time I started to feel the effects of the high temperature. I guzzled a full bottle of water and devoured a ham wrap.
 
-It 's nice to see Julie and Ian. I even manage a quick 5-minute chat as I walk along eating. But it's time to start jogging again. We're only about three miles from Lancaster now. Almost halfway!
+It's nice to see Julie and Ian. I even manage a quick 5-minute chat as I walk along eating. But it's time to start jogging again. We're only about three miles from Lancaster now. Almost halfway!
 
 I'm new to running, and it constantly surprises me. Because now I'm starting to feel the struggle. I don't know if it's mental, physical, or both.  I decide to back off to a fast walk for a while and see if it's just a case of digesting my wrap. I wonder what Phill is thinking. We're still a very long way from home!
 
@@ -123,7 +125,7 @@ I'm running again as we pass through Lancaster, although my pace has noticeably 
 
 I've never done anything like this and my muscles are tired. My running feels laboured, my back is hurting and I've just never felt anything like it. It's scorching hot and I feel low on energy even with all the drink and food. I know I haven't bonked. I'm just fucked. I did say I wasn't going to eat and drink lots in one go and I did both. Not sure if it mattered or contributed all that much to how I feel now. But who knows? What I am sure of is that at some point today there would be a low point. I think the more experienced you are the better prepared and easier to get through these dark times you are. This one was pitch black.
 
-At some point across the canal Phill saw a buzzard. It was huge. We don't often see them like that so close. Usually, they are circling high in the sky, but I'm sure it saw me as easy pickings and came down to have a look!
+At some point across the canal Phill saw a buzzard. It was huge. Just sat there chilling on a post. We don't often see them like that so close. Usually, they are circling high in the sky, but I'm sure it saw me as easy pickings and came down to have a look!
 
 I have done training runs on the canal south of Garstang, and so I know that there is a petrol station not too far away. I set myself the goal of running to it, no matter how slow or how bad my form is now. It's just over 3 miles and takes about half an hour. A small victory, and a bit of a boost to my morale.
 
@@ -149,7 +151,7 @@ In the closing two miles, we pass the aptly named "Final Whistle" cafe where I s
 
 Houses back on to the canal and there are all kinds of sights.
 
-> "The boat moorings are quite eclectic. Some are like a chance to create a 'garden' of wild plants in pots others a chance to display a fashion show of badly dressed mannequins."
+> The boat moorings are quite eclectic. Some are like a chance to create a 'garden' of wild plants in pots others a chance to display a fashion show of badly dressed mannequins.
 
 There's even one done up like a pub.
 
