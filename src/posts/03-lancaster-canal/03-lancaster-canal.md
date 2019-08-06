@@ -109,7 +109,7 @@ There are so many characters end up here: Lads enjoying a few tins fishing; fami
 
 It's nice to see Julie and Ian. I even manage a quick 5-minute chat as I walk along eating. But it's time to start jogging again. We're only about three miles from Lancaster now. Almost halfway!
 
-I'm new to running, and it constantly surprises me. Because now I'm starting to feel the struggle. I don't know if it's mental, physical, or both.  I decide to back off to a fast walk for a while and see if it's just a case of digesting my wrap. I wonder what Phill is thinking. We're still a very long way from home!
+I'm new to running, and it constantly surprises me. Because now, only minutes later, I'm starting to feel the struggle. I don't know if it's mental, physical, or both.  I decide to back off to a fast walk for a while and see if it's just a case of digesting my wrap. I wonder what Phill is thinking. We're still a very long way from home!
 
 <div class='photo-cluster'>
 <div class='flex'>
