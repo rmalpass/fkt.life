@@ -27,7 +27,7 @@ route_file: 'Lancaster_Canal.gpx'
 *[Verified](https://fastestknowntime.com/route/lancaster-canal-uk) on the FKT website*
 
 
-The first real Ultra distance test for my legs. And it went... OK! Before now, the longest run I have done is the [Hodder Way](/activities/hodder-way).
+I see this as the first real Ultra distance test for my legs. Before now, the longest run I have done is the [Hodder Way](/activities/hodder-way).
 
 The day started at 5am. I ate a quick breakfast and packed up the car with gels and spare kit. At about 6, the boys and wife were bundled in too, and we made our way an hour north to meet Phill.
 
@@ -119,7 +119,9 @@ I'm new to running, and it constantly surprises me. Because now I'm starting to 
 </p>
 </div>
 
-I'm running again as we pass through Lancaster, although my pace has noticeably slowed. My watch runs out of battery at Galgate, so I switch to my phone to record the rest. It's frustrating as I now have no idea how far I've gone or really where I am. The next 15 miles are a constant battle of wills: The head says go, but the legs say no.  I lose the fight at Garstang, and that's where I hit rock bottom. I walk for what feels like a long time but is only about ten minutes.
+I'm running again as we pass through Lancaster, although my pace has noticeably slowed. My watch runs out of battery at Galgate, so I switch to my phone to record the rest. It's frustrating as I now have no idea how far I've gone or really where I am. The next 15 miles are a constant battle of wills: The head says go, but the legs say no.  I lose the fight at Garstang, and that's where I hit rock bottom. I'm suffering. I walk for what feels like a long time but is only about ten minutes.
+
+I've never done anything like this and my muscles are tired. My running feels laboured, my back is hurting and I've just never felt anything like it. It's scorching hot and I feel low on energy even with all the drink and food. I know I haven't bonked. I'm just fucked. I did say I wasn't going to eat and drink lots in one go and I did both. Not sure if it mattered or contributed all that much to how I feel now. But who knows? What I am sure of is that at some point today there would be a low point. I think the more experienced you are the better prepared and easier to get through these dark times you are. This one was pitch black.
 
 At some point across the canal Phill saw a buzzard. It was huge. We don't often see them like that so close. Usually, they are circling high in the sky, but I'm sure it saw me as easy pickings and came down to have a look!
 
