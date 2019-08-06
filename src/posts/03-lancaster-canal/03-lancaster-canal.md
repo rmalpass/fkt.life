@@ -125,7 +125,7 @@ I'm running again as we pass through Lancaster, although my pace has noticeably 
 
 I've never done anything like this and my muscles are tired. My running feels laboured, my back is hurting and I've just never felt anything like it. It's scorching hot and I feel low on energy even with all the drink and food. I know I haven't bonked. I'm just fucked. I did say I wasn't going to eat and drink lots in one go and I did both. Not sure if it mattered or contributed all that much to how I feel now. But who knows? What I am sure of is that at some point today there would be a low point. I think the more experienced you are the better prepared and easier to get through these dark times you are. This one was pitch black.
 
-At some point across the canal Phill saw a buzzard. It was huge. Just sat there chilling on a post. We don't often see them like that so close. Usually, they are circling high in the sky, but I'm sure it saw me as easy pickings and came down to have a look!
+At some point across the canal Phill sees a buzzard. It's huge; just sat there chilling on a post. We don't often see them like this, so close. Usually, they are circling high in the sky, but I'm sure it saw me as easy pickings and came down to have a look!
 
 I have done training runs on the canal south of Garstang, and so I know that there is a petrol station not too far away. I set myself the goal of running to it, no matter how slow or how bad my form is now. It's just over 3 miles and takes about half an hour. A small victory, and a bit of a boost to my morale.
 
