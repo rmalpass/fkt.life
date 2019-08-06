@@ -4,8 +4,8 @@
     {
       "key": "one",
       "title": "Kendal",
-      "lat": "53.0685032",
-      "lng": "-4.0850314",
+      "lat": "54.32410609948974",
+      "lng": "-2.7412480023139096",
       "date": "08:12, 03 Aug 2019",
       "label": "A",
       "zoom": "14"
@@ -13,44 +13,53 @@
     {
       "key": "two",
       "title": "Hincaster Tunnel",
-      "lat": "54.4542347",
-      "lng": "-3.2203568",
+      "lat": "54.259011002396534",
+      "lng": "-2.7527439269555884",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "B",
+      "zoom": "14"
+    },
+    {
+      "key": "three",
+      "title": "Stainton",
+      "lat": "54.262106696526644",
+      "lng": "-2.7377445062149093",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "B",
+      "zoom": "14"
+    },
+    {
+      "key": "four",
+      "title": "Tewitfield",
+      "lat": "54.1553125969877",
+      "lng": "-2.737470235551939",
       "date": "04:25am, 11 Aug 2017",
       "label": "C",
       "zoom": "14"
     },
     {
-      "key": "three",
-      "title": "Tewitfield",
-      "lat": "54.4542347",
-      "lng": "-3.2203568",
+      "key": "five",
+      "title": "Lancaster",
+      "lat": "54.048216645592504",
+      "lng": "-2.794655274726267",
+      "date": "04:25am, 11 Aug 2017",
+      "label": "C",
+      "zoom": "14"
+    },
+    {
+      "key": "six",
+      "title": "Garstang",
+      "lat": "53.898076381620825",
+      "lng": "-2.777279065680176",
       "date": "04:25am, 11 Aug 2017",
       "label": "C",
       "zoom": "14"
     },
     {
       "key": "seven",
-      "title": "Lancaster",
-      "lat": "1",
-      "lng": "2",
-      "date": "04:25am, 11 Aug 2017",
-      "label": "C",
-      "zoom": "14"
-    },
-    {
-      "key": "five",
-      "title": "Garstang",
-      "lat": "1",
-      "lng": "2",
-      "date": "04:25am, 11 Aug 2017",
-      "label": "C",
-      "zoom": "14"
-    },
-    {
-      "key": "five",
       "title": "Preston",
-      "lat": "1",
-      "lng": "2",
+      "lat": "53.76620210963458",
+      "lng": "-2.719515840083858",
       "date": "18:05, 03 Aug 2019",
       "label": "C",
       "zoom": "14"
