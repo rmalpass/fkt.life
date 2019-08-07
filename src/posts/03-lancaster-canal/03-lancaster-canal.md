@@ -146,7 +146,7 @@ With that phone call made, the legs are back. It's 10k (well, just over at 6.3mi
 <image-zoom><img src='IMG_5432.jpg'/></image-zoom>
 </div>
 <p style='text-align: center'>
-<marker-link lat='54.04020160115954' lng='-2.490204776669657' label='A' zoom='15'>Coming in to Preston</marker-link>
+<marker-link lat='53.76620210963458' lng='-2.719515840083858' label='G' zoom='15'>Coming in to Preston</marker-link>
 </p>
 </div>
 
@@ -172,6 +172,6 @@ After almost ten hours, we're finally in Preston. I stop the clock at 9hrs 53min
 <image-zoom><img src='IMG_5418.jpg'/></image-zoom>
 </div>
 <p style='text-align: center'>
-<marker-link lat='54.04020160115954' lng='-2.490204776669657' label='A' zoom='15'>Preston Terminus</marker-link>
+<marker-link lat='53.76620210963458' lng='-2.719515840083858' label='G' zoom='15'>Preston Terminus</marker-link>
 </p>
 </div>
