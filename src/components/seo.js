@@ -13,7 +13,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         const metaDescription =
           description || data.site.siteMetadata.description
         const ogImage =
-          PeaksHero || data.site.siteMetadata.image
+          image || PeaksHero
         return (
           <Helmet
             htmlAttributes={{
