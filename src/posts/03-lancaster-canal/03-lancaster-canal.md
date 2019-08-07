@@ -116,6 +116,9 @@ I'm new to running, and it constantly surprises me. Because now, only minutes la
 <image-zoom><img src='IMG_5429.jpg'/></image-zoom>
 <image-zoom><img src='IMG_5430.jpg'/></image-zoom>
 </div>
+<div class='flex'>
+<image-zoom><img src='IMG_5410.jpg'/></image-zoom>
+</div>
 <p style='text-align: center'>
 <marker-link lat='54.048216645592504' lng='-2.794655274726267' label='A' zoom='15'>Lancaster</marker-link>
 </p>
@@ -157,6 +160,18 @@ There's even one done up like a pub.
 
 But this is it. I can see the end of the canal.
 
-"I'm so fucking excited about not having to run anymore", I pant at Phill.
+> I'm so fucking excited about not having to run anymore
+
+, I pant at Phill.
 
 After almost ten hours, we're finally in Preston. I stop the clock at 9hrs 53mins. And just like that, we're slap-bang back in reality. The canal is a strange place, there's nothing quite like it. A minute ago we could've been anywhere in the country. You wouldn't know to look at it. Now we're stood in the heart of a council estate in Preston.
+
+<div class='photo-cluster'>
+<div class='flex'>
+<image-zoom><img src='IMG_5379.png'/></image-zoom>
+<image-zoom><img src='IMG_5418.jpg'/></image-zoom>
+</div>
+<p style='text-align: center'>
+<marker-link lat='54.04020160115954' lng='-2.490204776669657' label='A' zoom='15'>Preston Terminus</marker-link>
+</p>
+</div>
