@@ -31,6 +31,8 @@ import PeaksHero from '../images/3peaksHero.png';
 import ratpackImg from '../images/ratpack.png';
 import hodderImg from '../posts/05-hodder-way/hodder.jpg';
 import canalImg from '../posts/03-lancaster-canal/IMG_5419.jpg';
+import amblesideImg from '../posts/06-ambleside-60/5.jpg';
+import coastalImg from '../images/timeline/coastal.jpg';
 
 class Home extends Component {
 
@@ -131,13 +133,36 @@ class Home extends Component {
                 <HorizontalScrollerItem>
                   <div className={classNames([styles.card], [styles.scheduled])}>
                     <div className={styles.card__date}>
-                      <p>22/09/2019</p>
+                      <p>Spring 2020</p>
+                    </div>
+                    <div className={styles.card__content}>
+                      <div className={styles.card__content__media}>
+                        <img src={coastalImg} />
+                        <div className={styles.countdown}>
+                          <DateCountdown second="04/04/2020" />
+                        </div>
+                      </div>
+                      <h2>The Lancashire Coastal Way</h2>
+                      <ul className={styles.card__tags}>
+                        <li>Running</li>
+                        <li>Ultra</li>
+                        <li>FKT Attempt</li>
+                      </ul>
+                      <div className={styles.arrow} />
+                    </div>
+                  </div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div className={classNames([styles.card], [styles.scheduled])}>
+                    <div className={styles.card__date}>
+                      <p>Spring 2020</p>
                     </div>
                     <div className={styles.card__content}>
                       <div className={styles.card__content__media}>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Ribble_-_geograph.org.uk_-_42616.jpg" />
                         <div className={styles.countdown}>
-                          <DateCountdown second="09/22/2019" />
+                          <DateCountdown second="05/05/2020" />
                         </div>
                       </div>
                       <h2>The Ribble Way FKT attempt</h2>
@@ -157,17 +182,17 @@ class Home extends Component {
                       <p>8/09/2019</p>
                     </div>
                     <div className={styles.card__content}>
-                      <div className={styles.card__content__media}>
-                        <img src="https://instagram.fman1-1.fna.fbcdn.net/vp/ad4e52f969baf09b2dfcf38d103f12d3/5D7E80D2/t51.2885-15/e35/18381884_244134129323854_2252555259777908736_n.jpg?_nc_ht=instagram.fman1-1.fna.fbcdn.net" />
-                        <div className={styles.countdown}>
-                          <DateCountdown second="09/08/2019" />
+                      <Link to="/activities/ambleside-trail-60">
+                        <div className={styles.card__content__media}>
+                          <img src={amblesideImg} alt="Descending on the Ambleside Trail 60km race" />
                         </div>
-                      </div>
-                      <h2>Ambleside Trail 60km</h2>
-                      <ul className={styles.card__tags}>
-                        <li>Running</li>
-                        <li>Ultra</li>
-                      </ul>
+                        <h2>Ambleside Trail 60km</h2>
+                        <ul className={styles.card__tags}>
+                          <li>Running</li>
+                          <li>Ultra</li>
+                        </ul>
+                        <div className={styles.arrow} />
+                      </Link>
                     </div>
                   </div>
                 </HorizontalScrollerItem>
