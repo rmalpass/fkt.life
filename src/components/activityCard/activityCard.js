@@ -13,11 +13,41 @@ class ActivityCard extends Component {
     super(props)
     this.state = {
       loading: true,
+      access_token: null,
     }
   }
 
+  fetchToken() {
+    let localStorage = window.localStorage
+    let uniqueAuthorizationCode = 'bfadc96c1059e56bcc4a26cde284c0fa3c715f41'
+    let exchangeTokenUrl =
+      'https://www.strava.com/oauth/token?client_id=4245&client_secret=1173690540e287755ca4b36f6d4bafb026167f73&code=' +
+      uniqueAuthorizationCode +
+      '&grant_type=authorization_code'
+
+    let urls = [exchangeTokenUrl]
+    let requests = urls.map(url =>
+      fetch(exchangeTokenUrl, {
+        method: 'post',
+      })
+        .then(resp => {
+          return resp.json()
+        })
+        .then(json => {
+          this.setState({ access_token: json.access_token })
+          localStorage.setItem('token_access_token', json.access_token)
+          localStorage.setItem('token_expires_at', json.expires_at)
+        })
+    )
+
+    Promise.all(requests).then(responses => {
+      this.fetchData()
+    })
+  }
+
   fetchData() {
-    let publicAccessToken = '43c4b7dd7c2a5e99db779498e960fdc039896087'
+    let localStorage = window.localStorage
+    let access_token = localStorage.getItem('token_access_token')
     let activityApiUrl =
       'https://www.strava.com/api/v3/activities/' +
       this.props.strava_id
@@ -32,7 +62,7 @@ class ActivityCard extends Component {
         method: 'get',
         headers: {
           'content-type': 'application/json',
-          authorization: 'Bearer ' + publicAccessToken,
+          authorization: 'Bearer ' + access_token,
         },
       })
         .then(resp => {
@@ -50,18 +80,43 @@ class ActivityCard extends Component {
 
     Promise.all(requests).then(responses => {
       this.setState({ loading: false })
-      //this.GetActivityImages();
     })
   }
 
   componentDidMount() {
-    this.fetchData();
+
+    console.log("ACTIVITY CARD MOUNTED");
+
+    let localStorage = window.localStorage
+    let localStorageAccessToken = localStorage.getItem('token_access_token')
+    let localStorageAccessTokenExpiresAt = localStorage.getItem(
+      'token_expires_at'
+    )
+    let currentTime = Date.now() / 1000
+
+    console.log("Local token: ", localStorageAccessToken)
+    console.log("Access token: ", this.state.access_token)
+
+    // If localstorage doesn't have access token, fetch a new one.
+    if (!localStorageAccessToken) {
+      console.log("no local token. Fetching a new one...");
+      this.fetchToken()
+    } else if (parseInt(localStorageAccessTokenExpiresAt) < currentTime) {
+      // If localstorage token expired, fetch new token
+      console.log("Token expired. Fetching a new one...");
+      this.fetchToken()
+    } else {
+      // Otherwise use existing token to fetch data
+      console.log("Token is OK.");
+      this.fetchData()
+    }
   }
 
   render() {
 
     const activityImgs = this.props.activityImages;
-    console.log(activityImgs);
+
+    console.log("Activity Data", this.state.activityData);
 
     return (
       <article className={styles.activityCard}>
