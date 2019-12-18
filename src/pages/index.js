@@ -1,53 +1,51 @@
 import React, { Component } from "react";
 import { Link, graphql } from "gatsby";
-import classNames from 'classnames';
-import Fade from 'react-reveal/Fade';
-import { Twitter, Instagram, Type } from 'react-feather';
+import classNames from "classnames";
+import Fade from "react-reveal/Fade";
+import { Twitter, Instagram, Type } from "react-feather";
 
 // Component
-import BouncyArrow from '../components/bouncyArrow';
-import SEO from '../components/seo';
-import HomeMenu from '../components/stickyMenu/homeMenu';
-import HorizontalScroller from '../components/horizontalScroller/horizontalScroller';
-import HorizontalScrollerItem from '../components/horizontalScroller/horizontalScrollerItem';
-import DateCountdown from '../components/dateCountdown/dateCountdown';
-import HomeFeature from '../components/homeFeature/homeFeature';
-import Insta from '../components/insta/insta';
-import ActivityCard from '../components/activityCard/activityCard';
-import Scroll from '../components/scroll';
+import BouncyArrow from "../components/bouncyArrow";
+import SEO from "../components/seo";
+import HomeMenu from "../components/stickyMenu/homeMenu";
+import HorizontalScroller from "../components/horizontalScroller/horizontalScroller";
+import HorizontalScrollerItem from "../components/horizontalScroller/horizontalScrollerItem";
+import DateCountdown from "../components/dateCountdown/dateCountdown";
+import HomeFeature from "../components/homeFeature/homeFeature";
+import Insta from "../components/insta/insta";
+import ActivityCard from "../components/activityCard/activityCard";
+import Scroll from "../components/scroll";
 
 // style
-import '../styles/styles.scss';
-import styles from './index.module.scss';
+import "../styles/styles.scss";
+import styles from "./index.module.scss";
 
 // images
-import M from '../images/M.svg';
-import Logo from '../images/logo.svg';
-import NGImg from '../images/newgrounds.jpg';
-import ThreePeaksImg from '../images/timeline/3peaks.jpg';
-import C2cImg from '../images/timeline/c2c.jpg';
-import BadassImg from '../posts/04-bowland-badass/badass.jpg';
-import PeaksHero from '../images/3peaksHero.png';
-import ratpackImg from '../images/ratpack.png';
-import hodderImg from '../posts/05-hodder-way/hodder.jpg';
-import canalImg from '../posts/03-lancaster-canal/IMG_5419.jpg';
-import amblesideImg from '../posts/06-ambleside-60/5.jpg';
-import coastalImg from '../images/timeline/coastal.jpg';
+import M from "../images/M.svg";
+import Logo from "../images/logo.svg";
+import NGImg from "../images/newgrounds.jpg";
+import ThreePeaksImg from "../images/timeline/3peaks.jpg";
+import C2cImg from "../images/timeline/c2c.jpg";
+import BadassImg from "../posts/04-bowland-badass/badass.jpg";
+import PeaksHero from "../images/3peaksHero.png";
+import ratpackImg from "../images/ratpack.png";
+import hodderImg from "../posts/05-hodder-way/hodder.jpg";
+import canalImg from "../posts/03-lancaster-canal/IMG_5419.jpg";
+import amblesideImg from "../posts/06-ambleside-60/5.jpg";
+import coastalImg from "../images/timeline/coastal.jpg";
 
 class Home extends Component {
-
   render() {
-    const data = this.props.data
-    console.log("Data",data);
+    const data = this.props.data;
+    console.log("Data", data);
 
     return (
       <div className={styles.page__home}>
-
-       <SEO
-        title="Ross Malpass"
-        keywords={[`cylist`, `designer`, `ultra`, `blog`, `fkt`]}
-        image={PeaksHero}
-      />
+        <SEO
+          title="Ross Malpass"
+          keywords={[`cylist`, `designer`, `ultra`, `blog`, `fkt`]}
+          image={PeaksHero}
+        />
 
         <HomeMenu />
 
@@ -56,15 +54,41 @@ class Home extends Component {
             <h1>
               <Link to="/#records">
                 <img src={M} alt="Malpass Mountains logo" />
-                <div>Ross Malpass <span>FKTs →</span></div>
+                <div>
+                  Ross Malpass <span>FKTs →</span>
+                </div>
               </Link>
             </h1>
-            <p>Ross is an <a href="https://www.strava.com/athletes/182874">athlete</a>, <a href="https://ombori.com">designer</a>, and <a href="https://medium.com/@rmalpass">writer</a> from North West England.</p>
-            <p>Lover of the outdoors; Father of Two; Working at <a href="https://ombori.com" className={styles.ombori}>Ombori</a>;  <span>and always plotting and scheming.</span></p>
+            <p>
+              Ross is an{" "}
+              <a href="https://www.strava.com/athletes/182874">athlete</a>,{" "}
+              <a href="https://ombori.com">designer</a>, and{" "}
+              <a href="https://medium.com/@rmalpass">writer</a> from North West
+              England.
+            </p>
+            <p>
+              Lover of the outdoors; Father of Two; Working at{" "}
+              <a href="https://ombori.com" className={styles.ombori}>
+                Ombori
+              </a>
+              ; <span>and always plotting and scheming.</span>
+            </p>
             <ul className={styles.social}>
-              <li><a href="https://twitter.com/rmalpass" target="_blank"><Twitter size={18} /></a></li>
-              <li><a href="https://instagram.com/rmalpass" target="_blank"><Instagram size={18} /></a></li>
-              <li><a href="https://medium.com/@rmalpass" target="_blank"><Type size={18} /></a></li>
+              <li>
+                <a href="https://twitter.com/rmalpass" target="_blank">
+                  <Twitter size={18} />
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/rmalpass" target="_blank">
+                  <Instagram size={18} />
+                </a>
+              </li>
+              <li>
+                <a href="https://medium.com/@rmalpass" target="_blank">
+                  <Type size={18} />
+                </a>
+              </li>
             </ul>
           </header>
           <div className={styles.bouncyArrow}>
@@ -94,12 +118,16 @@ class Home extends Component {
                 distance={node.frontmatter.distance}
                 relativePath={node.frontmatter.timeline.relativePath}
                 activityImages={node.frontmatter.images}
-                coverImage={node.frontmatter.cover_image.childImageSharp.sizes.src}
+                coverImage={
+                  node.frontmatter.cover_image.childImageSharp.sizes.src
+                }
               />
             ))}
           </div>
           <footer className={styles.activities__footer}>
-            <p>Or just &mdash; <strong>“I’m FKT.”</strong></p>
+            <p>
+              Or just &mdash; <strong>“I’m FKT.”</strong>
+            </p>
           </footer>
         </section>
 
@@ -116,22 +144,24 @@ class Home extends Component {
           <Fade right>
             <div className={styles.timeline__posts}>
               <HorizontalScroller fullWidth>
-
                 <HorizontalScrollerItem>
                   <header className={styles.timeline__header}>
                     <h1>Schedule, events & achievements</h1>
-                    <p>It's not just records (for the record)! Here's some of the fun stuff I've got planned or have done in the past.</p>
+                    <p>
+                      It's not just records (for the record)! Here's some of the
+                      fun stuff I've got planned or have done in the past.
+                    </p>
                   </header>
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={styles.timeline__year}>
-                    2019
-                  </div>
+                  <div className={styles.timeline__year}>2020</div>
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.scheduled])}>
+                  <div
+                    className={classNames([styles.card], [styles.scheduled])}
+                  >
                     <div className={styles.card__date}>
                       <p>Spring 2020</p>
                     </div>
@@ -154,7 +184,9 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.scheduled])}>
+                  <div
+                    className={classNames([styles.card], [styles.scheduled])}
+                  >
                     <div className={styles.card__date}>
                       <p>Spring 2020</p>
                     </div>
@@ -177,14 +209,23 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.scheduled])}>
+                  <div className={styles.timeline__year}>2019</div>
+                </HorizontalScrollerItem>
+
+                <HorizontalScrollerItem>
+                  <div
+                    className={classNames([styles.card], [styles.scheduled])}
+                  >
                     <div className={styles.card__date}>
                       <p>8/09/2019</p>
                     </div>
                     <div className={styles.card__content}>
                       <Link to="/activities/ambleside-trail-60">
                         <div className={styles.card__content__media}>
-                          <img src={amblesideImg} alt="Descending on the Ambleside Trail 60km race" />
+                          <img
+                            src={amblesideImg}
+                            alt="Descending on the Ambleside Trail 60km race"
+                          />
                         </div>
                         <h2>Ambleside Trail 60km</h2>
                         <ul className={styles.card__tags}>
@@ -228,7 +269,10 @@ class Home extends Component {
                     <div className={styles.card__content}>
                       <Link to="/activities/hodder-way">
                         <div className={styles.card__content__media}>
-                          <img src={hodderImg} alt="The River Hodder at Whitewell" />
+                          <img
+                            src={hodderImg}
+                            alt="The River Hodder at Whitewell"
+                          />
                         </div>
                         <h2>The Hodder Way</h2>
                         <ul className={styles.card__tags}>
@@ -244,20 +288,27 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={styles.timeline__year}>
-                    2017
-                  </div>
+                  <div className={styles.timeline__year}>2017</div>
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={classNames([styles.card], [styles.spacer], [styles.record])}>
+                  <div
+                    className={classNames(
+                      [styles.card],
+                      [styles.spacer],
+                      [styles.record]
+                    )}
+                  >
                     <div className={styles.card__date}>
                       <p>11/08/2017</p>
                     </div>
                     <div className={styles.card__content}>
                       <Link to="/activities/national-three-peaks-by-bike-record">
                         <div className={styles.card__content__media}>
-                          <img src={ThreePeaksImg} alt="Start of the National Three Peaks Challenge" />
+                          <img
+                            src={ThreePeaksImg}
+                            alt="Start of the National Three Peaks Challenge"
+                          />
                         </div>
                         <h2>The National Three Peaks by Bike</h2>
                         <ul className={styles.card__tags}>
@@ -273,9 +324,7 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={styles.timeline__year}>
-                    2015
-                  </div>
+                  <div className={styles.timeline__year}>2015</div>
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
@@ -286,7 +335,10 @@ class Home extends Component {
                     <div className={styles.card__content}>
                       <Link to="/activities/coast-to-coast/">
                         <div className={styles.card__content__media}>
-                          <img src={C2cImg} alt="Bombing a hill on the coast to coast ride" />
+                          <img
+                            src={C2cImg}
+                            alt="Bombing a hill on the coast to coast ride"
+                          />
                         </div>
                         <h2>Morecambe to Scarborough Coast 2 Coast</h2>
                         <ul className={styles.card__tags}>
@@ -301,9 +353,7 @@ class Home extends Component {
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
-                  <div className={styles.timeline__year}>
-                    2013
-                  </div>
+                  <div className={styles.timeline__year}>2013</div>
                 </HorizontalScrollerItem>
 
                 <HorizontalScrollerItem>
@@ -314,7 +364,10 @@ class Home extends Component {
                     <div className={styles.card__content}>
                       <Link to="/activities/bowland-badass/">
                         <div className={styles.card__content__media}>
-                          <img src={BadassImg} alt="Feeling sore on one of the many climbs of the Badass" />
+                          <img
+                            src={BadassImg}
+                            alt="Feeling sore on one of the many climbs of the Badass"
+                          />
                         </div>
                         <h2>Bowland Badass</h2>
                         <ul className={styles.card__tags}>
@@ -327,7 +380,6 @@ class Home extends Component {
                     </div>
                   </div>
                 </HorizontalScrollerItem>
-
               </HorizontalScroller>
             </div>
           </Fade>
@@ -337,9 +389,18 @@ class Home extends Component {
           <section className={styles.ratpack}>
             <div className={styles.ratpack__content}>
               <a href="https://www.strava.com/clubs/NWRATS">
-                <img src={ratpackImg} className={styles.ratpack__logo} alt="NW RATS on Strava." />
-                <p>A Strava club to discover and share the best unknown routes in the North West of England.</p>
-                <p><span className="btn btn__primary">Join the Rats</span></p>
+                <img
+                  src={ratpackImg}
+                  className={styles.ratpack__logo}
+                  alt="NW RATS on Strava."
+                />
+                <p>
+                  A Strava club to discover and share the best unknown routes in
+                  the North West of England.
+                </p>
+                <p>
+                  <span className="btn btn__primary">Join the Rats</span>
+                </p>
               </a>
             </div>
           </section>
@@ -359,7 +420,7 @@ class Home extends Component {
 
         */}
       </div>
-    )
+    );
   }
 }
 
@@ -419,4 +480,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
