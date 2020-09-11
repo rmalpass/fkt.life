@@ -62,16 +62,12 @@ class Home extends Component {
             <p>
               Ross is an{" "}
               <a href="https://www.strava.com/athletes/182874">athlete</a>,{" "}
-              <a href="https://ombori.com">designer</a>, and{" "}
-              <a href="https://medium.com/@rmalpass">writer</a> from North West
-              England.
+              designer, and <a href="https://medium.com/@rmalpass">writer</a>{" "}
+              from North West England.
             </p>
             <p>
-              Lover of the outdoors; Father of Two; Working at{" "}
-              <a href="https://ombori.com" className={styles.ombori}>
-                Ombori
-              </a>
-              ; <span>and always plotting and scheming.</span>
+              Lover of the outdoors; Father of Two; Working at Ombori ;
+              <span>and always plotting and scheming.</span>
             </p>
             <ul className={styles.social}>
               <li>
