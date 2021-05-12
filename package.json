@@ -6,7 +6,7 @@
   "author": "Ross Malpass <ross.malpass@gmail.com>",
   "dependencies": {
     "@mapbox/polyline": "^1.1.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "classnames": "^2.2.6",
     "crypto": "^1.0.1",
     "disqus-react": "^1.0.5",
